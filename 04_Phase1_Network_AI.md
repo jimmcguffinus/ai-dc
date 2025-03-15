@@ -32,6 +32,15 @@
 - **AI-Driven Tier 1 Troubleshooting:** AI-powered chatbots and automated workflows will handle **basic client network issues** before escalating to human engineers.
 - **Real-Time AI Monitoring Dashboards:** AI-generated **network health visualizations** will assist NOC teams in identifying and prioritizing network incidents.
 - **Automated Escalation Handling:** AI will **triage incidents** based on impact and severity, **optimizing NOC response times**.
+- **Guided Resolution Workflows:** AI will provide **step-by-step troubleshooting guides** with predicted success rates for Junior NOC staff.
+- **Auto-Suggested Fixes:** AI will analyze similar past incidents to **recommend proven solutions** for common network issues.
+
+### 5. AI-Driven Asset Management & Inventory Control (NEW)
+- **Automated Asset Discovery:** AI will continuously scan and **identify new network devices**, updating inventory in real-time.
+- **Predictive Hardware Lifecycle:** AI models will **forecast equipment end-of-life** and suggest proactive replacements.
+- **Smart Inventory Management:** AI will **track hardware stock levels** and automatically generate purchase orders for depleting items.
+- **Configuration Version Control:** AI will maintain a **searchable history of device configurations** and track changes over time.
+- **Automated Compliance Checking:** AI will ensure all network devices meet **security and regulatory requirements**.
 
 ## Technical Implementation
 
@@ -82,6 +91,9 @@
 - Automated network optimization and resource allocation
 - Enhanced security through AI-driven threat detection
 - Streamlined deployment and decommissioning processes
+- **Optimized inventory management and asset lifecycle tracking**
+- **Reduced mean time to resolution for Junior NOC staff**
+- **Improved first-call resolution rates through AI assistance**
 
 ## Implementation Timeline
 1. **Month 1-2:** Infrastructure assessment and AI model training
