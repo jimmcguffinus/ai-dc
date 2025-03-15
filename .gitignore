@@ -1,0 +1,45 @@
+# AI-DC Git Ignore File
+# Ignore Python Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Virtual Environments
+venv/
+.env/
+*.env
+
+# Ignore Milvus Vector Database Files
+milvus_data/
+milvus_logs/
+*.db
+*.sqlite3
+
+# Ignore Logs & Temp Files
+logs/
+*.log
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Ignore Local VS Code & Editor Files
+.vscode/
+.idea/
+*.iml
+
+# Ignore Large Files & Dumps
+*.tar.gz
+*.zip
+*.rar
+*.7z
+dump.sql
+*.tgz
+
+# Ignore Generated Assets (Diagrams, Rendered Outputs)
+assets/generated/
+diagrams/generated/
+
+# Ignore Node.js Dependencies (if we add a frontend later)
+node_modules/
