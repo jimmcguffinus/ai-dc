@@ -26,4 +26,4 @@ To effectively transform your data center into an AI-ready infrastructure, follo
 - **Interdisciplinary Collaboration:** Encourage close collaboration between data scientists, engineers, and administrators for optimal use of resources.
 - **Customer Training & Education:** Provide resources and training to clients to help them fully leverage AI capabilities, enhancing client satisfaction and facility usage.
 
-By incorporating these best practices, data center providers will position themselves to attract AI-focused clientele, drive operational excellence, and achieve sustained competitive advantage. 
+By incorporating these best practices, data center providers will position themselves to attract AI-focused clientele, drive operational excellence, and achieve sustained competitive advantage.
