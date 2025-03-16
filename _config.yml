@@ -11,6 +11,14 @@ kramdown:
   input: GFM
   hard_wrap: false
   syntax_highlighter: rouge
+
+# Theme settings
+minima:
+  date_format: "%b %-d, %Y"
+  social_links:
+    github: jimmcguffinus
+
+# Plugin settings
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -28,6 +36,25 @@ header_pages:
   - documentation.md
   - components.md
 
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "page"
+
 # Exclude files from processing
 exclude:
   - README.md
@@ -41,4 +68,6 @@ exclude:
 # Additional settings
 permalink: pretty
 future: true
-encoding: UTF-8 
+encoding: UTF-8
+sass:
+  style: compressed 

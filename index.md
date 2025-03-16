@@ -1,59 +1,84 @@
 ---
-layout: home
+layout: default
 title: Home
+permalink: /
 ---
 
-# Welcome to AI-DC
+<div class="home-content">
+  <h1>Welcome to AI-DC</h1>
 
-Your AI-driven data center automation hub, revolutionizing infrastructure management with cutting-edge artificial intelligence.
+  <p>Your AI-driven data center automation hub, revolutionizing infrastructure management with cutting-edge artificial intelligence.</p>
 
-## Overview
+  <h2>Overview</h2>
 
-AI-DC is a cutting-edge initiative aimed at integrating artificial intelligence into data center operations to optimize networking, colocation, cloud services, and security. By leveraging AI-driven automation, this project aims to:
+  <p>AI-DC is a cutting-edge initiative aimed at integrating artificial intelligence into data center operations to optimize networking, colocation, cloud services, and security. By leveraging AI-driven automation, this project aims to:</p>
 
-- Reduce operational inefficiencies
-- Enhance real-time monitoring & predictive analytics
-- Improve data center security & threat detection
-- Implement AI-powered self-healing networks
+  <ul>
+    <li>Reduce operational inefficiencies</li>
+    <li>Enhance real-time monitoring & predictive analytics</li>
+    <li>Improve data center security & threat detection</li>
+    <li>Implement AI-powered self-healing networks</li>
+  </ul>
 
-## Key Components
+  <h2>Key Components</h2>
 
-### AD-YOLO Core
-- Real-time AD monitoring and automation
-- Firebase integration for mobile access
-- Vector database for AI-powered search
-- Extended schema with auxLogin attributes
+  <h3>AD-YOLO Core</h3>
+  <ul>
+    <li>Real-time AD monitoring and automation</li>
+    <li>Firebase integration for mobile access</li>
+    <li>Vector database for AI-powered search</li>
+    <li>Extended schema with auxLogin attributes</li>
+  </ul>
 
-### Security & Compliance
-- Firewall rule synchronization
-- Security event alerting
-- Compliance tracking
-- Audit logging
+  <h3>Security & Compliance</h3>
+  <ul>
+    <li>Firewall rule synchronization</li>
+    <li>Security event alerting</li>
+    <li>Compliance tracking</li>
+    <li>Audit logging</li>
+  </ul>
 
-### Integration & Extensions
-- ITSM system integration
-- Cloud service connectors
-- Mobile applications
-- API endpoints
+  <h3>Integration & Extensions</h3>
+  <ul>
+    <li>ITSM system integration</li>
+    <li>Cloud service connectors</li>
+    <li>Mobile applications</li>
+    <li>API endpoints</li>
+  </ul>
 
-## Getting Started
+  <h2>Getting Started</h2>
 
-1. **Explore Documentation**
-   - Review our comprehensive guides
-   - Understand the architecture
-   - Learn about key features
+  <ol>
+    <li>
+      <strong>Explore Documentation</strong>
+      <ul>
+        <li>Review our comprehensive guides</li>
+        <li>Understand the architecture</li>
+        <li>Learn about key features</li>
+      </ul>
+    </li>
 
-2. **Setup & Configuration**
-   - Follow installation guides
-   - Configure integrations
-   - Deploy components
+    <li>
+      <strong>Setup & Configuration</strong>
+      <ul>
+        <li>Follow installation guides</li>
+        <li>Configure integrations</li>
+        <li>Deploy components</li>
+      </ul>
+    </li>
 
-3. **Development**
-   - Access API documentation
-   - Use development tools
-   - Contribute to the project
+    <li>
+      <strong>Development</strong>
+      <ul>
+        <li>Access API documentation</li>
+        <li>Use development tools</li>
+        <li>Contribute to the project</li>
+      </ul>
+    </li>
+  </ol>
 
-<div class="cta-buttons">
-<a href="{{ site.baseurl }}/documentation" class="btn">View Documentation</a>
-<a href="{{ site.baseurl }}/components" class="btn">Explore Components</a>
+  <div class="cta-buttons">
+    <a href="{{ site.baseurl }}/documentation" class="btn">View Documentation</a>
+    <a href="{{ site.baseurl }}/components" class="btn">Explore Components</a>
+  </div>
 </div> 

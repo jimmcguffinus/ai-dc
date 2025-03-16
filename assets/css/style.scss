@@ -1,4 +1,4 @@
-@import "{{ site.theme }}";
+@import "minima";
 
 .home-content {
     max-width: 800px;
@@ -14,9 +14,17 @@
     
     p {
         font-size: 1.2rem;
-        text-align: center;
         color: #666;
         margin-bottom: 2rem;
+    }
+
+    ul, ol {
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -39,14 +47,43 @@
 
 .site-header {
     border-top: 5px solid #0077cc;
+    border-bottom: 1px solid #e8e8e8;
+    min-height: 55.95px;
+    position: relative;
     
     .site-title {
         color: #0077cc;
+        font-weight: 300;
+        line-height: 54px;
+        letter-spacing: -1px;
+        margin-bottom: 0;
+        float: left;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .site-nav {
+        float: right;
+        line-height: 54px;
+
+        .page-link {
+            color: #111;
+            line-height: 1.5;
+            margin-left: 20px;
+
+            &:hover {
+                color: #0077cc;
+                text-decoration: none;
+            }
+        }
     }
 }
 
 .page-content {
-    padding: 2rem 0;
+    padding: 30px 0;
+    flex: 1;
     
     h2 {
         color: #333;
@@ -60,6 +97,14 @@
     ul {
         margin-left: 1.5rem;
     }
+}
+
+.wrapper {
+    max-width: calc(800px - (30px * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 table {
