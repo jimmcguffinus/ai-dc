@@ -29,6 +29,7 @@
     border-radius: 5px;
     transition: background-color 0.3s;
     font-weight: 500;
+    margin: 0 10px;
     
     &:hover {
         background-color: darken(#0077cc, 10%);
@@ -74,4 +75,9 @@ table {
     th {
         background: #f5f5f5;
     }
+}
+
+.cta-buttons {
+    text-align: center;
+    margin-top: 40px;
 } 
