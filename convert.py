@@ -19,36 +19,25 @@ def copy_markdown_files(source_dir, target_dir):
     """Copy markdown files from source to target directory"""
     ensure_directory(target_dir)
     
-    # Get all markdown files recursively
-    for root, _, files in os.walk(source_dir):
-        for file in files:
-            if file.endswith('.md'):
-                source_path = os.path.join(root, file)
-                # Skip if file is in docs/docs or deeper
-                if 'docs/docs' in source_path or 'docs\\docs' in source_path:
-                    continue
-                    
-                # Create relative path structure in target
-                rel_path = os.path.relpath(root, source_dir)
-                target_path = os.path.join(target_dir, rel_path)
-                ensure_directory(target_path)
-                target_file = os.path.join(target_path, file)
-                
-                # Copy file if it doesn't exist or is different
-                if not os.path.exists(target_file) or \
-                   os.path.getmtime(source_path) > os.path.getmtime(target_file):
-                    shutil.copy2(source_path, target_file)
-                    logging.info(f'Copied {source_path} to {target_file}')
+    # Get all markdown files in the source directory (non-recursive)
+    for file in os.listdir(source_dir):
+        if file.endswith('.md'):
+            source_path = os.path.join(source_dir, file)
+            target_file = os.path.join(target_dir, file)
+            
+            # Copy file if it doesn't exist or is different
+            if not os.path.exists(target_file) or \
+               os.path.getmtime(source_path) > os.path.getmtime(target_file):
+                shutil.copy2(source_path, target_file)
+                logging.info(f'Copied {source_path} to {target_file}')
 
 def convert_md_to_html():
     """Convert all markdown files to HTML with proper structure"""
     # Create docs directory
     ensure_directory('docs')
     
-    # Copy markdown files from root and jobs directory
+    # Copy markdown files from root directory
     copy_markdown_files('.', 'docs')
-    if os.path.exists('jobs'):
-        copy_markdown_files('jobs', os.path.join('docs', 'jobs'))
 
     # HTML template with enhanced styling
     main_template = '''<!DOCTYPE html>
@@ -197,54 +186,47 @@ def convert_md_to_html():
 </body>
 </html>'''
 
-    # Convert all markdown files in docs directory and subdirectories
-    for root, _, files in os.walk('docs'):
-        for md_file in files:
-            if md_file.endswith('.md'):
-                try:
-                    full_path = os.path.join(root, md_file)
-                    
-                    # Skip if file is in docs/docs or deeper
-                    if 'docs/docs' in full_path or 'docs\\docs' in full_path:
-                        continue
-                    
-                    # Read markdown content
-                    with open(full_path, 'r', encoding='utf-8') as f:
-                        md_content = f.read()
+    # Convert all markdown files in docs directory
+    for file in os.listdir('docs'):
+        if file.endswith('.md'):
+            try:
+                full_path = os.path.join('docs', file)
+                
+                # Read markdown content
+                with open(full_path, 'r', encoding='utf-8') as f:
+                    md_content = f.read()
 
-                    # Convert to HTML with extended features
-                    html_content = markdown.markdown(
-                        md_content,
-                        extensions=[
-                            'tables',
-                            'fenced_code',
-                            'toc',
-                            'attr_list',
-                            'def_list',
-                            'footnotes'
-                        ]
-                    )
-                    
-                    # Get title from filename
-                    title = os.path.basename(md_file).replace('.md', '').replace('_', ' ')
-                    
-                    # Create breadcrumbs
-                    rel_path = os.path.relpath(full_path, 'docs')
-                    path_parts = os.path.dirname(rel_path).split(os.sep)
-                    breadcrumbs = ' / '.join(path_parts + [title]) if path_parts[0] != '.' else title
-                    
-                    # Create HTML file
-                    html_file = full_path.replace('.md', '.html')
-                    with open(html_file, 'w', encoding='utf-8') as f:
-                        f.write(main_template.format(
-                            title=title,
-                            breadcrumbs=breadcrumbs,
-                            content=html_content
-                        ))
-                    
-                    logging.info(f'Converted {full_path} to {html_file}')
-                except Exception as e:
-                    logging.error(f'Error converting {md_file}: {str(e)}')
+                # Convert to HTML with extended features
+                html_content = markdown.markdown(
+                    md_content,
+                    extensions=[
+                        'tables',
+                        'fenced_code',
+                        'toc',
+                        'attr_list',
+                        'def_list',
+                        'footnotes'
+                    ]
+                )
+                
+                # Get title from filename
+                title = os.path.basename(file).replace('.md', '').replace('_', ' ')
+                
+                # Create breadcrumbs
+                breadcrumbs = title
+                
+                # Create HTML file
+                html_file = full_path.replace('.md', '.html')
+                with open(html_file, 'w', encoding='utf-8') as f:
+                    f.write(main_template.format(
+                        title=title,
+                        breadcrumbs=breadcrumbs,
+                        content=html_content
+                    ))
+                
+                logging.info(f'Converted {full_path} to {html_file}')
+            except Exception as e:
+                logging.error(f'Error converting {file}: {str(e)}')
 
     # Update main HTML files to use absolute paths
     main_files = ['index.html', 'documentation.html', 'components.html']
@@ -255,10 +237,10 @@ def convert_md_to_html():
                     content = f.read()
                 
                 # Update links to use /ai-dc prefix
-                content = content.replace('href="docs/', 'href="/ai-dc/docs/')
-                content = content.replace('href="index.html"', 'href="/ai-dc/index.html"')
-                content = content.replace('href="documentation.html"', 'href="/ai-dc/documentation.html"')
-                content = content.replace('href="components.html"', 'href="/ai-dc/components.html"')
+                content = content.replace('href="', 'href="/ai-dc/')
+                content = content.replace('href="/ai-dc/http', 'href="http')  # Fix external links
+                content = content.replace('href="/ai-dc/https', 'href="https')  # Fix external links
+                content = content.replace('href="/ai-dc/#', 'href="#')  # Fix anchor links
                 
                 with open(file, 'w', encoding='utf-8') as f:
                     f.write(content)
@@ -268,10 +250,10 @@ def convert_md_to_html():
 
 if __name__ == '__main__':
     try:
-        # Clean up any existing docs/docs directory
-        if os.path.exists('docs/docs'):
-            shutil.rmtree('docs/docs')
-            logging.info('Cleaned up docs/docs directory')
+        # Clean up docs directory if it exists
+        if os.path.exists('docs'):
+            shutil.rmtree('docs')
+            logging.info('Cleaned up docs directory')
             
         convert_md_to_html()
         logging.info('Conversion completed successfully')
