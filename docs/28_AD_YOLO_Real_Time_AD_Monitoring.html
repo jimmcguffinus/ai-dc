@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28 AD YOLO Real Time AD Monitoring</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .nav {
+            background: #34495e;
+            padding: 1rem;
+            text-align: center;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .nav a:hover {
+            background: #2c3e50;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #2980b9;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>28 AD YOLO Real Time AD Monitoring</h1>
+    </div>
+    
+    <div class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../documentation.html">Documentation</a>
+        <a href="../components.html">Components</a>
+    </div>
+
+    <div class="content">
+        <hr />
+<p>layout: page
+title: AD-YOLO Real-Time AD Monitoring
+permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/</p>
+<hr />
+<h1>AD-YOLO Real-Time AD Monitoring</h1>
+<h2>Overview</h2>
+<p>AD-YOLO's real-time Active Directory monitoring system provides continuous surveillance of AD changes, security events, and performance metrics. Using advanced event processing and AI-driven analysis, it enables immediate detection and response to critical AD events.</p>
+<h2>Architecture</h2>
+<h3>Core Components</h3>
+<ul>
+<li><strong>Event Collector</strong></li>
+<li>LDAP change notification listener</li>
+<li>Security log monitor</li>
+<li>Performance counter tracking</li>
+<li>
+<p>Directory replication monitor</p>
+</li>
+<li>
+<p><strong>Event Processor</strong></p>
+</li>
+<li>Real-time event filtering</li>
+<li>Pattern recognition</li>
+<li>Anomaly detection</li>
+<li>Alert generation</li>
+</ul>
+<h3>Event Types</h3>
+<pre><code class="language-python">class ADEventType(Enum):
+    OBJECT_CREATED = &quot;object_created&quot;
+    OBJECT_MODIFIED = &quot;object_modified&quot;
+    OBJECT_DELETED = &quot;object_deleted&quot;
+    SECURITY_CHANGE = &quot;security_change&quot;
+    GROUP_MEMBERSHIP = &quot;group_membership&quot;
+    PASSWORD_CHANGE = &quot;password_change&quot;
+    LOGIN_ATTEMPT = &quot;login_attempt&quot;
+    REPLICATION_STATUS = &quot;replication_status&quot;
+</code></pre>
+<h2>Event Collection</h2>
+<h3>LDAP Change Monitor</h3>
+<pre><code class="language-python">class LDAPChangeMonitor:
+    def __init__(self, ldap_server, base_dn):
+        self.server = ldap_server
+        self.base_dn = base_dn
+        self.changes_queue = asyncio.Queue()
+
+    async def start_monitoring(self):
+        &quot;&quot;&quot;Start monitoring LDAP changes&quot;&quot;&quot;
+        async with aioldap.Connection(self.server) as conn:
+            # Set up persistent search
+            search_request = {
+                'base': self.base_dn,
+                'scope': aioldap.SCOPE_SUBTREE,
+                'filter': '(objectClass=*)',
+                'attrs': ['*'],
+                'changes_only': True
+            }
+
+            async for entry in conn.extend.persistent_search(**search_request):
+                await self.process_change(entry)
+
+    async def process_change(self, entry):
+        &quot;&quot;&quot;Process LDAP change entry&quot;&quot;&quot;
+        change = {
+            'dn': entry.entry_dn,
+            'changes': entry.changes,
+            'timestamp': datetime.now().isoformat()
+        }
+        await self.changes_queue.put(change)
+</code></pre>
+<h3>Security Event Monitor</h3>
+<pre><code class="language-python">class SecurityEventMonitor:
+    def __init__(self):
+        self.event_queue = asyncio.Queue()
+
+    async def monitor_security_logs(self):
+        &quot;&quot;&quot;Monitor Windows Security Event Log&quot;&quot;&quot;
+        query = &quot;*[System/EventID=4624 or EventID=4625 or EventID=4648]&quot;
+
+        while True:
+            events = await self.get_security_events(query)
+            for event in events:
+                await self.event_queue.put({
+                    'event_id': event.EventID,
+                    'time_created': event.TimeCreated,
+                    'account': event.UserData.TargetUserName,
+                    'workstation': event.UserData.WorkstationName,
+                    'ip_address': event.UserData.IpAddress
+                })
+
+            await asyncio.sleep(1)
+</code></pre>
+<h2>Event Processing</h2>
+<h3>Pattern Recognition</h3>
+<pre><code class="language-python">class PatternRecognizer:
+    def __init__(self):
+        self.patterns = self.load_patterns()
+
+    def analyze_event(self, event):
+        &quot;&quot;&quot;Analyze event for known patterns&quot;&quot;&quot;
+        matches = []
+        for pattern in self.patterns:
+            if pattern.matches(event):
+                matches.append({
+                    'pattern_id': pattern.id,
+                    'confidence': pattern.calculate_confidence(event),
+                    'description': pattern.description
+                })
+        return matches
+</code></pre>
+<h3>Anomaly Detection</h3>
+<pre><code class="language-python">class AnomalyDetector:
+    def __init__(self):
+        self.model = self.load_model()
+
+    def detect_anomalies(self, events):
+        &quot;&quot;&quot;Detect anomalies in event stream&quot;&quot;&quot;
+        features = self.extract_features(events)
+        scores = self.model.predict(features)
+
+        anomalies = []
+        for event, score in zip(events, scores):
+            if score &gt; self.threshold:
+                anomalies.append({
+                    'event': event,
+                    'anomaly_score': score,
+                    'timestamp': datetime.now().isoformat()
+                })
+
+        return anomalies
+</code></pre>
+<h2>Alert Generation</h2>
+<h3>Alert Rules</h3>
+<pre><code class="language-python">class AlertRule:
+    def __init__(self, condition, severity, actions):
+        self.condition = condition
+        self.severity = severity
+        self.actions = actions
+
+    def evaluate(self, event):
+        &quot;&quot;&quot;Evaluate alert rule against event&quot;&quot;&quot;
+        if self.condition(event):
+            return Alert(
+                severity=self.severity,
+                message=self.generate_message(event),
+                actions=self.actions
+            )
+        return None
+</code></pre>
+<h3>Alert Manager</h3>
+<pre><code class="language-python">class AlertManager:
+    def __init__(self):
+        self.rules = self.load_rules()
+        self.notifiers = self.load_notifiers()
+
+    async def process_event(self, event):
+        &quot;&quot;&quot;Process event through alert rules&quot;&quot;&quot;
+        alerts = []
+        for rule in self.rules:
+            alert = rule.evaluate(event)
+            if alert:
+                alerts.append(alert)
+                await self.notify(alert)
+
+        return alerts
+
+    async def notify(self, alert):
+        &quot;&quot;&quot;Send notifications for alert&quot;&quot;&quot;
+        for notifier in self.notifiers:
+            await notifier.send(alert)
+</code></pre>
+<h2>Performance Monitoring</h2>
+<h3>Metrics Collection</h3>
+<pre><code class="language-python">class ADMetricsCollector:
+    def __init__(self):
+        self.metrics = {
+            'replication_latency': [],
+            'authentication_rate': [],
+            'query_response_time': [],
+            'cpu_usage': [],
+            'memory_usage': []
+        }
+
+    async def collect_metrics(self):
+        &quot;&quot;&quot;Collect AD performance metrics&quot;&quot;&quot;
+        while True:
+            metrics = await self.get_current_metrics()
+            self.update_metrics(metrics)
+            await self.store_metrics(metrics)
+            await asyncio.sleep(60)
+</code></pre>
+<h3>Health Checks</h3>
+<pre><code class="language-python">class ADHealthChecker:
+    def __init__(self):
+        self.checks = [
+            self.check_replication,
+            self.check_services,
+            self.check_connectivity,
+            self.check_dns
+        ]
+
+    async def run_health_checks(self):
+        &quot;&quot;&quot;Run all health checks&quot;&quot;&quot;
+        results = []
+        for check in self.checks:
+            result = await check()
+            results.append(result)
+        return results
+</code></pre>
+<h2>Integration Examples</h2>
+<h3>PowerShell Integration</h3>
+<pre><code class="language-powershell"># Monitor AD changes
+function Watch-ADChanges {
+    param(
+        [string]$BaseOU,
+        [string]$Filter = &quot;*&quot;
+    )
+
+    $changes = Start-ADChangeNotification -BaseOU $BaseOU -Filter $Filter
+
+    foreach ($change in $changes) {
+        $eventData = @{
+            ObjectDN = $change.DistinguishedName
+            ChangeType = $change.ChangeType
+            Attributes = $change.AttributeChanges
+            Timestamp = Get-Date
+        }
+
+        Send-ADYoloEvent -EventData $eventData
+    }
+}
+</code></pre>
+<h3>Python Integration</h3>
+<pre><code class="language-python">from adyolo.monitor import ADMonitor
+
+# Initialize monitor
+monitor = ADMonitor()
+
+# Register event handler
+@monitor.on_event
+async def handle_event(event):
+    if event.type == ADEventType.SECURITY_CHANGE:
+        await process_security_event(event)
+    elif event.type == ADEventType.OBJECT_MODIFIED:
+        await process_modification(event)
+
+# Start monitoring
+monitor.start()
+</code></pre>
+<h2>Configuration</h2>
+<h3>Monitor Settings</h3>
+<pre><code class="language-yaml"># monitor_config.yaml
+monitoring:
+  ldap:
+    server: ldap://ad.example.com
+    base_dn: DC=example,DC=com
+    poll_interval: 1
+
+  security:
+    event_ids: [4624, 4625, 4648, 4719]
+    log_name: Security
+
+  performance:
+    metrics_interval: 60
+    retention_days: 30
+
+alerts:
+  rules:
+    - name: admin_group_change
+      condition: &quot;event.type == 'group_membership' and 'Domain Admins' in event.group&quot;
+      severity: high
+      actions: [email, sms]
+
+    - name: mass_password_reset
+      condition: &quot;event.type == 'password_change' and event.count &gt; 10&quot;
+      severity: critical
+      actions: [email, sms, ticket]
+</code></pre>
+<h2>Deployment</h2>
+<h3>Environment Setup</h3>
+<pre><code class="language-bash"># Install dependencies
+pip install aioldap asyncio aiohttp pyyaml
+
+# Set environment variables
+export AD_SERVER=&quot;ldap://ad.example.com&quot;
+export AD_USERNAME=&quot;monitor_user&quot;
+export AD_PASSWORD=&quot;secure_password&quot;
+export ALERT_EMAIL=&quot;admin@example.com&quot;
+</code></pre>
+<h2>Monitoring Dashboard</h2>
+<h3>Metrics Display</h3>
+<ul>
+<li>Real-time event feed</li>
+<li>Performance graphs</li>
+<li>Alert history</li>
+<li>Health status</li>
+<li>Replication status</li>
+</ul>
+<h3>Interactive Features</h3>
+<ul>
+<li>Event filtering</li>
+<li>Alert acknowledgment</li>
+<li>Custom queries</li>
+<li>Report generation</li>
+<li>Trend analysis</li>
+</ul>
+<h2>Future Enhancements</h2>
+<p>✅ <strong>AI-powered event correlation</strong><br />
+✅ <strong>Predictive anomaly detection</strong><br />
+✅ <strong>Automated response actions</strong><br />
+✅ <strong>Extended metrics collection</strong>  </p>
+<hr />
+<p><em>AD-YOLO's real-time monitoring provides comprehensive visibility into Active Directory changes, enabling proactive management and rapid response to critical events.</em> 🔍 </p>
+    </div>
+</body>
+</html>

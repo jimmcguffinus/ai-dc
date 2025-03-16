@@ -1,0 +1,2341 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for AI-DC project">
+      
+      
+      
+      
+        <link rel="prev" href="../31_AD_YOLO_Vector_DB_RAG_AI/">
+      
+      
+        <link rel="next" href="../33_AD_YOLO_AD_Firewall_Sync/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+    
+    
+      
+        <title>32 AD YOLO Schema Extension AuxLogin - AI-DC Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ad-yolo-schema-extension-auxlogin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="AI-DC Documentation" class="md-header__button md-logo" aria-label="AI-DC Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI-DC Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              32 AD YOLO Schema Extension AuxLogin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Readme_AD-YOLO/" class="md-tabs__link">
+          
+  
+  Documentation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../15_Business_Development_AI/" class="md-tabs__link">
+          
+  
+  Business
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../22_AI_Research_Development_AI_Markets_Growth/" class="md-tabs__link">
+          
+  
+  Market Analysis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../27_AI_Datacenter_Future_Vision/" class="md-tabs__link">
+          
+  
+  Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AI-DC Documentation" class="md-nav__button md-logo" aria-label="AI-DC Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI-DC Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Readme_AD-YOLO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_Company_Breakdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Company Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_AI_Strategy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_Implementation_Plan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implementation Plan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Core Components
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core Components
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_VectorDB_Setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vector DB Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../31_AD_YOLO_Vector_DB_RAG_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AD-YOLO Core
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Schema Extension
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Schema Extension
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extended-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extended Attributes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extended Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-extended-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Extended Attributes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Extension
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Extension">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powershell-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      PowerShell Deployment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bulk-import-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bulk Import Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk Import Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ldif-import-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      LDIF Import Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-bulk-import-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV Bulk Import Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enhanced-audit-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced Audit Tracking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enhanced Audit Tracking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attribute-change-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute Change Logging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-check-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health Check Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-deployment-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-deployment Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../33_AD_YOLO_AD_Firewall_Sync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Firewall Sync
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../28_AD_YOLO_Real_Time_AD_Monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Real-Time Monitoring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../29_AD_YOLO_Firebase_Sync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Firebase Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30_AD_YOLO_Ticketing_Helpdesk_Integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ticketing Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Implementation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Implementation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_Phase1_Network_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 1 - Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_Phase2_Colo_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 2 - Colocation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_Phase3_Cloud_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 3 - Cloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_Phase4_Security_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Phase 4 - Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Services
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Services
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_Network_Cabling_Company_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Cabling
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_VoIP_Phone_Service_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VoIP Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13_Video_Surveillance_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Video Surveillance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_Best_Practices_AI_Datacenter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Business
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Business
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15_Business_Development_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16_Network_Automation_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Automation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17_Business_AI_Automation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Automation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18_AI_Training_and_RnD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Training & R&D
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19_Colocation_Hosting_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Colocation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20_Business_Internet_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internet Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21_AI_Network_Security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Market Analysis
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Market Analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22_AI_Research_Development_AI_Markets_Growth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research & Development
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23_Autonomous_Smart_Tech_AI_Markets_Growth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Smart Technology
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24_Healthcare_Biotech_AI_Markets_Growth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Healthcare & Biotech
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25_Enterprise_Business_Automation_AI_Markets_Growth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterprise Automation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26_Government_Defense_AI_Markets_Growth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Government & Defense
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27_AI_Datacenter_Future_Vision/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Future Vision
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Future_DataCenter_OrgChart_AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organization Chart
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extended-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extended Attributes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extended Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Attributes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-extended-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Extended Attributes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Extension
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Extension">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powershell-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      PowerShell Deployment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bulk-import-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bulk Import Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk Import Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ldif-import-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      LDIF Import Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv-bulk-import-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV Bulk Import Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enhanced-audit-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced Audit Tracking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enhanced Audit Tracking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attribute-change-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute Change Logging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schema-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schema Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#health-check-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health Check Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-deployment-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-deployment Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ad-yolo-schema-extension-auxlogin">AD-YOLO Schema Extension (auxLogin)</h1>
+<h2 id="overview">Overview</h2>
+<p>AD-YOLO extends Active Directory schema with auxiliary attributes (<code>auxLogin</code>) to track modern enterprise assets and user properties. This extension enables granular tracking of devices, vehicles, security equipment, and employee-specific data while maintaining AD's core functionality.</p>
+<h2 id="extended-attributes">Extended Attributes</h2>
+<h3 id="core-attributes">Core Attributes</h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Base auxLogin attributes</span>
+<span class="nv">$attributes</span> <span class="p">=</span> <span class="p">@{</span>
+    <span class="s1">&#39;auxLoginInstalledApps&#39;</span> <span class="p">=</span> <span class="s1">&#39;List of installed applications&#39;</span>
+    <span class="s1">&#39;auxLoginSecurityCameras&#39;</span> <span class="p">=</span> <span class="s1">&#39;Assigned security camera IDs&#39;</span>
+    <span class="s1">&#39;auxLogin4KTVs&#39;</span> <span class="p">=</span> <span class="s1">&#39;Managed 4K display assets&#39;</span>
+    <span class="s1">&#39;auxLoginMetaGlasses&#39;</span> <span class="p">=</span> <span class="s1">&#39;AR/VR device assignments&#39;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="new-extended-attributes">New Extended Attributes</h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Additional tracking attributes</span>
+<span class="nv">$newAttributes</span> <span class="p">=</span> <span class="p">@{</span>
+    <span class="s1">&#39;auxLoginIMEINumber&#39;</span> <span class="p">=</span> <span class="s1">&#39;Mobile device IMEI tracking&#39;</span>
+    <span class="s1">&#39;auxLoginFleetVehicle&#39;</span> <span class="p">=</span> <span class="s1">&#39;Company vehicle assignments&#39;</span>
+    <span class="s1">&#39;auxLoginGunRegistry&#39;</span> <span class="p">=</span> <span class="s1">&#39;Security weapon tracking&#39;</span>
+    <span class="s1">&#39;auxLoginProjects&#39;</span> <span class="p">=</span> <span class="s1">&#39;Active project assignments&#39;</span>
+    <span class="s1">&#39;auxLoginHandicap&#39;</span> <span class="p">=</span> <span class="s1">&#39;Golf handicap for perks program&#39;</span>
+    <span class="s1">&#39;auxLoginBadgeLevel&#39;</span> <span class="p">=</span> <span class="s1">&#39;Security clearance level&#39;</span>
+    <span class="s1">&#39;auxLoginParkingSpot&#39;</span> <span class="p">=</span> <span class="s1">&#39;Assigned parking location&#39;</span>
+    <span class="s1">&#39;auxLoginCertifications&#39;</span> <span class="p">=</span> <span class="s1">&#39;Professional certifications&#39;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="schema-extension">Schema Extension</h2>
+<h3 id="powershell-deployment">PowerShell Deployment</h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Import AD Schema module</span>
+<span class="nb">Import-Module</span> <span class="n">ActiveDirectory</span>
+
+<span class="c"># Create new auxiliary class</span>
+<span class="nv">$schemaPath</span> <span class="p">=</span> <span class="s2">&quot;CN=Schema,CN=Configuration,DC=login,DC=local&quot;</span>
+<span class="nv">$auxLoginClass</span> <span class="p">=</span> <span class="s2">&quot;CN=auxLogin,$schemaPath&quot;</span>
+
+<span class="nb">New-ADObject</span> <span class="n">-Name</span> <span class="s2">&quot;auxLogin&quot;</span> <span class="n">-Type</span> <span class="s2">&quot;classSchema&quot;</span> <span class="n">-Path</span> <span class="nv">$schemaPath</span> <span class="n">-OtherAttributes</span> <span class="p">@{</span>
+    <span class="n">objectClass</span> <span class="p">=</span> <span class="s2">&quot;classSchema&quot;</span>
+    <span class="n">ldapDisplayName</span> <span class="p">=</span> <span class="s2">&quot;auxLogin&quot;</span>
+    <span class="n">governsID</span> <span class="p">=</span> <span class="s2">&quot;1.2.840.113556.1.5.9999&quot;</span>
+    <span class="n">objectClassCategory</span> <span class="p">=</span> <span class="n">3</span>
+    <span class="n">systemOnly</span> <span class="p">=</span> <span class="nv">$false</span>
+    <span class="n">defaultObjectCategory</span> <span class="p">=</span> <span class="nv">$auxLoginClass</span>
+    <span class="n">mayContain</span> <span class="p">=</span> <span class="p">@(</span>
+        <span class="s2">&quot;auxLoginIMEINumber&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;auxLoginFleetVehicle&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;auxLoginGunRegistry&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;auxLoginProjects&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;auxLoginHandicap&quot;</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="bulk-import-support">Bulk Import Support</h2>
+<h3 id="ldif-import-example">LDIF Import Example</h3>
+<div class="highlight"><pre><span></span><code><span class="k">dn</span><span class="p">:</span><span class="w"> </span><span class="na">CN</span><span class="o">=</span><span class="s">Schema</span><span class="p">,</span><span class="na">CN</span><span class="o">=</span><span class="s">Configuration</span><span class="p">,</span><span class="na">DC</span><span class="o">=</span><span class="s">login</span><span class="p">,</span><span class="na">DC</span><span class="o">=</span><span class="s">local</span>
+<span class="k">changetype</span><span class="p">:</span><span class="w"> </span><span class="k">modify</span>
+<span class="k">add</span><span class="p">:</span><span class="w"> </span><span class="na">attributeTypes</span>
+<span class="na">attributeTypes</span><span class="p">:</span><span class="s"> (</span>
+<span class="w">    </span><span class="s">1.2.840.113556.1.4.9001</span>
+<span class="w">    </span><span class="s">NAME &#39;auxLoginIMEINumber&#39;</span>
+<span class="w">    </span><span class="s">SYNTAX &#39;1.3.6.1.4.1.1466.115.121.1.15&#39;</span>
+<span class="w">    </span><span class="s">SINGLE-VALUE</span>
+<span class="err">)</span>
+<span class="p">-</span>
+<span class="k">add</span><span class="p">:</span><span class="w"> </span><span class="na">attributeTypes</span>
+<span class="na">attributeTypes</span><span class="p">:</span><span class="s"> (</span>
+<span class="w">    </span><span class="s">1.2.840.113556.1.4.9002</span>
+<span class="w">    </span><span class="s">NAME &#39;auxLoginFleetVehicle&#39;</span>
+<span class="w">    </span><span class="s">SYNTAX &#39;1.3.6.1.4.1.1466.115.121.1.15&#39;</span>
+<span class="w">    </span><span class="s">SINGLE-VALUE</span>
+<span class="err">)</span>
+</code></pre></div>
+<h3 id="csv-bulk-import-tool">CSV Bulk Import Tool</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">ldap3</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">AuxLoginBulkImporter</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ldap_server</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">admin_dn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server</span> <span class="o">=</span> <span class="n">ldap3</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="n">ldap_server</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conn</span> <span class="o">=</span> <span class="n">ldap3</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="p">,</span> 
+            <span class="n">admin_dn</span><span class="p">,</span> 
+            <span class="n">password</span><span class="p">,</span> 
+            <span class="n">auto_bind</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">import_from_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">csv_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Import auxLogin attributes from CSV&quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">csv_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_update_user_attributes</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_update_user_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update user with auxLogin attributes&quot;&quot;&quot;</span>
+        <span class="n">user_dn</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;CN=</span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">,OU=Users,DC=login,DC=local&quot;</span>
+
+        <span class="n">attributes</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;auxLoginIMEINumber&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;imei&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;auxLoginFleetVehicle&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;vehicle&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;auxLoginProjects&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;projects&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;auxLoginHandicap&#39;</span><span class="p">:</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;handicap&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="o">.</span><span class="n">modify</span><span class="p">(</span><span class="n">user_dn</span><span class="p">,</span> 
+            <span class="p">{</span><span class="n">attr</span><span class="p">:</span> <span class="p">[(</span><span class="n">ldap3</span><span class="o">.</span><span class="n">MODIFY_REPLACE</span><span class="p">,</span> <span class="p">[</span><span class="n">val</span><span class="p">])]</span> 
+             <span class="k">for</span> <span class="n">attr</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">attributes</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">val</span><span class="p">}</span>
+        <span class="p">)</span>
+
+<span class="c1"># Usage Example</span>
+<span class="n">importer</span> <span class="o">=</span> <span class="n">AuxLoginBulkImporter</span><span class="p">(</span>
+    <span class="s1">&#39;ldap://dc.login.local&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;CN=Admin,DC=login,DC=local&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;password&#39;</span>
+<span class="p">)</span>
+<span class="n">importer</span><span class="o">.</span><span class="n">import_from_csv</span><span class="p">(</span><span class="s1">&#39;aux_login_data.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="enhanced-audit-tracking">Enhanced Audit Tracking</h2>
+<h3 id="attribute-change-logging">Attribute Change Logging</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">AuxLoginAuditor</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setup_database</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">setup_database</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create audit tables&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            CREATE TABLE IF NOT EXISTS attribute_changes (</span>
+<span class="s2">                id INTEGER PRIMARY KEY,</span>
+<span class="s2">                user_dn TEXT NOT NULL,</span>
+<span class="s2">                attribute TEXT NOT NULL,</span>
+<span class="s2">                old_value TEXT,</span>
+<span class="s2">                new_value TEXT,</span>
+<span class="s2">                changed_by TEXT NOT NULL,</span>
+<span class="s2">                change_time TIMESTAMP,</span>
+<span class="s2">                source_ip TEXT,</span>
+<span class="s2">                change_location TEXT</span>
+<span class="s2">            )</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">log_change</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">change_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Log attribute modification&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            INSERT INTO attribute_changes (</span>
+<span class="s2">                user_dn, attribute, old_value, new_value,</span>
+<span class="s2">                changed_by, change_time, source_ip, change_location</span>
+<span class="s2">            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="p">,</span> <span class="p">(</span>
+            <span class="n">change_data</span><span class="p">[</span><span class="s1">&#39;user_dn&#39;</span><span class="p">],</span>
+            <span class="n">change_data</span><span class="p">[</span><span class="s1">&#39;attribute&#39;</span><span class="p">],</span>
+            <span class="n">change_data</span><span class="p">[</span><span class="s1">&#39;old_value&#39;</span><span class="p">],</span>
+            <span class="n">change_data</span><span class="p">[</span><span class="s1">&#39;new_value&#39;</span><span class="p">],</span>
+            <span class="n">change_data</span><span class="p">[</span><span class="s1">&#39;changed_by&#39;</span><span class="p">],</span>
+            <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(),</span>
+            <span class="n">change_data</span><span class="p">[</span><span class="s1">&#39;source_ip&#39;</span><span class="p">],</span>
+            <span class="n">change_data</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span>
+        <span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_audit_trail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_dn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Retrieve audit history for a user&quot;&quot;&quot;</span>
+        <span class="n">cursor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            SELECT * FROM attribute_changes</span>
+<span class="s2">            WHERE user_dn = ?</span>
+<span class="s2">            ORDER BY change_time DESC</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">user_dn</span><span class="p">,))</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()]</span>
+</code></pre></div>
+<h2 id="schema-validation">Schema Validation</h2>
+<h3 id="health-check-tool">Health Check Tool</h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">ldap3</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">SchemaHealthChecker</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ldap_server</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">admin_dn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">server</span> <span class="o">=</span> <span class="n">ldap3</span><span class="o">.</span><span class="n">Server</span><span class="p">(</span><span class="n">ldap_server</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conn</span> <span class="o">=</span> <span class="n">ldap3</span><span class="o">.</span><span class="n">Connection</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">server</span><span class="p">,</span> 
+            <span class="n">admin_dn</span><span class="p">,</span> 
+            <span class="n">password</span><span class="p">,</span> 
+            <span class="n">auto_bind</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">check_schema_health</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Perform comprehensive schema health check&quot;&quot;&quot;</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;missing_attributes&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;conflicts&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;invalid_syntax&#39;</span><span class="p">:</span> <span class="p">[],</span>
+            <span class="s1">&#39;recommendations&#39;</span><span class="p">:</span> <span class="p">[]</span>
+        <span class="p">}</span>
+
+        <span class="c1"># Check required attributes</span>
+        <span class="n">required_attrs</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;auxLoginIMEINumber&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;auxLoginFleetVehicle&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;auxLoginGunRegistry&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;auxLoginProjects&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;auxLoginHandicap&#39;</span>
+        <span class="p">]</span>
+
+        <span class="n">schema_attrs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_schema_attributes</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">required_attrs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">attr</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">schema_attrs</span><span class="p">:</span>
+                <span class="n">results</span><span class="p">[</span><span class="s1">&#39;missing_attributes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span>
+
+        <span class="c1"># Check for conflicts</span>
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">schema_attrs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">attr</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;auxLogin&#39;</span><span class="p">):</span>
+                <span class="n">conflicts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_attribute_conflicts</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">conflicts</span><span class="p">:</span>
+                    <span class="n">results</span><span class="p">[</span><span class="s1">&#39;conflicts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">conflicts</span><span class="p">)</span>
+
+        <span class="c1"># Validate syntax</span>
+        <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">schema_attrs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_attribute_syntax</span><span class="p">(</span><span class="n">attr</span><span class="p">):</span>
+                <span class="n">results</span><span class="p">[</span><span class="s1">&#39;invalid_syntax&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">results</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_schema_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get all schema attributes&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+            <span class="s1">&#39;CN=Schema,CN=Configuration,DC=login,DC=local&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;(objectClass=attributeSchema)&#39;</span><span class="p">,</span>
+            <span class="n">attributes</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lDAPDisplayName&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">entry</span><span class="o">.</span><span class="n">lDAPDisplayName</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="o">.</span><span class="n">entries</span><span class="p">]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_check_attribute_conflicts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Check for attribute naming conflicts&quot;&quot;&quot;</span>
+        <span class="n">conflicts</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+            <span class="s1">&#39;CN=Schema,CN=Configuration,DC=login,DC=local&#39;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s1">&#39;(&amp;(objectClass=attributeSchema)(!(lDAPDisplayName=</span><span class="si">{</span><span class="n">attr</span><span class="si">}</span><span class="s1">))(name=*</span><span class="si">{</span><span class="n">attr</span><span class="si">}</span><span class="s1">*))&#39;</span><span class="p">,</span>
+            <span class="n">attributes</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;lDAPDisplayName&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">entry</span><span class="o">.</span><span class="n">lDAPDisplayName</span><span class="o">.</span><span class="n">value</span> <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="o">.</span><span class="n">entries</span><span class="p">]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_validate_attribute_syntax</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attr</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Validate attribute syntax&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+            <span class="s1">&#39;CN=Schema,CN=Configuration,DC=login,DC=local&#39;</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s1">&#39;(lDAPDisplayName=</span><span class="si">{</span><span class="n">attr</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span>
+            <span class="n">attributes</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;attributeSyntax&#39;</span><span class="p">,</span> <span class="s1">&#39;oMSyntax&#39;</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="o">.</span><span class="n">entries</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">entry</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conn</span><span class="o">.</span><span class="n">entries</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="nb">all</span><span class="p">([</span>
+            <span class="n">entry</span><span class="o">.</span><span class="n">attributeSyntax</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="n">entry</span><span class="o">.</span><span class="n">oMSyntax</span><span class="o">.</span><span class="n">value</span>
+        <span class="p">])</span>
+
+<span class="c1"># Usage Example</span>
+<span class="n">checker</span> <span class="o">=</span> <span class="n">SchemaHealthChecker</span><span class="p">(</span>
+    <span class="s1">&#39;ldap://dc.login.local&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;CN=Admin,DC=login,DC=local&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;password&#39;</span>
+<span class="p">)</span>
+
+<span class="n">health_report</span> <span class="o">=</span> <span class="n">checker</span><span class="o">.</span><span class="n">check_schema_health</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Schema Health Report:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">category</span><span class="p">,</span> <span class="n">issues</span> <span class="ow">in</span> <span class="n">health_report</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">category</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">issue</span> <span class="ow">in</span> <span class="n">issues</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- </span><span class="si">{</span><span class="n">issue</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="deployment-validation">Deployment Validation</h2>
+<h3 id="pre-deployment-checks">Pre-deployment Checks</h3>
+<div class="highlight"><pre><span></span><code><span class="c"># Validate schema before deployment</span>
+<span class="k">function</span> <span class="nb">Test-AuxLoginSchema</span> <span class="p">{</span>
+    <span class="k">param</span><span class="p">(</span>
+        <span class="no">[string]</span><span class="nv">$Domain</span> <span class="p">=</span> <span class="s2">&quot;login.local&quot;</span><span class="p">,</span>
+        <span class="no">[string[]]</span><span class="nv">$RequiredAttributes</span>
+    <span class="p">)</span>
+
+    <span class="nv">$results</span> <span class="p">=</span> <span class="p">@{</span>
+        <span class="n">Success</span> <span class="p">=</span> <span class="nv">$true</span>
+        <span class="n">Messages</span> <span class="p">=</span> <span class="p">@()</span>
+    <span class="p">}</span>
+
+    <span class="c"># Check Schema Admin rights</span>
+    <span class="nv">$identity</span> <span class="p">=</span> <span class="no">[Security.Principal.WindowsIdentity]</span><span class="p">::</span><span class="n">GetCurrent</span><span class="p">()</span>
+    <span class="nv">$principal</span> <span class="p">=</span> <span class="nb">New-Object</span> <span class="n">Security</span><span class="p">.</span><span class="n">Principal</span><span class="p">.</span><span class="n">WindowsPrincipal</span><span class="p">(</span><span class="nv">$identity</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="nv">$principal</span><span class="p">.</span><span class="n">IsInRole</span><span class="p">(</span><span class="no">[Security.Principal.WindowsBuiltInRole]</span><span class="p">::</span><span class="n">Administrator</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nv">$results</span><span class="p">.</span><span class="n">Success</span> <span class="p">=</span> <span class="nv">$false</span>
+        <span class="nv">$results</span><span class="p">.</span><span class="n">Messages</span> <span class="p">+=</span> <span class="s2">&quot;Error: Must run as Schema Admin&quot;</span>
+    <span class="p">}</span>
+
+    <span class="c"># Check Schema Master availability</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="nv">$schemaNC</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Get-ADRootDSE</span><span class="p">).</span><span class="n">schemaNamingContext</span>
+        <span class="nb">Get-ADObject</span> <span class="nv">$schemaNC</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+        <span class="nv">$results</span><span class="p">.</span><span class="n">Success</span> <span class="p">=</span> <span class="nv">$false</span>
+        <span class="nv">$results</span><span class="p">.</span><span class="n">Messages</span> <span class="p">+=</span> <span class="s2">&quot;Error: Cannot access Schema Master&quot;</span>
+    <span class="p">}</span>
+
+    <span class="c"># Validate attribute names</span>
+    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$attr</span> <span class="k">in</span> <span class="nv">$RequiredAttributes</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$attr</span> <span class="o">-notmatch</span> <span class="s1">&#39;^auxLogin[A-Z]&#39;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$results</span><span class="p">.</span><span class="n">Success</span> <span class="p">=</span> <span class="nv">$false</span>
+            <span class="nv">$results</span><span class="p">.</span><span class="n">Messages</span> <span class="p">+=</span> <span class="s2">&quot;Error: Invalid attribute name format: $attr&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="nv">$results</span>
+<span class="p">}</span>
+
+<span class="c"># Example usage</span>
+<span class="nv">$checkResults</span> <span class="p">=</span> <span class="nb">Test-AuxLoginSchema</span> <span class="n">-RequiredAttributes</span> <span class="p">@(</span>
+    <span class="s1">&#39;auxLoginIMEINumber&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;auxLoginFleetVehicle&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;auxLoginGunRegistry&#39;</span>
+<span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$checkResults</span><span class="p">.</span><span class="n">Success</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">Write-Host</span> <span class="s2">&quot;Schema validation passed!&quot;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nb">Write-Host</span> <span class="s2">&quot;Schema validation failed:&quot;</span>
+    <span class="nv">$checkResults</span><span class="p">.</span><span class="n">Messages</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span> <span class="nb">Write-Host</span> <span class="s2">&quot;- $_&quot;</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<p>✅ <strong>Additional tracking attributes</strong><br />
+✅ <strong>Enhanced audit logging</strong><br />
+✅ <strong>Bulk import tools</strong><br />
+✅ <strong>Schema validation</strong><br />
+✅ <strong>Health monitoring</strong>  </p>
+<h2 id="next-steps">Next Steps</h2>
+<ol>
+<li>Deploy new attributes using LDIF or PowerShell</li>
+<li>Import existing data using CSV tool</li>
+<li>Enable enhanced audit logging</li>
+<li>Run schema health check</li>
+<li>Monitor attribute usage and performance</li>
+</ol>
+<hr />
+<p><em>AD-YOLO Schema Extension provides a robust framework for tracking modern enterprise assets while maintaining AD compatibility and security.</em> 🎯 </p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
