@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Components - AI-DC</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .site-header {
+            border-top: 5px solid #0077cc;
+            border-bottom: 1px solid #e8e8e8;
+            padding: 1rem;
+            background-color: #f8f9fa;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-nav {
+            display: flex;
+            gap: 20px;
+        }
+        .site-nav a {
+            color: #0077cc;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .site-nav a:hover {
+            background-color: #e7f1ff;
+        }
+        .site-title {
+            color: #0077cc;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1 {
+            color: #0077cc;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .component-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid #e8e8e8;
+        }
+        .component-card h3 {
+            color: #34495e;
+            margin: 0 0 1rem;
+        }
+        .component-card p {
+            margin: 0 0 1rem;
+        }
+        .component-card .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #0077cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        .component-card .btn:hover {
+            background-color: #0066b3;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <a href="index.html" class="site-title">AI-DC</a>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="documentation.html">Documentation</a>
+                <a href="components.html">Components</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1>AI-DC Components</h1>
+        
+        <h2>Core Components</h2>
+        <div class="component-grid">
+            <div class="component-card">
+                <h3>AD-YOLO Core</h3>
+                <p>Real-time Active Directory monitoring and automation system with advanced AI capabilities.</p>
+                <a href="28_AD_YOLO_Real_Time_AD_Monitoring.html" class="btn">Learn More</a>
+            </div>
+            
+            <div class="component-card">
+                <h3>Firebase Integration</h3>
+                <p>Mobile-first synchronization system for real-time data access and management.</p>
+                <a href="29_AD_YOLO_Firebase_Sync.html" class="btn">Learn More</a>
+            </div>
+            
+            <div class="component-card">
+                <h3>Vector Database</h3>
+                <p>AI-powered search and analytics using advanced vector embeddings.</p>
+                <a href="31_AD_YOLO_Vector_DB_RAG_AI.html" class="btn">Learn More</a>
+            </div>
+        </div>
+
+        <h2>Implementation Tools</h2>
+        <div class="component-grid">
+            <div class="component-card">
+                <h3>Schema Extension</h3>
+                <p>Extended AD schema with auxLogin attributes for enhanced user management.</p>
+                <a href="32_AD_YOLO_Schema_Extension_AuxLogin.html" class="btn">Learn More</a>
+            </div>
+            
+            <div class="component-card">
+                <h3>Firewall Sync</h3>
+                <p>Automated firewall rule management integrated with Active Directory.</p>
+                <a href="33_AD_YOLO_AD_Firewall_Sync.html" class="btn">Learn More</a>
+            </div>
+            
+            <div class="component-card">
+                <h3>Ticketing System</h3>
+                <p>Integrated helpdesk and ticketing system with AI-powered automation.</p>
+                <a href="30_AD_YOLO_Ticketing_Helpdesk_Integration.html" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

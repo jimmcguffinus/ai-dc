@@ -15,6 +15,27 @@
             border-top: 5px solid #0077cc;
             border-bottom: 1px solid #e8e8e8;
             padding: 1rem;
+            background-color: #f8f9fa;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-nav {
+            display: flex;
+            gap: 20px;
+        }
+        .site-nav a {
+            color: #0077cc;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .site-nav a:hover {
+            background-color: #e7f1ff;
         }
         .site-title {
             color: #0077cc;
@@ -48,7 +69,14 @@
 </head>
 <body>
     <header class="site-header">
-        <a href="/ai-dc/" class="site-title">AI-DC</a>
+        <div class="header-content">
+            <a href="index.html" class="site-title">AI-DC</a>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="documentation.html">Documentation</a>
+                <a href="components.html">Components</a>
+            </nav>
+        </div>
     </header>
 
     <div class="home-content">

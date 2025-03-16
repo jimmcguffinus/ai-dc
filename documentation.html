@@ -15,6 +15,27 @@
             border-top: 5px solid #0077cc;
             border-bottom: 1px solid #e8e8e8;
             padding: 1rem;
+            background-color: #f8f9fa;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-nav {
+            display: flex;
+            gap: 20px;
+        }
+        .site-nav a {
+            color: #0077cc;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .site-nav a:hover {
+            background-color: #e7f1ff;
         }
         .site-title {
             color: #0077cc;
@@ -28,6 +49,32 @@
         }
         h1 {
             color: #0077cc;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+        h3 {
+            color: #34495e;
+            margin: 1.5rem 0 1rem;
+        }
+        ul {
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: Monaco, Consolas, "Courier New", monospace;
         }
         a {
             color: #0077cc;
@@ -40,7 +87,14 @@
 </head>
 <body>
     <header class="site-header">
-        <a href="/ai-dc/" class="site-title">AI-DC</a>
+        <div class="header-content">
+            <a href="index.html" class="site-title">AI-DC</a>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+                <a href="documentation.html">Documentation</a>
+                <a href="components.html">Components</a>
+            </nav>
+        </div>
     </header>
 
     <div class="content">
