@@ -7,12 +7,30 @@ url: "https://jimmcguffinus.github.io"
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-relative-links
+
+# Site settings
+show_excerpts: true
+relative_links:
+  enabled: true
+  collections: true
 
 # Navigation
 header_pages:
   - about.md
   - documentation.md
-  - components.md 
+  - components.md
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor 

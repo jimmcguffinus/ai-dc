@@ -1,12 +1,18 @@
 ---
-layout: default
+layout: home
 title: Home
 ---
 
-# 🚀 AI-DC: Artificial Intelligence for Data Centers
+<div class="home-content" markdown="1">
+
+# Welcome to AI-DC
+
+Your AI-driven data center automation hub, revolutionizing infrastructure management with cutting-edge artificial intelligence.
 
 ## Overview
+
 **AI-DC** is a cutting-edge initiative aimed at **integrating artificial intelligence into data center operations** to optimize **networking, colocation, cloud services, and security**. By leveraging **AI-driven automation**, this project aims to:
+
 - Reduce **operational inefficiencies**
 - Enhance **real-time monitoring & predictive analytics**
 - Improve **data center security & threat detection**
@@ -52,4 +58,6 @@ title: Home
 <div class="cta-buttons" style="text-align: center; margin-top: 40px;">
     <a href="{{ '/documentation' | relative_url }}" class="btn">View Documentation</a>
     <a href="{{ '/components' | relative_url }}" class="btn" style="margin-left: 20px;">Explore Components</a>
+</div>
+
 </div> 
