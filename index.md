@@ -50,6 +50,6 @@ title: Home
    - Contribute to the project
 
 <div class="cta-buttons" style="text-align: center; margin-top: 40px;">
-    <a href="documentation" class="btn">View Documentation</a>
-    <a href="components" class="btn" style="margin-left: 20px;">Explore Components</a>
+    <a href="{{ '/documentation' | relative_url }}" class="btn">View Documentation</a>
+    <a href="{{ '/components' | relative_url }}" class="btn" style="margin-left: 20px;">Explore Components</a>
 </div> 
