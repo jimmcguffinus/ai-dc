@@ -1,0 +1,18 @@
+title: AI-DC
+description: AI-powered data center transformation
+theme: minima
+author: Jim McGuffin
+baseurl: "/ai-dc"
+url: "https://jimmcguffinus.github.io"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Navigation
+header_pages:
+  - about.md
+  - documentation.md
+  - components.md 
