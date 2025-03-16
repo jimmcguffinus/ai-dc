@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,16 +137,17 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / 16 Network Automation AI
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: 16 Network Automation AI
 permalink: /docs/16_Network_Automation_AI/</p>
 <hr />
-<h1>🚀 AI-Powered Network Automation</h1>
-<h2>📌 Overview</h2>
+<h1 id="ai-powered-network-automation">🚀 AI-Powered Network Automation</h1>
+<h2 id="overview">📌 Overview</h2>
 <p>As network complexity increases, AI-driven automation is revolutionizing how network engineers manage infrastructure. This document outlines how <strong>AI, scripting, and automation</strong> can optimize Login's <strong>NOC operations, network provisioning, and security monitoring</strong>.</p>
-<h2>🛠️ AI-Driven Network Automation Features</h2>
-<h3>1️⃣ <strong>Automated Network Troubleshooting</strong></h3>
+<h2 id="ai-driven-network-automation-features">🛠️ AI-Driven Network Automation Features</h2>
+<h3 id="1-automated-network-troubleshooting">1️⃣ <strong>Automated Network Troubleshooting</strong></h3>
 <p>✅ AI-powered <strong>diagnostics</strong> using real-time monitoring &amp; machine learning.<br />
 ✅ Automates <strong>ping, traceroute, packet loss analysis</strong>, and <strong>BGP/OSPF route verification</strong>.<br />
 ✅ Predicts <strong>network congestion &amp; latency issues</strong> before they impact performance.<br />
@@ -98,14 +155,14 @@ permalink: /docs/16_Network_Automation_AI/</p>
 <p><strong>💡 Example:</strong><br />
 A <strong>Python-based AI script</strong> detects a high-latency event on an MPLS link and recommends <strong>re-routing traffic dynamically</strong>.</p>
 <hr />
-<h3>2️⃣ <strong>AI-Powered Network Health Monitoring</strong></h3>
+<h3 id="2-ai-powered-network-health-monitoring">2️⃣ <strong>AI-Powered Network Health Monitoring</strong></h3>
 <p>✅ <strong>Real-time AI insights</strong> into bandwidth utilization, jitter, and packet loss.<br />
 ✅ Proactive <strong>alerts for switch/router/firewall failures before impact</strong>.<br />
 ✅ AI-driven <strong>QoS optimization</strong> for <strong>VoIP, cloud services, &amp; SD-WAN traffic prioritization</strong>.  </p>
 <p><strong>💡 Example:</strong><br />
 AI detects <strong>abnormal VoIP packet loss</strong> and <strong>automatically adjusts QoS policies</strong> to optimize voice traffic.</p>
 <hr />
-<h3>3️⃣ <strong>Predictive Maintenance &amp; Auto-Healing Networks</strong></h3>
+<h3 id="3-predictive-maintenance-auto-healing-networks">3️⃣ <strong>Predictive Maintenance &amp; Auto-Healing Networks</strong></h3>
 <p>✅ Machine learning detects <strong>anomalies &amp; impending hardware failures</strong>.<br />
 ✅ Auto-scheduling <strong>switch/router/firewall firmware updates</strong> with zero downtime.<br />
 ✅ AI predicts <strong>network capacity trends</strong> and <strong>recommends infrastructure scaling</strong>.<br />
@@ -113,19 +170,19 @@ AI detects <strong>abnormal VoIP packet loss</strong> and <strong>automatically 
 <p><strong>💡 Example:</strong><br />
 If a firewall module <strong>shows degraded performance</strong>, AI automatically <strong>fails over to a secondary device</strong>.</p>
 <hr />
-<h3>4️⃣ <strong>Intelligent Network Provisioning &amp; Security Automation</strong></h3>
+<h3 id="4-intelligent-network-provisioning-security-automation">4️⃣ <strong>Intelligent Network Provisioning &amp; Security Automation</strong></h3>
 <p>✅ AI-driven <strong>configuration templating</strong> for switch/router/firewall setups.<br />
 ✅ Auto-generates <strong>ACLs &amp; security rules based on detected threats</strong>.<br />
 ✅ Dynamic <strong>IP reputation scoring &amp; anomaly detection for network security</strong>.  </p>
 <p><strong>💡 Example:</strong><br />
 AI detects <strong>unauthorized access attempts</strong> on a VPN gateway and <strong>auto-blocks the source IP</strong> in real time.</p>
 <hr />
-<h2>🔗 <strong>Integration with Existing Login Infrastructure</strong></h2>
+<h2 id="integration-with-existing-login-infrastructure">🔗 <strong>Integration with Existing Login Infrastructure</strong></h2>
 <p>✅ <strong>Works with Cisco, Juniper, Mikrotik, Adtran, &amp; Fortinet devices</strong>.<br />
 ✅ AI-powered <strong>PowerShell &amp; Python scripts</strong> automate network administration.<br />
 ✅ API-based <strong>integration with Login's NutShell CRM &amp; NOC dashboards</strong>.  </p>
 <hr />
-<h2>📌 <strong>Next Steps</strong></h2>
+<h2 id="next-steps">📌 <strong>Next Steps</strong></h2>
 <p>1️⃣ Implement <strong>AI-driven network monitoring</strong> for real-time anomaly detection.<br />
 2️⃣ Develop <strong>automation scripts in Python &amp; PowerShell</strong> for provisioning &amp; troubleshooting.<br />
 3️⃣ Integrate AI insights into <strong>Login's NOC workflows &amp; security policies</strong>.<br />
@@ -133,6 +190,7 @@ AI detects <strong>unauthorized access attempts</strong> on a VPN gateway and <s
 <hr />
 <p>🚀 <strong>AI isn't just an optimization—it's the future of network engineering.</strong><br />
 By leveraging <strong>AI-driven automation</strong>, Login's <strong>NOC engineers can reduce troubleshooting time, enhance uptime, and proactively resolve issues before they impact customers.</strong> </p>
+        </div>
     </div>
 </body>
 </html>

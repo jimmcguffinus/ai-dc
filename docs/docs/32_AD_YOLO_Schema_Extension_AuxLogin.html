@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32 AD YOLO Schema Extension AuxLogin</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f5f6fa;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav {
+            background: #34495e;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .nav a:hover {
+            background: #2c3e50;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #2980b9;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            border: 1px solid #e9ecef;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+        .breadcrumbs {
+            padding: 1rem;
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>32 AD YOLO Schema Extension AuxLogin</h1>
+    </div>
+    
+    <div class="nav">
+        <a href="/ai-dc/index.html">Home</a>
+        <a href="/ai-dc/documentation.html">Documentation</a>
+        <a href="/ai-dc/components.html">Components</a>
+    </div>
+
+    <div class="content">
+        <div class="breadcrumbs">
+            <a href="/ai-dc/index.html">Home</a> / docs / 32 AD YOLO Schema Extension AuxLogin
+        </div>
+        <div class="main-content">
+            <hr />
+<p>layout: page
+title: 32 AD YOLO Schema Extension AuxLogin
+permalink: /docs/32_AD_YOLO_Schema_Extension_AuxLogin/</p>
+<hr />
+<h1 id="ad-yolo-schema-extension-auxlogin">AD-YOLO Schema Extension (auxLogin)</h1>
+<h2 id="overview">Overview</h2>
+<p>AD-YOLO extends Active Directory schema with auxiliary attributes (<code>auxLogin</code>) to track modern enterprise assets and user properties. This extension enables granular tracking of devices, vehicles, security equipment, and employee-specific data while maintaining AD's core functionality.</p>
+<h2 id="extended-attributes">Extended Attributes</h2>
+<h3 id="core-attributes">Core Attributes</h3>
+<pre><code class="language-powershell"># Base auxLogin attributes
+$attributes = @{
+    'auxLoginInstalledApps' = 'List of installed applications'
+    'auxLoginSecurityCameras' = 'Assigned security camera IDs'
+    'auxLogin4KTVs' = 'Managed 4K display assets'
+    'auxLoginMetaGlasses' = 'AR/VR device assignments'
+}
+</code></pre>
+<h3 id="new-extended-attributes">New Extended Attributes</h3>
+<pre><code class="language-powershell"># Additional tracking attributes
+$newAttributes = @{
+    'auxLoginIMEINumber' = 'Mobile device IMEI tracking'
+    'auxLoginFleetVehicle' = 'Company vehicle assignments'
+    'auxLoginGunRegistry' = 'Security weapon tracking'
+    'auxLoginProjects' = 'Active project assignments'
+    'auxLoginHandicap' = 'Golf handicap for perks program'
+    'auxLoginBadgeLevel' = 'Security clearance level'
+    'auxLoginParkingSpot' = 'Assigned parking location'
+    'auxLoginCertifications' = 'Professional certifications'
+}
+</code></pre>
+<h2 id="schema-extension">Schema Extension</h2>
+<h3 id="powershell-deployment">PowerShell Deployment</h3>
+<pre><code class="language-powershell"># Import AD Schema module
+Import-Module ActiveDirectory
+
+# Create new auxiliary class
+$schemaPath = &quot;CN=Schema,CN=Configuration,DC=login,DC=local&quot;
+$auxLoginClass = &quot;CN=auxLogin,$schemaPath&quot;
+
+New-ADObject -Name &quot;auxLogin&quot; -Type &quot;classSchema&quot; -Path $schemaPath -OtherAttributes @{
+    objectClass = &quot;classSchema&quot;
+    ldapDisplayName = &quot;auxLogin&quot;
+    governsID = &quot;1.2.840.113556.1.5.9999&quot;
+    objectClassCategory = 3
+    systemOnly = $false
+    defaultObjectCategory = $auxLoginClass
+    mayContain = @(
+        &quot;auxLoginIMEINumber&quot;,
+        &quot;auxLoginFleetVehicle&quot;,
+        &quot;auxLoginGunRegistry&quot;,
+        &quot;auxLoginProjects&quot;,
+        &quot;auxLoginHandicap&quot;
+    )
+}
+</code></pre>
+<h2 id="bulk-import-support">Bulk Import Support</h2>
+<h3 id="ldif-import-example">LDIF Import Example</h3>
+<pre><code class="language-ldif">dn: CN=Schema,CN=Configuration,DC=login,DC=local
+changetype: modify
+add: attributeTypes
+attributeTypes: (
+    1.2.840.113556.1.4.9001
+    NAME 'auxLoginIMEINumber'
+    SYNTAX '1.3.6.1.4.1.1466.115.121.1.15'
+    SINGLE-VALUE
+)
+-
+add: attributeTypes
+attributeTypes: (
+    1.2.840.113556.1.4.9002
+    NAME 'auxLoginFleetVehicle'
+    SYNTAX '1.3.6.1.4.1.1466.115.121.1.15'
+    SINGLE-VALUE
+)
+</code></pre>
+<h3 id="csv-bulk-import-tool">CSV Bulk Import Tool</h3>
+<pre><code class="language-python">import csv
+import ldap3
+from typing import Dict, List
+
+class AuxLoginBulkImporter:
+    def __init__(self, ldap_server: str, admin_dn: str, password: str):
+        self.server = ldap3.Server(ldap_server)
+        self.conn = ldap3.Connection(
+            self.server, 
+            admin_dn, 
+            password, 
+            auto_bind=True
+        )
+
+    def import_from_csv(self, csv_path: str):
+        &quot;&quot;&quot;Import auxLogin attributes from CSV&quot;&quot;&quot;
+        with open(csv_path, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                self._update_user_attributes(row)
+
+    def _update_user_attributes(self, data: Dict):
+        &quot;&quot;&quot;Update user with auxLogin attributes&quot;&quot;&quot;
+        user_dn = f&quot;CN={data['username']},OU=Users,DC=login,DC=local&quot;
+
+        attributes = {
+            'auxLoginIMEINumber': data.get('imei', ''),
+            'auxLoginFleetVehicle': data.get('vehicle', ''),
+            'auxLoginProjects': data.get('projects', '').split(','),
+            'auxLoginHandicap': data.get('handicap', '')
+        }
+
+        self.conn.modify(user_dn, 
+            {attr: [(ldap3.MODIFY_REPLACE, [val])] 
+             for attr, val in attributes.items() if val}
+        )
+
+# Usage Example
+importer = AuxLoginBulkImporter(
+    'ldap://dc.login.local',
+    'CN=Admin,DC=login,DC=local',
+    'password'
+)
+importer.import_from_csv('aux_login_data.csv')
+</code></pre>
+<h2 id="enhanced-audit-tracking">Enhanced Audit Tracking</h2>
+<h3 id="attribute-change-logging">Attribute Change Logging</h3>
+<pre><code class="language-python">from datetime import datetime
+import sqlite3
+from typing import Dict
+
+class AuxLoginAuditor:
+    def __init__(self, db_path: str):
+        self.conn = sqlite3.connect(db_path)
+        self.setup_database()
+
+    def setup_database(self):
+        &quot;&quot;&quot;Create audit tables&quot;&quot;&quot;
+        self.conn.execute(&quot;&quot;&quot;
+            CREATE TABLE IF NOT EXISTS attribute_changes (
+                id INTEGER PRIMARY KEY,
+                user_dn TEXT NOT NULL,
+                attribute TEXT NOT NULL,
+                old_value TEXT,
+                new_value TEXT,
+                changed_by TEXT NOT NULL,
+                change_time TIMESTAMP,
+                source_ip TEXT,
+                change_location TEXT
+            )
+        &quot;&quot;&quot;)
+
+    def log_change(self, change_data: Dict):
+        &quot;&quot;&quot;Log attribute modification&quot;&quot;&quot;
+        self.conn.execute(&quot;&quot;&quot;
+            INSERT INTO attribute_changes (
+                user_dn, attribute, old_value, new_value,
+                changed_by, change_time, source_ip, change_location
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        &quot;&quot;&quot;, (
+            change_data['user_dn'],
+            change_data['attribute'],
+            change_data['old_value'],
+            change_data['new_value'],
+            change_data['changed_by'],
+            datetime.now(),
+            change_data['source_ip'],
+            change_data['location']
+        ))
+        self.conn.commit()
+
+    def get_audit_trail(self, user_dn: str) -&gt; List[Dict]:
+        &quot;&quot;&quot;Retrieve audit history for a user&quot;&quot;&quot;
+        cursor = self.conn.execute(&quot;&quot;&quot;
+            SELECT * FROM attribute_changes
+            WHERE user_dn = ?
+            ORDER BY change_time DESC
+        &quot;&quot;&quot;, (user_dn,))
+
+        return [dict(row) for row in cursor.fetchall()]
+</code></pre>
+<h2 id="schema-validation">Schema Validation</h2>
+<h3 id="health-check-tool">Health Check Tool</h3>
+<pre><code class="language-python">from typing import List, Dict
+import ldap3
+
+class SchemaHealthChecker:
+    def __init__(self, ldap_server: str, admin_dn: str, password: str):
+        self.server = ldap3.Server(ldap_server)
+        self.conn = ldap3.Connection(
+            self.server, 
+            admin_dn, 
+            password, 
+            auto_bind=True
+        )
+
+    def check_schema_health(self) -&gt; Dict[str, List]:
+        &quot;&quot;&quot;Perform comprehensive schema health check&quot;&quot;&quot;
+        results = {
+            'missing_attributes': [],
+            'conflicts': [],
+            'invalid_syntax': [],
+            'recommendations': []
+        }
+
+        # Check required attributes
+        required_attrs = [
+            'auxLoginIMEINumber',
+            'auxLoginFleetVehicle',
+            'auxLoginGunRegistry',
+            'auxLoginProjects',
+            'auxLoginHandicap'
+        ]
+
+        schema_attrs = self._get_schema_attributes()
+
+        for attr in required_attrs:
+            if attr not in schema_attrs:
+                results['missing_attributes'].append(attr)
+
+        # Check for conflicts
+        for attr in schema_attrs:
+            if attr.startswith('auxLogin'):
+                conflicts = self._check_attribute_conflicts(attr)
+                if conflicts:
+                    results['conflicts'].extend(conflicts)
+
+        # Validate syntax
+        for attr in schema_attrs:
+            if not self._validate_attribute_syntax(attr):
+                results['invalid_syntax'].append(attr)
+
+        return results
+
+    def _get_schema_attributes(self) -&gt; List[str]:
+        &quot;&quot;&quot;Get all schema attributes&quot;&quot;&quot;
+        self.conn.search(
+            'CN=Schema,CN=Configuration,DC=login,DC=local',
+            '(objectClass=attributeSchema)',
+            attributes=['lDAPDisplayName']
+        )
+        return [entry.lDAPDisplayName.value for entry in self.conn.entries]
+
+    def _check_attribute_conflicts(self, attr: str) -&gt; List[str]:
+        &quot;&quot;&quot;Check for attribute naming conflicts&quot;&quot;&quot;
+        conflicts = []
+        self.conn.search(
+            'CN=Schema,CN=Configuration,DC=login,DC=local',
+            f'(&amp;(objectClass=attributeSchema)(!(lDAPDisplayName={attr}))(name=*{attr}*))',
+            attributes=['lDAPDisplayName']
+        )
+        return [entry.lDAPDisplayName.value for entry in self.conn.entries]
+
+    def _validate_attribute_syntax(self, attr: str) -&gt; bool:
+        &quot;&quot;&quot;Validate attribute syntax&quot;&quot;&quot;
+        self.conn.search(
+            'CN=Schema,CN=Configuration,DC=login,DC=local',
+            f'(lDAPDisplayName={attr})',
+            attributes=['attributeSyntax', 'oMSyntax']
+        )
+        if not self.conn.entries:
+            return False
+
+        entry = self.conn.entries[0]
+        return all([
+            entry.attributeSyntax.value,
+            entry.oMSyntax.value
+        ])
+
+# Usage Example
+checker = SchemaHealthChecker(
+    'ldap://dc.login.local',
+    'CN=Admin,DC=login,DC=local',
+    'password'
+)
+
+health_report = checker.check_schema_health()
+print(&quot;Schema Health Report:&quot;)
+for category, issues in health_report.items():
+    print(f&quot;\n{category.upper()}:&quot;)
+    for issue in issues:
+        print(f&quot;- {issue}&quot;)
+</code></pre>
+<h2 id="deployment-validation">Deployment Validation</h2>
+<h3 id="pre-deployment-checks">Pre-deployment Checks</h3>
+<pre><code class="language-powershell"># Validate schema before deployment
+function Test-AuxLoginSchema {
+    param(
+        [string]$Domain = &quot;login.local&quot;,
+        [string[]]$RequiredAttributes
+    )
+
+    $results = @{
+        Success = $true
+        Messages = @()
+    }
+
+    # Check Schema Admin rights
+    $identity = [Security.Principal.WindowsIdentity]::GetCurrent()
+    $principal = New-Object Security.Principal.WindowsPrincipal($identity)
+    if (-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+        $results.Success = $false
+        $results.Messages += &quot;Error: Must run as Schema Admin&quot;
+    }
+
+    # Check Schema Master availability
+    try {
+        $schemaNC = (Get-ADRootDSE).schemaNamingContext
+        Get-ADObject $schemaNC
+    } catch {
+        $results.Success = $false
+        $results.Messages += &quot;Error: Cannot access Schema Master&quot;
+    }
+
+    # Validate attribute names
+    foreach ($attr in $RequiredAttributes) {
+        if ($attr -notmatch '^auxLogin[A-Z]') {
+            $results.Success = $false
+            $results.Messages += &quot;Error: Invalid attribute name format: $attr&quot;
+        }
+    }
+
+    return $results
+}
+
+# Example usage
+$checkResults = Test-AuxLoginSchema -RequiredAttributes @(
+    'auxLoginIMEINumber',
+    'auxLoginFleetVehicle',
+    'auxLoginGunRegistry'
+)
+
+if ($checkResults.Success) {
+    Write-Host &quot;Schema validation passed!&quot;
+} else {
+    Write-Host &quot;Schema validation failed:&quot;
+    $checkResults.Messages | ForEach-Object { Write-Host &quot;- $_&quot; }
+}
+</code></pre>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<p>✅ <strong>Additional tracking attributes</strong><br />
+✅ <strong>Enhanced audit logging</strong><br />
+✅ <strong>Bulk import tools</strong><br />
+✅ <strong>Schema validation</strong><br />
+✅ <strong>Health monitoring</strong>  </p>
+<h2 id="next-steps">Next Steps</h2>
+<ol>
+<li>Deploy new attributes using LDIF or PowerShell</li>
+<li>Import existing data using CSV tool</li>
+<li>Enable enhanced audit logging</li>
+<li>Run schema health check</li>
+<li>Monitor attribute usage and performance</li>
+</ol>
+<hr />
+<p><em>AD-YOLO Schema Extension provides a robust framework for tracking modern enterprise assets while maintaining AD compatibility and security.</em> 🎯 </p>
+        </div>
+    </div>
+</body>
+</html>

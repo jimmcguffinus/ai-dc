@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,23 +137,24 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / 13 Video Surveillance AI
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: 13 Video Surveillance AI
 permalink: /docs/13_Video_Surveillance_AI/</p>
 <hr />
-<h1>📹 AI-Enhanced Video Surveillance</h1>
-<h2>📌 Overview</h2>
+<h1 id="ai-enhanced-video-surveillance">📹 AI-Enhanced Video Surveillance</h1>
+<h2 id="overview">📌 Overview</h2>
 <p>Login's Video Surveillance combines <strong>advanced HD cameras</strong> with <strong>AI-powered analytics</strong> to deliver <strong>comprehensive security monitoring</strong>. Our VALOR cloud platform provides <strong>24/7 intelligent surveillance, automated alerts, and business insights</strong> for enhanced security and operational efficiency.</p>
 <hr />
-<h2>🎥 1️⃣ Intelligent Video Monitoring</h2>
-<h3><strong>🎯 Security Benefits</strong></h3>
+<h2 id="1-intelligent-video-monitoring">🎥 1️⃣ Intelligent Video Monitoring</h2>
+<h3 id="security-benefits"><strong>🎯 Security Benefits</strong></h3>
 <p>✅ AI enables <strong>comprehensive protection</strong>:
 - <strong>Crime deterrence &amp; prevention</strong>
 - <strong>Employee accountability</strong>
 - <strong>Evidence documentation</strong>
 - <strong>Remote monitoring &amp; alerts</strong></p>
-<h3><strong>🔍 AI Video Analytics</strong></h3>
+<h3 id="ai-video-analytics"><strong>🔍 AI Video Analytics</strong></h3>
 <p>✅ AI provides <strong>intelligent monitoring</strong>:
 - <strong>Object detection &amp; tracking</strong>
 - <strong>Anomaly identification</strong>
@@ -106,14 +163,14 @@ permalink: /docs/13_Video_Surveillance_AI/</p>
 <p><strong>💡 Example:</strong><br />
 AI detects <strong>suspicious behavior</strong> → <strong>automatically alerts security</strong> and tracks subject movement.</p>
 <hr />
-<h2>☁️ 2️⃣ VALOR Cloud Platform</h2>
-<h3><strong>🎯 Real-Time Surveillance</strong></h3>
+<h2 id="2-valor-cloud-platform">☁️ 2️⃣ VALOR Cloud Platform</h2>
+<h3 id="real-time-surveillance"><strong>🎯 Real-Time Surveillance</strong></h3>
 <p>✅ AI powers <strong>24/7 monitoring</strong>:
 - <strong>HD video streaming</strong>
 - <strong>AI threat detection</strong>
 - <strong>Event-based notifications</strong>
 - <strong>Mobile app access</strong></p>
-<h3><strong>💾 Secure Storage</strong></h3>
+<h3 id="secure-storage"><strong>💾 Secure Storage</strong></h3>
 <p>✅ AI manages <strong>video data</strong>:
 - <strong>Multi-location redundancy</strong>
 - <strong>High-speed fiber network</strong>
@@ -122,14 +179,14 @@ AI detects <strong>suspicious behavior</strong> → <strong>automatically alerts
 <p><strong>💡 Example:</strong><br />
 AI identifies <strong>critical event</strong> → <strong>instantly backs up footage</strong> to multiple secure locations.</p>
 <hr />
-<h2>🤖 3️⃣ Advanced Security Features</h2>
-<h3><strong>📸 HD Camera Systems</strong></h3>
+<h2 id="3-advanced-security-features">🤖 3️⃣ Advanced Security Features</h2>
+<h3 id="hd-camera-systems"><strong>📸 HD Camera Systems</strong></h3>
 <p>✅ AI enhances <strong>video capture</strong>:
 - <strong>Vandal-proof hardware</strong>
 - <strong>Smart motion detection</strong>
 - <strong>Facial recognition</strong>
 - <strong>License plate reading</strong></p>
-<h3><strong>🎯 Intelligent Alerts</strong></h3>
+<h3 id="intelligent-alerts"><strong>🎯 Intelligent Alerts</strong></h3>
 <p>✅ AI enables <strong>proactive security</strong>:
 - <strong>Customizable alerts</strong>
 - <strong>Threat level assessment</strong>
@@ -138,14 +195,14 @@ AI identifies <strong>critical event</strong> → <strong>instantly backs up foo
 <p><strong>💡 Example:</strong><br />
 AI recognizes <strong>unauthorized access</strong> → <strong>triggers alert system</strong> and begins recording.</p>
 <hr />
-<h2>📊 4️⃣ Business Intelligence</h2>
-<h3><strong>📈 Analytics &amp; Insights</strong></h3>
+<h2 id="4-business-intelligence">📊 4️⃣ Business Intelligence</h2>
+<h3 id="analytics-insights"><strong>📈 Analytics &amp; Insights</strong></h3>
 <p>✅ AI generates <strong>business value</strong>:
 - <strong>Customer traffic analysis</strong>
 - <strong>Heat mapping visualization</strong>
 - <strong>Behavioral patterns</strong>
 - <strong>Operational insights</strong></p>
-<h3><strong>📋 Security Reporting</strong></h3>
+<h3 id="security-reporting"><strong>📋 Security Reporting</strong></h3>
 <p>✅ AI automates <strong>documentation</strong>:
 - <strong>Incident reports</strong>
 - <strong>Activity summaries</strong>
@@ -154,14 +211,14 @@ AI recognizes <strong>unauthorized access</strong> → <strong>triggers alert sy
 <p><strong>💡 Example:</strong><br />
 AI analyzes <strong>customer flow</strong> → <strong>generates heat maps</strong> for optimizing store layout.</p>
 <hr />
-<h2>⚡ 5️⃣ Service Excellence</h2>
-<h3><strong>🎯 Performance Guarantees</strong></h3>
+<h2 id="5-service-excellence">⚡ 5️⃣ Service Excellence</h2>
+<h3 id="performance-guarantees"><strong>🎯 Performance Guarantees</strong></h3>
 <p>✅ AI ensures <strong>reliable service</strong>:
 - <strong>99% ticket resolution &lt; 2 hours</strong>
 - <strong>100% network uptime</strong>
 - <strong>100 Gbps fiber speeds</strong>
 - <strong>24/7 technical support</strong></p>
-<h3><strong>🔒 System Reliability</strong></h3>
+<h3 id="system-reliability"><strong>🔒 System Reliability</strong></h3>
 <p>✅ AI maintains <strong>system health</strong>:
 - <strong>Proactive monitoring</strong>
 - <strong>Automated maintenance</strong>
@@ -170,15 +227,15 @@ AI analyzes <strong>customer flow</strong> → <strong>generates heat maps</stro
 <p><strong>💡 Example:</strong><br />
 AI detects <strong>potential camera issue</strong> → <strong>initiates maintenance</strong> before failure occurs.</p>
 <hr />
-<h2>📈 Business Benefits</h2>
-<h3><strong>🎯 Security Impact</strong></h3>
+<h2 id="business-benefits">📈 Business Benefits</h2>
+<h3 id="security-impact"><strong>🎯 Security Impact</strong></h3>
 <ul>
 <li><strong>Enhanced Protection</strong>: 24/7 AI monitoring</li>
 <li><strong>Incident Prevention</strong>: Proactive alerts</li>
 <li><strong>Risk Reduction</strong>: Automated tracking</li>
 <li><strong>Evidence Protection</strong>: Secure storage</li>
 </ul>
-<h3><strong>💼 Operational Value</strong></h3>
+<h3 id="operational-value"><strong>💼 Operational Value</strong></h3>
 <ul>
 <li><strong>Business Intelligence</strong>: Customer insights</li>
 <li><strong>Operational Efficiency</strong>: Automated monitoring</li>
@@ -186,21 +243,22 @@ AI detects <strong>potential camera issue</strong> → <strong>initiates mainten
 <li><strong>Peace of Mind</strong>: Reliable protection</li>
 </ul>
 <hr />
-<h2>📍 Contact Information</h2>
-<h3><strong>🏢 Get Started</strong></h3>
+<h2 id="contact-information">📍 Contact Information</h2>
+<h3 id="get-started"><strong>🏢 Get Started</strong></h3>
 <ul>
 <li><strong>Phone:</strong> (520) 618-3000</li>
 <li><strong>Email:</strong> Surveillance@LoginBusiness.com</li>
 <li><strong>Address:</strong> 1855 N 6th Ave, Tucson, AZ 85705-5601</li>
 </ul>
 <hr />
-<h2>⚡ Next Steps</h2>
+<h2 id="next-steps">⚡ Next Steps</h2>
 <p>1️⃣ <strong>Security assessment</strong>
 2️⃣ <strong>System design</strong>
 3️⃣ <strong>Camera placement</strong>
 4️⃣ <strong>VALOR setup</strong>
 5️⃣ <strong>Staff training</strong></p>
 <p>🚀 <strong>Transform your security with Login's AI-powered video surveillance - where intelligent monitoring meets comprehensive protection.</strong> </p>
+        </div>
     </div>
 </body>
 </html>

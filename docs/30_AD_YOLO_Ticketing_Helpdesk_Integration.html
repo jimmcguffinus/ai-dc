@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,16 +137,17 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / 30 AD YOLO Ticketing Helpdesk Integration
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: 30 AD YOLO Ticketing Helpdesk Integration
 permalink: /docs/30_AD_YOLO_Ticketing_Helpdesk_Integration/</p>
 <hr />
-<h1>AD-YOLO Ticketing &amp; Helpdesk Integration</h1>
-<h2>Overview</h2>
+<h1 id="ad-yolo-ticketing-helpdesk-integration">AD-YOLO Ticketing &amp; Helpdesk Integration</h1>
+<h2 id="overview">Overview</h2>
 <p>AD-YOLO integrates with enterprise ticketing systems, allowing IT teams to track real-time Active Directory (AD) changes and automate responses. This enables seamless incident management, reducing manual effort and enhancing security.</p>
-<h2>Features</h2>
-<h3>🔥 <strong>Real-Time Ticket Creation</strong></h3>
+<h2 id="features">Features</h2>
+<h3 id="real-time-ticket-creation">🔥 <strong>Real-Time Ticket Creation</strong></h3>
 <ul>
 <li>Automatic ticket creation based on <strong>critical AD changes</strong>:</li>
 <li>New privileged users added</li>
@@ -100,7 +157,7 @@ permalink: /docs/30_AD_YOLO_Ticketing_Helpdesk_Integration/</p>
 <li>GPO modifications</li>
 <li>Expired or disabled user accounts</li>
 </ul>
-<h3>🤖 <strong>AI-Powered Helpdesk Chatbot</strong></h3>
+<h3 id="ai-powered-helpdesk-chatbot">🤖 <strong>AI-Powered Helpdesk Chatbot</strong></h3>
 <ul>
 <li>Employees and IT staff can ask AD-YOLO:</li>
 <li><strong>"Who has been locked out in the last 24 hours?"</strong></li>
@@ -108,7 +165,7 @@ permalink: /docs/30_AD_YOLO_Ticketing_Helpdesk_Integration/</p>
 <li><strong>"What devices were enrolled today?"</strong></li>
 <li>Responses are pulled directly from the AD-YOLO database</li>
 </ul>
-<h3>🎯 <strong>Multi-System Integration</strong></h3>
+<h3 id="multi-system-integration">🎯 <strong>Multi-System Integration</strong></h3>
 <p>Supports major IT Service Management (ITSM) and helpdesk platforms:
 - ServiceNow
 - Jira Service Management
@@ -117,14 +174,14 @@ permalink: /docs/30_AD_YOLO_Ticketing_Helpdesk_Integration/</p>
 - ConnectWise
 - IT Glue
 - Custom REST API integrations</p>
-<h2>🚀 How It Works</h2>
-<h3><strong>1️⃣ Change Detection</strong></h3>
+<h2 id="how-it-works">🚀 How It Works</h2>
+<h3 id="1-change-detection"><strong>1️⃣ Change Detection</strong></h3>
 <p>AD-YOLO continuously monitors AD changes via:
 - <strong>DirSync</strong> control
 - <strong>USNChanged</strong> attribute tracking
 - <strong>LDAP Change Notifications</strong>
 - <strong>Security event log monitoring (Event ID 4720, 4732, etc.)</strong></p>
-<h3><strong>2️⃣ AD-YOLO Database Updates</strong></h3>
+<h3 id="2-ad-yolo-database-updates"><strong>2️⃣ AD-YOLO Database Updates</strong></h3>
 <p>Detected changes are <strong>logged into SQLite/Milvus</strong>, with key attributes:
 | Attribute | Example Value |
 |-----------|--------------|
@@ -132,7 +189,7 @@ permalink: /docs/30_AD_YOLO_Ticketing_Helpdesk_Integration/</p>
 | Object Type | <code>User</code> |
 | Change Type | <code>Added to Domain Admins</code> |
 | Timestamp | <code>2025-03-15 14:30:22</code> |</p>
-<h3><strong>3️⃣ Automated Ticket Creation</strong></h3>
+<h3 id="3-automated-ticket-creation"><strong>3️⃣ Automated Ticket Creation</strong></h3>
 <p>A new ticket is <strong>instantly generated</strong> if the change meets predefined security policies.</p>
 <p>Example JSON payload for ServiceNow:</p>
 <pre><code class="language-json">{
@@ -143,7 +200,7 @@ permalink: /docs/30_AD_YOLO_Ticketing_Helpdesk_Integration/</p>
   &quot;category&quot;: &quot;Security Incident&quot;
 }
 </code></pre>
-<h3><strong>4️⃣ Chatbot Query Processing</strong></h3>
+<h3 id="4-chatbot-query-processing"><strong>4️⃣ Chatbot Query Processing</strong></h3>
 <p>When a helpdesk agent queries AD-YOLO:</p>
 <ul>
 <li><strong>"Show all recent admin additions"</strong></li>
@@ -157,8 +214,8 @@ permalink: /docs/30_AD_YOLO_Ticketing_Helpdesk_Integration/</p>
 <li>AD-YOLO validates user identity</li>
 <li>Triggers ServiceNow API to reset the password</li>
 </ul>
-<h2>🔌 Integration with Ticketing Systems</h2>
-<h3>REST API for Ticketing</h3>
+<h2 id="integration-with-ticketing-systems">🔌 Integration with Ticketing Systems</h2>
+<h3 id="rest-api-for-ticketing">REST API for Ticketing</h3>
 <p>Example PowerShell script to create a ServiceNow ticket:</p>
 <pre><code class="language-powershell">$Body = @{
     short_description = &quot;Critical AD Change Detected&quot;
@@ -172,7 +229,7 @@ Invoke-RestMethod -Uri &quot;https://servicenow.example.com/api/now/table/incide
   -Headers @{&quot;Authorization&quot;=&quot;Bearer $Token&quot;} `
   -Body $Body
 </code></pre>
-<h3>GraphQL Query Interface</h3>
+<h3 id="graphql-query-interface">GraphQL Query Interface</h3>
 <p>Instead of SQL, enable GraphQL queries for flexible AI-driven insights:</p>
 <pre><code class="language-graphql">query {
   recentChanges(filter: { objectType: &quot;User&quot;, changeType: &quot;Added to Admins&quot; }) {
@@ -182,7 +239,7 @@ Invoke-RestMethod -Uri &quot;https://servicenow.example.com/api/now/table/incide
   }
 }
 </code></pre>
-<h3>Ticketing Workflow Example</h3>
+<h3 id="ticketing-workflow-example">Ticketing Workflow Example</h3>
 <table>
 <thead>
 <tr>
@@ -214,30 +271,30 @@ Invoke-RestMethod -Uri &quot;https://servicenow.example.com/api/now/table/incide
 </tr>
 </tbody>
 </table>
-<h2>🛠️ Future Enhancements</h2>
-<h3>Firebase App for Live Updates</h3>
+<h2 id="future-enhancements">🛠️ Future Enhancements</h2>
+<h3 id="firebase-app-for-live-updates">Firebase App for Live Updates</h3>
 <ul>
 <li>Push ticket updates to mobile IT dashboards</li>
 <li>Integrate Firebase Cloud Functions for real-time alerts</li>
 </ul>
-<h3>AI-Driven Ticket Prioritization</h3>
+<h3 id="ai-driven-ticket-prioritization">AI-Driven Ticket Prioritization</h3>
 <ul>
 <li>Machine learning assigns risk scores to AD changes</li>
 <li>High-risk actions trigger multi-factor authentication (MFA) verification</li>
 </ul>
-<h3>Expanded Chatbot Capabilities</h3>
+<h3 id="expanded-chatbot-capabilities">Expanded Chatbot Capabilities</h3>
 <ul>
 <li>Voice interaction via Google Assistant / Alexa</li>
 <li>Generate automated incident reports from AD-YOLO insights</li>
 </ul>
-<h2>📌 Conclusion</h2>
+<h2 id="conclusion">📌 Conclusion</h2>
 <p>AD-YOLO revolutionizes helpdesk workflows by combining:
 - Real-time AD monitoring
 - AI-powered chat interfaces
 - Automated ticketing
 - GraphQL-based query engines</p>
 <p>This empowers IT teams with instant incident detection, automated response, and an intelligent helpdesk assistant. 🚀</p>
-<h3>🔥 <strong>Key Features Added</strong></h3>
+<h3 id="key-features-added">🔥 <strong>Key Features Added</strong></h3>
 <p>✔️ <strong>GraphQL query support for AI-enhanced ticketing</strong><br />
 ✔️ <strong>Expanded ITSM integrations (ConnectWise, IT Glue, Freshservice, etc.)</strong><br />
 ✔️ <strong>Chatbot natural language queries</strong><br />
@@ -245,6 +302,7 @@ Invoke-RestMethod -Uri &quot;https://servicenow.example.com/api/now/table/incide
 ✔️ <strong>REST API triggers for ServiceNow tickets</strong>  </p>
 <hr />
 <p>💡 <strong>Next Steps:</strong> Connect AD-YOLO to your ITSM system today! </p>
+        </div>
     </div>
 </body>
 </html>

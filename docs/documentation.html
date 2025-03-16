@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,62 +137,63 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / documentation
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: Documentation
 permalink: /documentation/</p>
 <hr />
-<h1>Documentation</h1>
-<h2>Core Documentation</h2>
-<h3>AD-YOLO Components</h3>
+<h1 id="ai-dc-documentation">AI-DC Documentation</h1>
+<h2 id="core-components">Core Components</h2>
+<h3 id="ad-yolo-core">AD-YOLO Core</h3>
 <ul>
-<li><a href="28_AD_YOLO_Real_Time_AD_Monitoring.md">Real-Time AD Monitoring</a></li>
-<li><a href="29_AD_YOLO_Firebase_Sync.md">Firebase Sync</a></li>
-<li><a href="30_AD_YOLO_Ticketing_Helpdesk_Integration.md">Ticketing &amp; Helpdesk Integration</a></li>
-<li><a href="31_AD_YOLO_Vector_DB_RAG_AI.md">Vector DB &amp; RAG AI</a></li>
-<li><a href="32_AD_YOLO_Schema_Extension_AuxLogin.md">Schema Extension &amp; AuxLogin</a></li>
-<li><a href="33_AD_YOLO_AD_Firewall_Sync.md">AD Firewall Sync</a></li>
+<li><a href="{{ site.baseurl }}/28_AD_YOLO_Real_Time_AD_Monitoring">Real-Time AD Monitoring</a></li>
+<li><a href="{{ site.baseurl }}/29_AD_YOLO_Firebase_Sync">Firebase Sync</a></li>
+<li><a href="{{ site.baseurl }}/30_AD_YOLO_Ticketing_Helpdesk_Integration">Ticketing &amp; Helpdesk Integration</a></li>
+<li><a href="{{ site.baseurl }}/31_AD_YOLO_Vector_DB_RAG_AI">Vector DB &amp; RAG AI</a></li>
+<li><a href="{{ site.baseurl }}/32_AD_YOLO_Schema_Extension_AuxLogin">Schema Extension</a></li>
+<li><a href="{{ site.baseurl }}/33_AD_YOLO_AD_Firewall_Sync">AD Firewall Sync</a></li>
 </ul>
-<h3>Getting Started</h3>
+<h3 id="implementation-guides">Implementation Guides</h3>
 <ul>
-<li><a href="01_Company_Breakdown.md">Company Overview</a></li>
-<li><a href="02_AI_Strategy.md">AI Strategy</a></li>
-<li><a href="03_Implementation_Plan.md">Implementation Plan</a></li>
+<li><a href="{{ site.baseurl }}/01_Company_Breakdown">Company Breakdown</a></li>
+<li><a href="{{ site.baseurl }}/02_AI_Strategy">AI Strategy</a></li>
+<li><a href="{{ site.baseurl }}/03_Implementation_Plan">Implementation Plan</a></li>
 </ul>
-<h3>Implementation Phases</h3>
+<h3 id="phase-documentation">Phase Documentation</h3>
 <ul>
-<li><a href="04_Phase1_Network_AI.md">Phase 1: Network AI</a></li>
-<li><a href="05_Phase2_Colo_AI.md">Phase 2: Colocation</a></li>
-<li><a href="06_Phase3_Cloud_AI.md">Phase 3: Cloud</a></li>
-<li><a href="07_Phase4_Security_AI.md">Phase 4: Security</a></li>
+<li><a href="{{ site.baseurl }}/04_Phase1_Network_AI">Phase 1: Network AI</a></li>
+<li><a href="{{ site.baseurl }}/05_Phase2_Colo_AI">Phase 2: Colocation</a></li>
+<li><a href="{{ site.baseurl }}/06_Phase3_Cloud_AI">Phase 3: Cloud</a></li>
+<li><a href="{{ site.baseurl }}/07_Phase4_Security_AI">Phase 4: Security</a></li>
 </ul>
-<h3>Services Documentation</h3>
+<h3 id="business-services">Business Services</h3>
 <ul>
-<li><a href="11_Network_Cabling_Company_AI.md">Network Cabling</a></li>
-<li><a href="12_VoIP_Phone_Service_AI.md">VoIP Services</a></li>
-<li><a href="13_Video_Surveillance_AI.md">Video Surveillance</a></li>
-<li><a href="14_Best_Practices_AI_Datacenter.md">Best Practices</a></li>
+<li><a href="{{ site.baseurl }}/11_Network_Cabling_Company_AI">Network Cabling</a></li>
+<li><a href="{{ site.baseurl }}/12_VoIP_Phone_Service_AI">VoIP Services</a></li>
+<li><a href="{{ site.baseurl }}/13_Video_Surveillance_AI">Video Surveillance</a></li>
+<li><a href="{{ site.baseurl }}/14_Best_Practices_AI_Datacenter">Best Practices</a></li>
 </ul>
-<h3>Business Integration</h3>
+<h3 id="ai-integration">AI Integration</h3>
 <ul>
-<li><a href="15_Business_Development_AI.md">Business Development</a></li>
-<li><a href="16_Network_Automation_AI.md">Network Automation</a></li>
-<li><a href="17_Business_AI_Automation.md">Business AI Automation</a></li>
-<li><a href="18_AI_Training_and_RnD.md">AI Training &amp; R&amp;D</a></li>
+<li><a href="{{ site.baseurl }}/15_Business_Development_AI">Business Development</a></li>
+<li><a href="{{ site.baseurl }}/16_Network_Automation_AI">Network Automation</a></li>
+<li><a href="{{ site.baseurl }}/17_Business_AI_Automation">Business Automation</a></li>
+<li><a href="{{ site.baseurl }}/18_AI_Training_and_RnD">Training and R&amp;D</a></li>
 </ul>
-<h3>Infrastructure</h3>
+<h3 id="market-analysis">Market Analysis</h3>
 <ul>
-<li><a href="19_Colocation_Hosting_AI.md">Colocation Hosting</a></li>
-<li><a href="20_Business_Internet_AI.md">Business Internet</a></li>
-<li><a href="21_AI_Network_Security.md">Network Security</a></li>
+<li><a href="{{ site.baseurl }}/19_Colocation_Hosting_AI">Colocation &amp; Hosting</a></li>
+<li><a href="{{ site.baseurl }}/20_Business_Internet_AI">Business Internet</a></li>
+<li><a href="{{ site.baseurl }}/21_AI_Network_Security">Network Security</a></li>
 </ul>
-<h3>Setup &amp; Configuration</h3>
+<h2 id="additional-resources">Additional Resources</h2>
 <ul>
-<li><a href="08_VectorDB_Setup.md">Vector DB Setup</a></li>
-<li><a href="27_AI_Datacenter_Future_Vision.md">Future Vision</a></li>
-<li><a href="Future_DataCenter_OrgChart_AI.md">Organization Chart</a></li>
+<li><a href="{{ site.baseurl }}/08_VectorDB_Setup">Vector DB Setup</a></li>
+<li><a href="{{ site.baseurl }}/27_AI_Datacenter_Future_Vision">Future Vision</a></li>
+<li><a href="{{ site.baseurl }}/Future_DataCenter_OrgChart_AI">Organization Chart</a></li>
 </ul>
-<h2>Quick Start Guide</h2>
+<h2 id="quick-start-guide">Quick Start Guide</h2>
 <ol>
 <li>
 <p><strong>Environment Setup</strong>
@@ -159,10 +216,11 @@ permalink: /documentation/</p>
 <li>Set up Firebase synchronization</li>
 <li>Configure security monitoring</li>
 </ol>
-<h2>Best Practices</h2>
+<h2 id="best-practices">Best Practices</h2>
 <p>For detailed best practices and guidelines, refer to our <a href="../14_Best_Practices_AI_Datacenter.md">Best Practices Guide</a>.</p>
-<h2>Contributing</h2>
+<h2 id="contributing">Contributing</h2>
 <p>We welcome contributions from the community! Please review our contribution guidelines before submitting changes. </p>
+        </div>
     </div>
 </body>
 </html>

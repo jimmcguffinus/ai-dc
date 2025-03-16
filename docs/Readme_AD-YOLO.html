@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,16 +137,17 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / Readme AD-YOLO
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: Readme AD-YOLO
 permalink: /docs/Readme_AD-YOLO/</p>
 <hr />
-<h1>AD-YOLO: AI-Powered Active Directory Management &amp; Automation</h1>
-<h2>Overview</h2>
+<h1 id="ad-yolo-ai-powered-active-directory-management-automation">AD-YOLO: AI-Powered Active Directory Management &amp; Automation</h1>
+<h2 id="overview">Overview</h2>
 <p>AD-YOLO is an intelligent Active Directory management system that combines real-time monitoring, AI-driven automation, and modern enterprise asset tracking. It extends traditional AD capabilities with smart schema extensions, mobile integration, and natural language interfaces.</p>
-<h2>📚 Documentation Structure</h2>
-<h3>Core Components</h3>
+<h2 id="documentation-structure">📚 Documentation Structure</h2>
+<h3 id="core-components">Core Components</h3>
 <ol>
 <li><strong>AD-YOLO Base System</strong></li>
 <li><a href="./27_AI_Datacenter_Future_Vision.md"><code>27_AI_Datacenter_Future_Vision.md</code></a> - Strategic vision and roadmap</li>
@@ -127,7 +184,7 @@ permalink: /docs/Readme_AD-YOLO/</p>
 <li><a href="./38_AD_YOLO_Mermaid_Diagram_Forest_Structure.md"><code>38_AD_YOLO_Mermaid_Diagram_Forest_Structure.md</code></a> - Visual mapping</li>
 <li><a href="./39_AD_YOLO_AD_Log_Change_Tracking.md"><code>39_AD_YOLO_AD_Log_Change_Tracking.md</code></a> - Audit logging</li>
 </ol>
-<h3>New Documentation (To Be Created)</h3>
+<h3 id="new-documentation-to-be-created">New Documentation (To Be Created)</h3>
 <ol>
 <li><strong>[<code>41_AD_YOLO_No_Code_Firebase_Apps.md</code>]</strong></li>
 <li>Firebase UI components</li>
@@ -153,8 +210,8 @@ permalink: /docs/Readme_AD-YOLO/</p>
 <li>Compliance frameworks</li>
 <li>Audit procedures</li>
 </ol>
-<h2>🔧 Schema Extension Examples</h2>
-<h3>auxLogin Schema Definition</h3>
+<h2 id="schema-extension-examples">🔧 Schema Extension Examples</h2>
+<h3 id="auxlogin-schema-definition">auxLogin Schema Definition</h3>
 <pre><code class="language-ldif"># Sample LDIF for Schema Extension
 dn: CN=Schema,CN=Configuration,DC=login,DC=local
 changetype: modify
@@ -166,7 +223,7 @@ attributeTypes: (
     SINGLE-VALUE
 )
 </code></pre>
-<h3>PowerShell Deployment</h3>
+<h3 id="powershell-deployment">PowerShell Deployment</h3>
 <pre><code class="language-powershell"># Create auxLogin attributes
 $schemaPath = &quot;CN=Schema,CN=Configuration,DC=login,DC=local&quot;
 New-ADObject -Name &quot;auxLoginIMEINumber&quot; -Type &quot;attributeSchema&quot; -Path $schemaPath -OtherAttributes @{
@@ -176,8 +233,8 @@ New-ADObject -Name &quot;auxLoginIMEINumber&quot; -Type &quot;attributeSchema&qu
     lDAPDisplayName = &quot;auxLoginIMEINumber&quot;
 }
 </code></pre>
-<h2>🤖 Helpdesk Chatbot Examples</h2>
-<h3>User Management Queries</h3>
+<h2 id="helpdesk-chatbot-examples">🤖 Helpdesk Chatbot Examples</h2>
+<h3 id="user-management-queries">User Management Queries</h3>
 <pre><code class="language-sql">-- Find recent user additions
 SELECT u.samAccountName, u.whenCreated
 FROM ADUsers u
@@ -189,7 +246,7 @@ FROM ADGroups g
 JOIN GroupMembers m ON g.distinguishedName = m.groupDN
 WHERE m.domain != 'login.local'
 </code></pre>
-<h3>Asset Management Queries</h3>
+<h3 id="asset-management-queries">Asset Management Queries</h3>
 <pre><code class="language-powershell"># Find inactive laptops
 Get-ADComputer -Filter {
     OperatingSystem -like '*Windows*' -and 
@@ -204,8 +261,8 @@ Get-ADComputer -Filter {
 Where-Object { -not $_.auxLoginCompliant } |
 Select-Object Name, OperatingSystem, auxLoginLastCheck
 </code></pre>
-<h2>🚀 Getting Started</h2>
-<h3>Prerequisites</h3>
+<h2 id="getting-started">🚀 Getting Started</h2>
+<h3 id="prerequisites">Prerequisites</h3>
 <ul>
 <li>Windows Server 2019/2022</li>
 <li>Active Directory Domain Services</li>
@@ -213,7 +270,7 @@ Select-Object Name, OperatingSystem, auxLoginLastCheck
 <li>Python 3.8+</li>
 <li>Node.js 16+</li>
 </ul>
-<h3>Quick Start</h3>
+<h3 id="quick-start">Quick Start</h3>
 <ol>
 <li>Clone the repository</li>
 </ol>
@@ -242,7 +299,7 @@ $ADConfig = @{
 <pre><code class="language-powershell"># Run schema deployment
 .\scripts\Deploy-ADYoloSchema.ps1
 </code></pre>
-<h2>🔒 Security Best Practices</h2>
+<h2 id="security-best-practices">🔒 Security Best Practices</h2>
 <ol>
 <li><strong>Least Privilege Access</strong></li>
 <li>Use dedicated service accounts</li>
@@ -265,28 +322,28 @@ $ADConfig = @{
 <li>GDPR compliance</li>
 <li>HIPAA requirements</li>
 </ol>
-<h2>🔄 Integration Points</h2>
+<h2 id="integration-points">🔄 Integration Points</h2>
 <ul>
 <li>ITSM Systems (ServiceNow, Jira)</li>
 <li>Cloud Services (Azure AD, AWS)</li>
 <li>Security Tools (Firewalls, SIEM)</li>
 <li>Mobile Apps (Firebase, React Native)</li>
 </ul>
-<h2>📊 Monitoring &amp; Analytics</h2>
+<h2 id="monitoring-analytics">📊 Monitoring &amp; Analytics</h2>
 <ul>
 <li>Real-time AD changes</li>
 <li>Security events</li>
 <li>Performance metrics</li>
 <li>Usage statistics</li>
 </ul>
-<h2>🛠️ Troubleshooting</h2>
+<h2 id="troubleshooting">🛠️ Troubleshooting</h2>
 <ul>
 <li>Schema validation</li>
 <li>Sync issues</li>
 <li>Performance tuning</li>
 <li>Common errors</li>
 </ul>
-<h2>🎯 Future Roadmap</h2>
+<h2 id="future-roadmap">🎯 Future Roadmap</h2>
 <ol>
 <li><strong>Q2 2024</strong></li>
 <li>Enhanced mobile apps</li>
@@ -301,12 +358,13 @@ $ADConfig = @{
 <li>Edge computing support</li>
 <li>Extended cloud integration</li>
 </ol>
-<h2>📝 Contributing</h2>
+<h2 id="contributing">📝 Contributing</h2>
 <p>Please read <a href="./CONTRIBUTING.md">CONTRIBUTING.md</a> for details on our code of conduct and the process for submitting pull requests.</p>
-<h2>📄 License</h2>
+<h2 id="license">📄 License</h2>
 <p>This project is licensed under the MIT License - see the <a href="./LICENSE.md">LICENSE.md</a> file for details.</p>
 <hr />
 <p><em>AD-YOLO: Revolutionizing Active Directory management with AI-powered automation and modern enterprise integration.</em> 🚀 </p>
+        </div>
     </div>
 </body>
 </html>

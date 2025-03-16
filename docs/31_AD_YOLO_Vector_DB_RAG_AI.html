@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,16 +137,17 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / 31 AD YOLO Vector DB RAG AI
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: 31 AD YOLO Vector DB RAG AI
 permalink: /docs/31_AD_YOLO_Vector_DB_RAG_AI/</p>
 <hr />
-<h1>AD-YOLO Vector DB &amp; RAG AI Integration</h1>
-<h2>Overview</h2>
+<h1 id="ad-yolo-vector-db-rag-ai-integration">AD-YOLO Vector DB &amp; RAG AI Integration</h1>
+<h2 id="overview">Overview</h2>
 <p>AD-YOLO leverages <strong>Vector Database technology</strong> and <strong>Retrieval-Augmented Generation (RAG)</strong> to enable intelligent querying and analysis of Active Directory data. This integration allows natural language interactions with AD data while maintaining context and accuracy through vector-based similarity search.</p>
-<h2>Vector Database Architecture</h2>
-<h3>Core Components</h3>
+<h2 id="vector-database-architecture">Vector Database Architecture</h2>
+<h3 id="core-components">Core Components</h3>
 <ul>
 <li><strong>SQLite Vector Store</strong></li>
 <li>Optimized for AD object embeddings</li>
@@ -107,7 +164,7 @@ permalink: /docs/31_AD_YOLO_Vector_DB_RAG_AI/</p>
 <li>Contextual encoding</li>
 <li>Semantic similarity matching</li>
 </ul>
-<h3>Schema Design</h3>
+<h3 id="schema-design">Schema Design</h3>
 <pre><code class="language-sql">-- Vector Database Schema
 CREATE TABLE ad_vectors (
     id INTEGER PRIMARY KEY,
@@ -123,8 +180,8 @@ CREATE INDEX idx_vectors ON ad_vectors USING ivfflat (vector_embedding vector_co
 CREATE INDEX idx_object_dn ON ad_vectors(object_dn);
 CREATE INDEX idx_object_class ON ad_vectors(object_class);
 </code></pre>
-<h2>RAG Implementation</h2>
-<h3>Query Processing Pipeline</h3>
+<h2 id="rag-implementation">RAG Implementation</h2>
+<h3 id="query-processing-pipeline">Query Processing Pipeline</h3>
 <pre><code class="language-python">class ADYoloRAG:
     def process_query(self, query: str) -&gt; QueryResult:
         # Convert query to vector
@@ -152,7 +209,7 @@ CREATE INDEX idx_object_class ON ad_vectors(object_class);
             confidence=self.calculate_confidence(response)
         )
 </code></pre>
-<h3>Embedding Generation</h3>
+<h3 id="embedding-generation">Embedding Generation</h3>
 <pre><code class="language-python">def generate_ad_embeddings(ad_object):
     &quot;&quot;&quot;Generate embeddings for AD objects&quot;&quot;&quot;
     # Combine relevant attributes
@@ -168,8 +225,8 @@ CREATE INDEX idx_object_class ON ad_vectors(object_class);
 
     return embedding
 </code></pre>
-<h2>Natural Language Queries</h2>
-<h3>Example Queries</h3>
+<h2 id="natural-language-queries">Natural Language Queries</h2>
+<h3 id="example-queries">Example Queries</h3>
 <ol>
 <li>
 <p><strong>User Management</strong>
@@ -190,7 +247,7 @@ CREATE INDEX idx_object_class ON ad_vectors(object_class);
    "Find all disabled user accounts"</code></p>
 </li>
 </ol>
-<h3>Query Processing</h3>
+<h3 id="query-processing">Query Processing</h3>
 <pre><code class="language-python">def process_ad_query(query: str) -&gt; List[Dict]:
     # Vectorize query
     query_vector = embed_text(query)
@@ -215,8 +272,8 @@ CREATE INDEX idx_object_class ON ad_vectors(object_class);
 
     return formatted_results
 </code></pre>
-<h2>Vector Database Management</h2>
-<h3>Indexing Strategy</h3>
+<h2 id="vector-database-management">Vector Database Management</h2>
+<h3 id="indexing-strategy">Indexing Strategy</h3>
 <pre><code class="language-python">class VectorDBManager:
     def index_ad_object(self, ad_object):
         # Generate embedding
@@ -234,7 +291,7 @@ CREATE INDEX idx_object_class ON ad_vectors(object_class);
             }
         )
 </code></pre>
-<h3>Maintenance Operations</h3>
+<h3 id="maintenance-operations">Maintenance Operations</h3>
 <ul>
 <li>Real-time indexing</li>
 <li>Periodic reindexing</li>
@@ -242,8 +299,8 @@ CREATE INDEX idx_object_class ON ad_vectors(object_class);
 <li>Index compression</li>
 <li>Cache management</li>
 </ul>
-<h2>Performance Optimization</h2>
-<h3>Caching Strategy</h3>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<h3 id="caching-strategy">Caching Strategy</h3>
 <pre><code class="language-python">class VectorCache:
     def __init__(self):
         self.cache = LRUCache(maxsize=10000)
@@ -254,7 +311,7 @@ CREATE INDEX idx_object_class ON ad_vectors(object_class);
     def store_vector(self, object_dn: str, vector: np.ndarray):
         self.cache.set(object_dn, vector)
 </code></pre>
-<h3>Query Optimization</h3>
+<h3 id="query-optimization">Query Optimization</h3>
 <ul>
 <li>Vector quantization</li>
 <li>Dimension reduction</li>
@@ -262,8 +319,8 @@ CREATE INDEX idx_object_class ON ad_vectors(object_class);
 <li>Index sharding</li>
 <li>Query caching</li>
 </ul>
-<h2>Integration Examples</h2>
-<h3>PowerShell Integration</h3>
+<h2 id="integration-examples">Integration Examples</h2>
+<h3 id="powershell-integration">PowerShell Integration</h3>
 <pre><code class="language-powershell"># Query AD-YOLO Vector DB
 function Search-ADYoloVector {
     param(
@@ -276,7 +333,7 @@ function Search-ADYoloVector {
     return $results | Format-Table -AutoSize
 }
 </code></pre>
-<h3>Python Integration</h3>
+<h3 id="python-integration">Python Integration</h3>
 <pre><code class="language-python">from adyolo.vector import ADYoloVectorClient
 
 # Initialize client
@@ -289,8 +346,8 @@ results = client.similarity_search(
     threshold=0.8
 )
 </code></pre>
-<h2>Security &amp; Compliance</h2>
-<h3>Data Protection</h3>
+<h2 id="security-compliance">Security &amp; Compliance</h2>
+<h3 id="data-protection">Data Protection</h3>
 <ul>
 <li>Encrypted vectors</li>
 <li>Secure storage</li>
@@ -298,7 +355,7 @@ results = client.similarity_search(
 <li>Audit logging</li>
 <li>Data retention</li>
 </ul>
-<h3>Access Control</h3>
+<h3 id="access-control">Access Control</h3>
 <ul>
 <li>Role-based access</li>
 <li>Query restrictions</li>
@@ -306,8 +363,8 @@ results = client.similarity_search(
 <li>Usage monitoring</li>
 <li>Compliance reporting</li>
 </ul>
-<h2>Monitoring &amp; Analytics</h2>
-<h3>Performance Metrics</h3>
+<h2 id="monitoring-analytics">Monitoring &amp; Analytics</h2>
+<h3 id="performance-metrics">Performance Metrics</h3>
 <ul>
 <li>Query latency</li>
 <li>Search accuracy</li>
@@ -315,7 +372,7 @@ results = client.similarity_search(
 <li>Index size</li>
 <li>Vector quality</li>
 </ul>
-<h3>Health Checks</h3>
+<h3 id="health-checks">Health Checks</h3>
 <ul>
 <li>Database status</li>
 <li>Index integrity</li>
@@ -323,15 +380,15 @@ results = client.similarity_search(
 <li>Query performance</li>
 <li>System resources</li>
 </ul>
-<h2>Future Enhancements</h2>
+<h2 id="future-enhancements">Future Enhancements</h2>
 <p>✅ <strong>Multi-modal embeddings</strong><br />
 ✅ <strong>Quantum-resistant vectors</strong><br />
 ✅ <strong>Distributed vector search</strong><br />
 ✅ <strong>Advanced caching strategies</strong>  </p>
 <hr />
 <p><em>AD-YOLO's Vector DB and RAG AI integration enables intelligent, natural language interaction with Active Directory data while maintaining security and performance.</em> 🎯 </p>
-<h2>Vector DB Integrations</h2>
-<h3>Milvus Integration</h3>
+<h2 id="vector-db-integrations">Vector DB Integrations</h2>
+<h3 id="milvus-integration">Milvus Integration</h3>
 <pre><code class="language-python">from pymilvus import connections, Collection, FieldSchema, CollectionSchema, DataType
 
 class MilvusADStore:
@@ -367,7 +424,7 @@ class MilvusADStore:
         )
         return results
 </code></pre>
-<h3>Weaviate Integration</h3>
+<h3 id="weaviate-integration">Weaviate Integration</h3>
 <pre><code class="language-python">import weaviate
 
 class WeaviateADStore:
@@ -402,7 +459,7 @@ class WeaviateADStore:
             .do()
         )
 </code></pre>
-<h3>FAISS Integration</h3>
+<h3 id="faiss-integration">FAISS Integration</h3>
 <pre><code class="language-python">import faiss
 import numpy as np
 
@@ -421,8 +478,8 @@ class FAISSADStore:
         )
         return [(self.ad_objects[i], distances[0][i]) for i in indices[0]]
 </code></pre>
-<h2>API Endpoints</h2>
-<h3>REST API Interface</h3>
+<h2 id="api-endpoints">API Endpoints</h2>
+<h3 id="rest-api-interface">REST API Interface</h3>
 <pre><code class="language-python">from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
@@ -473,7 +530,7 @@ async def add_ad_object(ad_object: dict):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 </code></pre>
-<h3>GraphQL API Interface</h3>
+<h3 id="graphql-api-interface">GraphQL API Interface</h3>
 <pre><code class="language-graphql">type ADObject {
   id: ID!
   objectType: String!
@@ -502,8 +559,8 @@ type Mutation {
   updateADObject(id: ID!, input: ADObjectInput!): ADObject!
 }
 </code></pre>
-<h2>Deployment</h2>
-<h3>Docker Compose Setup</h3>
+<h2 id="deployment">Deployment</h2>
+<h3 id="docker-compose-setup">Docker Compose Setup</h3>
 <pre><code class="language-yaml">version: '3.8'
 
 services:
@@ -549,7 +606,7 @@ services:
 volumes:
   milvus_data:
 </code></pre>
-<h3>Kubernetes Deployment</h3>
+<h3 id="kubernetes-deployment">Kubernetes Deployment</h3>
 <pre><code class="language-yaml"># Example Kubernetes deployment configuration
 apiVersion: apps/v1
 kind: Deployment
@@ -576,8 +633,8 @@ spec:
         - name: EMBEDDING_SERVICE_URL
           value: &quot;http://embedding-service:8000&quot;
 </code></pre>
-<h2>Performance Optimization</h2>
-<h3>Caching Strategy</h3>
+<h2 id="performance-optimization_1">Performance Optimization</h2>
+<h3 id="caching-strategy_1">Caching Strategy</h3>
 <pre><code class="language-python">from functools import lru_cache
 
 class VectorCache:
@@ -592,7 +649,7 @@ class VectorCache:
     async def get_similar_objects(self, query_vector: np.ndarray, limit: int = 5):
         return await vector_store.search_similar(query_vector, limit)
 </code></pre>
-<h3>Batch Processing</h3>
+<h3 id="batch-processing">Batch Processing</h3>
 <pre><code class="language-python">class BatchProcessor:
     def __init__(self, batch_size=100):
         self.batch_size = batch_size
@@ -617,7 +674,7 @@ class VectorCache:
         await vector_store.add_vectors(embeddings, self.batch)
         self.batch = []
 </code></pre>
-<h2>Future Enhancements</h2>
+<h2 id="future-enhancements_1">Future Enhancements</h2>
 <p>✅ <strong>Multi-modal embeddings support</strong><br />
 ✅ <strong>Distributed vector search</strong><br />
 ✅ <strong>Real-time index updates</strong><br />
@@ -625,6 +682,7 @@ class VectorCache:
 ✅ <strong>Kubernetes auto-scaling</strong>  </p>
 <hr />
 <p><em>AD-YOLO's Vector DB and RAG AI integration enables intelligent, natural language interaction with Active Directory data while maintaining security and performance.</em> 🎯 </p>
+        </div>
     </div>
 </body>
 </html>

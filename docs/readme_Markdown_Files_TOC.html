@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,17 +137,18 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / readme Markdown Files TOC
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: readme Markdown Files TOC
 permalink: /docs/readme_Markdown_Files_TOC/</p>
 <hr />
-<h1><strong>Login AI &amp; AD-YOLO Project</strong></h1>
-<h2><strong>🚀 Overview</strong></h2>
+<h1 id="login-ai-ad-yolo-project"><strong>Login AI &amp; AD-YOLO Project</strong></h1>
+<h2 id="overview"><strong>🚀 Overview</strong></h2>
 <p>Welcome to the <strong>Login AI &amp; AD-YOLO</strong> repository! This project is dedicated to <strong>modernizing datacenter infrastructure, Active Directory inventory management, AI-driven automation, and security intelligence.</strong> We are building a <strong>next-generation AI-driven enterprise IT framework</strong> with <strong>vectorized data processing, Active Directory (AD) real-time monitoring, and multi-cloud support.</strong></p>
 <p>This repo contains structured <strong>Markdown documentation</strong> that outlines every component of the <strong>Login AI ecosystem</strong> and its <strong>AD-YOLO (Active Directory Your Own Lightweight Orchestrator)</strong> framework.</p>
 <hr />
-<h2><strong>📂 Directory Structure</strong></h2>
+<h2 id="directory-structure"><strong>📂 Directory Structure</strong></h2>
 <table>
 <thead>
 <tr>
@@ -210,7 +267,7 @@ permalink: /docs/readme_Markdown_Files_TOC/</p>
 </tr>
 </tbody>
 </table>
-<h3><strong>AD-YOLO Core Documentation</strong></h3>
+<h3 id="ad-yolo-core-documentation"><strong>AD-YOLO Core Documentation</strong></h3>
 <table>
 <thead>
 <tr>
@@ -273,7 +330,7 @@ permalink: /docs/readme_Markdown_Files_TOC/</p>
 </tr>
 </tbody>
 </table>
-<h3><strong>Additional Resources</strong></h3>
+<h3 id="additional-resources"><strong>Additional Resources</strong></h3>
 <table>
 <thead>
 <tr>
@@ -313,8 +370,8 @@ permalink: /docs/readme_Markdown_Files_TOC/</p>
 </tbody>
 </table>
 <hr />
-<h2><strong>🔥 Key Components</strong></h2>
-<h3><strong>1️⃣ AD-YOLO: The Future of Active Directory</strong></h3>
+<h2 id="key-components"><strong>🔥 Key Components</strong></h2>
+<h3 id="1-ad-yolo-the-future-of-active-directory"><strong>1️⃣ AD-YOLO: The Future of Active Directory</strong></h3>
 <p>AD-YOLO (Active Directory Your Own Lightweight Orchestrator) is a <strong>real-time Active Directory monitoring and AI-powered inventory system.</strong> It enables <strong>vector-based RAG (Retrieval-Augmented Generation) queries</strong>, allowing IT teams to <strong>chat with their AD infrastructure</strong> while tracking live object changes.</p>
 <p><strong>Features:</strong>
 - <strong>Real-time Active Directory change detection</strong>
@@ -324,7 +381,7 @@ permalink: /docs/readme_Markdown_Files_TOC/</p>
 - <strong>Integration with helpdesk ticketing systems</strong></p>
 <p>See <code>AD_YOLO_Core_Architecture.md</code> for full implementation details.</p>
 <hr />
-<h3><strong>2️⃣ AI-Enhanced IT Infrastructure</strong></h3>
+<h3 id="2-ai-enhanced-it-infrastructure"><strong>2️⃣ AI-Enhanced IT Infrastructure</strong></h3>
 <p><strong>AI-driven optimizations for:</strong><br />
 ✅ <strong>Networking &amp; Cloud Automation</strong><br />
 ✅ <strong>Business Internet AI</strong><br />
@@ -333,7 +390,7 @@ permalink: /docs/readme_Markdown_Files_TOC/</p>
 ✅ <strong>Autonomous Enterprise Management</strong>  </p>
 <p>See <code>AI_Network_Automation.md</code> and <code>AI_Security_Operations.md</code> for specifics.</p>
 <hr />
-<h3><strong>3️⃣ Vector Databases for AI</strong></h3>
+<h3 id="3-vector-databases-for-ai"><strong>3️⃣ Vector Databases for AI</strong></h3>
 <ul>
 <li>Uses <strong>SQLite with sqlite-vec</strong> for <strong>local vectorized queries</strong></li>
 <li>Expansion support for <strong>Milvus Lite / ChromaDB</strong></li>
@@ -341,8 +398,8 @@ permalink: /docs/readme_Markdown_Files_TOC/</p>
 </ul>
 <p><strong>See <code>VectorDB_Setup.md</code> for installation &amp; implementation.</strong></p>
 <hr />
-<h2><strong>📌 Getting Started</strong></h2>
-<h3><strong>🔹 How to Use This Repo</strong></h3>
+<h2 id="getting-started"><strong>📌 Getting Started</strong></h2>
+<h3 id="how-to-use-this-repo"><strong>🔹 How to Use This Repo</strong></h3>
 <p>1️⃣ Clone the repo:  </p>
 <pre><code class="language-sh">git clone git@github.com:jimmcguffinus/Login_AI_AD_YOLO.git
 </code></pre>
@@ -357,6 +414,7 @@ permalink: /docs/readme_Markdown_Files_TOC/</p>
 - Individual component guides as needed</p>
 <hr />
 <p>🚀 <strong>Ready to revolutionize your IT infrastructure with AI? Let's begin!</strong> 💪 </p>
+        </div>
     </div>
 </body>
 </html>

@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,17 +137,18 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / Login Industry Specific Videos
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: Login Industry Specific Videos
 permalink: /docs/Login_Industry_Specific_Videos/</p>
 <hr />
-<h1>🎥 Login Industry-Specific Videos</h1>
-<h2>📌 Overview</h2>
+<h1 id="login-industry-specific-videos">🎥 Login Industry-Specific Videos</h1>
+<h2 id="overview">📌 Overview</h2>
 <p>Specialized video content tailored for different industries, showcasing how Login's solutions address sector-specific challenges and opportunities. These videos provide in-depth insights into industry-focused technology solutions.</p>
 <hr />
-<h2>🏥 Healthcare Industry</h2>
-<h3><strong>Medical Technology Solutions</strong></h3>
+<h2 id="healthcare-industry">🏥 Healthcare Industry</h2>
+<h3 id="medical-technology-solutions"><strong>Medical Technology Solutions</strong></h3>
 <ol>
 <li><strong><a href="https://www.youtube.com/watch?v=XXXXX">Healthcare Digital Transformation</a></strong></li>
 <li>Focus: Modern Healthcare IT</li>
@@ -109,8 +166,8 @@ permalink: /docs/Login_Industry_Specific_Videos/</p>
 <li>Duration: 5:45 minutes</li>
 </ol>
 <hr />
-<h2>💰 Financial Services</h2>
-<h3><strong>FinTech Solutions</strong></h3>
+<h2 id="financial-services">💰 Financial Services</h2>
+<h3 id="fintech-solutions"><strong>FinTech Solutions</strong></h3>
 <ol>
 <li><strong><a href="https://www.youtube.com/watch?v=XXXXX">Banking Technology Innovation</a></strong></li>
 <li>Focus: Modern Banking IT</li>
@@ -128,8 +185,8 @@ permalink: /docs/Login_Industry_Specific_Videos/</p>
 <li>Duration: 6:45 minutes</li>
 </ol>
 <hr />
-<h2>🏭 Manufacturing</h2>
-<h3><strong>Industrial Technology</strong></h3>
+<h2 id="manufacturing">🏭 Manufacturing</h2>
+<h3 id="industrial-technology"><strong>Industrial Technology</strong></h3>
 <ol>
 <li><strong><a href="https://www.youtube.com/watch?v=XXXXX">Smart Manufacturing Solutions</a></strong></li>
 <li>Focus: Industry 4.0</li>
@@ -147,8 +204,8 @@ permalink: /docs/Login_Industry_Specific_Videos/</p>
 <li>Duration: 7:45 minutes</li>
 </ol>
 <hr />
-<h2>🏪 Retail &amp; E-commerce</h2>
-<h3><strong>Retail Technology</strong></h3>
+<h2 id="retail-e-commerce">🏪 Retail &amp; E-commerce</h2>
+<h3 id="retail-technology"><strong>Retail Technology</strong></h3>
 <ol>
 <li><strong><a href="https://www.youtube.com/watch?v=XXXXX">Modern Retail Solutions</a></strong></li>
 <li>Focus: Retail Operations</li>
@@ -166,8 +223,8 @@ permalink: /docs/Login_Industry_Specific_Videos/</p>
 <li>Duration: 6:15 minutes</li>
 </ol>
 <hr />
-<h2>📚 Education Sector</h2>
-<h3><strong>Educational Technology</strong></h3>
+<h2 id="education-sector">📚 Education Sector</h2>
+<h3 id="educational-technology"><strong>Educational Technology</strong></h3>
 <ol>
 <li><strong><a href="https://www.youtube.com/watch?v=XXXXX">K-12 Technology Solutions</a></strong></li>
 <li>Focus: School Technology</li>
@@ -185,7 +242,7 @@ permalink: /docs/Login_Industry_Specific_Videos/</p>
 <li>Duration: 6:30 minutes</li>
 </ol>
 <hr />
-<h2>🏷️ Categories &amp; Tags</h2>
+<h2 id="categories-tags">🏷️ Categories &amp; Tags</h2>
 <ul>
 <li><strong>Industries:</strong> #Healthcare #Finance #Manufacturing #Retail #Education</li>
 <li><strong>Solutions:</strong> #Technology #Digital #Innovation #Security</li>
@@ -193,7 +250,7 @@ permalink: /docs/Login_Industry_Specific_Videos/</p>
 <li><strong>Benefits:</strong> #Efficiency #Growth #Security #Quality</li>
 </ul>
 <hr />
-<h2>📊 Industry Solutions</h2>
+<h2 id="industry-solutions">📊 Industry Solutions</h2>
 <ul>
 <li><strong>Customization:</strong> Industry-specific adaptations</li>
 <li><strong>Compliance:</strong> Sector-specific regulations</li>
@@ -201,7 +258,7 @@ permalink: /docs/Login_Industry_Specific_Videos/</p>
 <li><strong>Support:</strong> Specialized industry expertise</li>
 </ul>
 <hr />
-<h2>📱 Industry Contacts</h2>
+<h2 id="industry-contacts">📱 Industry Contacts</h2>
 <ul>
 <li><strong>Healthcare:</strong> healthcare@loginbusiness.com</li>
 <li><strong>Financial:</strong> finance@loginbusiness.com</li>
@@ -210,13 +267,14 @@ permalink: /docs/Login_Industry_Specific_Videos/</p>
 <li><strong>Education:</strong> education@loginbusiness.com</li>
 </ul>
 <hr />
-<h2>🔗 Industry Resources</h2>
+<h2 id="industry-resources">🔗 Industry Resources</h2>
 <ul>
 <li><a href="https://loginbusiness.com/industries">Industry Case Studies</a></li>
 <li><a href="https://loginbusiness.com/compliance">Compliance Guides</a></li>
 <li><a href="https://loginbusiness.com/news">Industry News</a></li>
 </ul>
 <p>🎬 <strong>Discover industry-specific solutions from Login - where expertise meets your sector's needs.</strong> </p>
+        </div>
     </div>
 </body>
 </html>

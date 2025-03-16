@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28 AD YOLO Live Change Log</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f5f6fa;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav {
+            background: #34495e;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .nav a:hover {
+            background: #2c3e50;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #2980b9;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            border: 1px solid #e9ecef;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+        .breadcrumbs {
+            padding: 1rem;
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>28 AD YOLO Live Change Log</h1>
+    </div>
+    
+    <div class="nav">
+        <a href="/ai-dc/index.html">Home</a>
+        <a href="/ai-dc/documentation.html">Documentation</a>
+        <a href="/ai-dc/components.html">Components</a>
+    </div>
+
+    <div class="content">
+        <div class="breadcrumbs">
+            <a href="/ai-dc/index.html">Home</a> / docs / 28 AD YOLO Live Change Log
+        </div>
+        <div class="main-content">
+            <hr />
+<p>layout: page
+title: 28 AD YOLO Live Change Log
+permalink: /docs/28_AD_YOLO_Live_Change_Log/</p>
+<hr />
+<h1 id="ad-yolo-live-change-log-integration">AD-YOLO Live Change Log Integration</h1>
+<h2 id="overview"><strong>🔍 Overview</strong></h2>
+<p>AD-YOLO now provides <strong>real-time Active Directory (AD) change tracking</strong> across any company's AD forest, enabling instant <strong>AI-driven monitoring, security alerts, and IT automation</strong>. This system captures every AD modification in real-time, making it instantly queryable and actionable.</p>
+<h2 id="core-features"><strong>🔥 Core Features</strong></h2>
+<h3 id="1-real-time-change-detection"><strong>1. Real-Time Change Detection</strong></h3>
+<ul>
+<li>LDAP Change Notifications</li>
+<li>USNChanged Tracking</li>
+<li>DirSync Control Integration</li>
+<li>Vector Database Indexing</li>
+<li>Webhook Integration Support</li>
+</ul>
+<h3 id="2-monitored-changes"><strong>2. Monitored Changes</strong></h3>
+<ul>
+<li>User Account Modifications</li>
+<li>Group Membership Updates</li>
+<li>Computer Object Changes</li>
+<li>Security Policy Adjustments</li>
+<li>Custom Attribute Modifications</li>
+<li>Installed Software Updates</li>
+<li>Security Device Status</li>
+</ul>
+<h2 id="technical-implementation"><strong>📡 Technical Implementation</strong></h2>
+<h3 id="powershell-change-monitoring"><strong>PowerShell Change Monitoring</strong></h3>
+<pre><code class="language-powershell"># AD-YOLO Change Monitor
+function Monitor-ADChanges {
+    param(
+        [string]$Domain = &quot;DC=yourdomain,DC=com&quot;,
+        [string]$VectorDBPath = &quot;C:\AD-YOLO\vector.db&quot;
+    )
+
+    # Set up LDAP notification
+    $ldapFilter = &quot;(&amp;(objectClass=*))&quot;
+    $scope = [System.DirectoryServices.SearchScope]::Subtree
+
+    # Initialize vector database
+    $vectorDB = Initialize-VectorDB -Path $VectorDBPath
+
+    # Start monitoring
+    $searcher = New-Object System.DirectoryServices.DirectorySearcher
+    $searcher.SearchRoot = &quot;LDAP://$Domain&quot;
+    $searcher.Filter = $ldapFilter
+    $searcher.SearchScope = $scope
+
+    # Monitor changes
+    while ($true) {
+        $changes = $searcher.FindAll()
+        foreach ($change in $changes) {
+            # Process change
+            $changeData = @{
+                ObjectDN = $change.Properties[&quot;distinguishedName&quot;][0]
+                ObjectClass = $change.Properties[&quot;objectClass&quot;][-1]
+                TimeStamp = Get-Date
+                Attributes = $change.Properties
+            }
+
+            # Index in vector database
+            Add-VectorDBEntry -DB $vectorDB -Data $changeData
+
+            # Trigger notifications
+            Send-ChangeNotification -Change $changeData
+        }
+        Start-Sleep -Seconds 1
+    }
+}
+</code></pre>
+<h3 id="vector-database-schema"><strong>Vector Database Schema</strong></h3>
+<pre><code class="language-sql">CREATE TABLE ad_changes (
+    id INTEGER PRIMARY KEY,
+    object_dn TEXT,
+    object_class TEXT,
+    timestamp DATETIME,
+    attributes JSON,
+    vector_embedding BLOB
+);
+
+CREATE INDEX idx_vector ON ad_changes(vector_embedding);
+</code></pre>
+<h2 id="real-time-alerts"><strong>🔔 Real-Time Alerts</strong></h2>
+<h3 id="security-events"><strong>Security Events</strong></h3>
+<ul>
+<li>Admin Group Modifications</li>
+<li>Privileged Access Changes</li>
+<li>Password Reset Activities</li>
+<li>Security Policy Updates</li>
+<li>Failed Login Attempts</li>
+</ul>
+<h3 id="asset-management"><strong>Asset Management</strong></h3>
+<ul>
+<li>New Device Registration</li>
+<li>Software Installation</li>
+<li>Security Camera Status</li>
+<li>Network Resource Changes</li>
+<li>License Assignments</li>
+</ul>
+<h2 id="ai-powered-queries"><strong>🤖 AI-Powered Queries</strong></h2>
+<h3 id="natural-language-examples"><strong>Natural Language Examples</strong></h3>
+<ul>
+<li>"Who modified the Domain Admins group today?"</li>
+<li>"Show all computers added this week"</li>
+<li>"List users with expired passwords"</li>
+<li>"Which security cameras are offline?"</li>
+<li>"Display recent firewall changes"</li>
+</ul>
+<h3 id="query-processing"><strong>Query Processing</strong></h3>
+<pre><code class="language-python">def process_ad_query(query: str) -&gt; List[Dict]:
+    # Convert natural language to vector
+    query_vector = embed_text(query)
+
+    # Search vector database
+    results = vector_db.similarity_search(
+        query_vector,
+        table=&quot;ad_changes&quot;,
+        top_k=10
+    )
+
+    # Process and format results
+    formatted_results = [
+        {
+            &quot;object&quot;: result.object_dn,
+            &quot;change&quot;: result.attributes,
+            &quot;timestamp&quot;: result.timestamp,
+            &quot;relevance&quot;: result.similarity_score
+        }
+        for result in results
+    ]
+
+    return formatted_results
+</code></pre>
+<h2 id="monitoring-dashboard"><strong>📊 Monitoring Dashboard</strong></h2>
+<h3 id="real-time-metrics"><strong>Real-Time Metrics</strong></h3>
+<ul>
+<li>Active Directory Changes/minute</li>
+<li>Security Alert Frequency</li>
+<li>Resource Usage Trends</li>
+<li>User Activity Patterns</li>
+<li>System Health Status</li>
+</ul>
+<h3 id="visualization-components"><strong>Visualization Components</strong></h3>
+<ul>
+<li>Live Activity Feed</li>
+<li>Change Type Distribution</li>
+<li>Security Event Timeline</li>
+<li>Resource Usage Graphs</li>
+<li>Alert Priority Matrix</li>
+</ul>
+<h2 id="security-compliance"><strong>🔒 Security &amp; Compliance</strong></h2>
+<h3 id="access-control"><strong>Access Control</strong></h3>
+<ul>
+<li>Role-Based Access (RBAC)</li>
+<li>Audit Logging</li>
+<li>Change Verification</li>
+<li>Data Encryption</li>
+<li>Compliance Reporting</li>
+</ul>
+<h3 id="data-retention"><strong>Data Retention</strong></h3>
+<ul>
+<li>Configurable Retention Periods</li>
+<li>Automated Archiving</li>
+<li>Compliance Requirements</li>
+<li>Data Compression</li>
+<li>Backup Integration</li>
+</ul>
+<h2 id="integration-capabilities"><strong>🔄 Integration Capabilities</strong></h2>
+<h3 id="supported-systems"><strong>Supported Systems</strong></h3>
+<ul>
+<li>SIEM Platforms</li>
+<li>Help Desk Software</li>
+<li>Monitoring Tools</li>
+<li>Cloud Services</li>
+<li>Mobile Applications</li>
+</ul>
+<h3 id="api-endpoints"><strong>API Endpoints</strong></h3>
+<pre><code class="language-python">@app.route('/api/v1/changes', methods=['GET'])
+def get_changes():
+    &quot;&quot;&quot;Retrieve recent AD changes&quot;&quot;&quot;
+    return jsonify({
+        'changes': get_recent_changes(),
+        'timestamp': datetime.now().isoformat()
+    })
+
+@app.route('/api/v1/query', methods=['POST'])
+def query_changes():
+    &quot;&quot;&quot;Execute natural language query&quot;&quot;&quot;
+    query = request.json.get('query')
+    results = process_ad_query(query)
+    return jsonify({'results': results})
+</code></pre>
+<h2 id="mobile-access"><strong>📱 Mobile Access</strong></h2>
+<h3 id="features"><strong>Features</strong></h3>
+<ul>
+<li>Real-Time Notifications</li>
+<li>Mobile Query Interface</li>
+<li>Quick Actions</li>
+<li>Status Dashboard</li>
+<li>Secure Authentication</li>
+</ul>
+<h3 id="security-measures"><strong>Security Measures</strong></h3>
+<ul>
+<li>Biometric Authentication</li>
+<li>Session Management</li>
+<li>Encrypted Communication</li>
+<li>Device Registration</li>
+<li>Access Logging</li>
+</ul>
+<h2 id="future-enhancements"><strong>🚀 Future Enhancements</strong></h2>
+<h3 id="planned-features"><strong>Planned Features</strong></h3>
+<ul>
+<li>Quantum-Safe Encryption</li>
+<li>AI Predictive Analytics</li>
+<li>AR/VR Visualization</li>
+<li>Voice Command Support</li>
+<li>Automated Remediation</li>
+</ul>
+<h3 id="research-areas"><strong>Research Areas</strong></h3>
+<ul>
+<li>Advanced Vector Search</li>
+<li>Neural Query Processing</li>
+<li>Behavior Analysis</li>
+<li>Pattern Recognition</li>
+<li>Anomaly Detection</li>
+</ul>
+<hr />
+<p><em>AD-YOLO Live Change Log transforms Active Directory into a real-time, AI-queryable system, enabling instant visibility and response to any AD changes across your organization.</em> 🎯 </p>
+        </div>
+    </div>
+</body>
+</html>

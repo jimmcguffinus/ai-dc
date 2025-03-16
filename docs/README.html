@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,22 +137,23 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / README
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: README
 permalink: /docs/README/</p>
 <hr />
-<h1>🚀 AI-DC: Artificial Intelligence for Data Centers</h1>
-<h2>🔹 Overview</h2>
+<h1 id="ai-dc-artificial-intelligence-for-data-centers">🚀 AI-DC: Artificial Intelligence for Data Centers</h1>
+<h2 id="overview">🔹 Overview</h2>
 <p><strong>AI-DC</strong> is a cutting-edge initiative aimed at <strong>integrating artificial intelligence into data center operations</strong> to optimize <strong>networking, colocation, cloud services, and security</strong>. By leveraging <strong>AI-driven automation</strong>, this project aims to:
 - Reduce <strong>operational inefficiencies</strong>
 - Enhance <strong>real-time monitoring &amp; predictive analytics</strong>
 - Improve <strong>data center security &amp; threat detection</strong>
 - Implement <strong>AI-powered self-healing networks</strong></p>
-<h2>🧑‍💻 Project Architect &amp; Visionary</h2>
+<h2 id="project-architect-visionary">🧑‍💻 Project Architect &amp; Visionary</h2>
 <p>This AI-driven data center transformation was architected by <strong>Jim McGuffin</strong>, a seasoned IT professional with over 40 years of experience in technology innovation. Jim's vision is to seamlessly integrate cutting-edge artificial intelligence across data center operations, emphasizing scalable solutions, robust security, and exceptional customer experience—bringing Login, Inc. to the forefront of the AI revolution.</p>
 <p>Jim's approach prioritizes clarity, simplicity, and longevity, aiming to establish Login, Inc. as an industry leader and trusted local partner in AI-powered technology solutions.</p>
-<h2>📂 Project Structure</h2>
+<h2 id="project-structure">📂 Project Structure</h2>
 <table>
 <thead>
 <tr>
@@ -167,7 +224,7 @@ permalink: /docs/README/</p>
 </tr>
 </tbody>
 </table>
-<h2>📂 Directories</h2>
+<h2 id="directories">📂 Directories</h2>
 <table>
 <thead>
 <tr>
@@ -190,7 +247,7 @@ permalink: /docs/README/</p>
 </tr>
 </tbody>
 </table>
-<h2>🚀 Getting Started</h2>
+<h2 id="getting-started">🚀 Getting Started</h2>
 <ol>
 <li><strong>Understand the Data Center Landscape:</strong>  </li>
 <li>Read <code>01_Company_Breakdown.md</code> to understand the industry and business model.</li>
@@ -203,11 +260,12 @@ permalink: /docs/README/</p>
 <li><strong>Review Service-Specific AI Solutions:</strong></li>
 <li>Explore files <code>09-14_*.md</code> for detailed service implementations.</li>
 </ol>
-<h2>🤝 Contributing</h2>
+<h2 id="contributing">🤝 Contributing</h2>
 <p>We welcome contributions from AI &amp; data center professionals.<br />
 Please <strong>review our documentation</strong> before submitting changes or new ideas.</p>
-<h2>📜 License</h2>
+<h2 id="license">📜 License</h2>
 <p>This project is licensed under the terms specified in the <strong>LICENSE</strong> file.</p>
+        </div>
     </div>
 </body>
 </html>

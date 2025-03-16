@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,11 +137,12 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> / jobs / CAECO Chief AI Ethics Compliance Officer
         </div>
-        <h1>Chief AI Ethics &amp; Compliance Officer (CAECO)</h1>
-<h2>Role Overview</h2>
+        <div class="main-content">
+            <h1 id="chief-ai-ethics-compliance-officer-caeco">Chief AI Ethics &amp; Compliance Officer (CAECO)</h1>
+<h2 id="role-overview">Role Overview</h2>
 <p>The Chief AI Ethics &amp; Compliance Officer (CAECO) leads the organization's AI governance, ethical implementation, and regulatory compliance initiatives. This executive position ensures responsible AI deployment while maintaining compliance with evolving AI regulations and industry standards.</p>
-<h2>Key Responsibilities</h2>
-<h3>AI Ethics Leadership</h3>
+<h2 id="key-responsibilities">Key Responsibilities</h2>
+<h3 id="ai-ethics-leadership">AI Ethics Leadership</h3>
 <ul>
 <li>Develop and implement AI ethics frameworks</li>
 <li>Lead responsible AI implementation strategies</li>
@@ -93,7 +150,7 @@
 <li>Oversee AI bias mitigation programs</li>
 <li>Guide ethical AI development standards</li>
 </ul>
-<h3>Compliance Management</h3>
+<h3 id="compliance-management">Compliance Management</h3>
 <ul>
 <li>Direct AI regulatory compliance programs</li>
 <li>Lead data governance initiatives</li>
@@ -101,7 +158,7 @@
 <li>Guide compliance monitoring systems</li>
 <li>Manage audit and reporting processes</li>
 </ul>
-<h3>Risk &amp; Governance</h3>
+<h3 id="risk-governance">Risk &amp; Governance</h3>
 <ul>
 <li>Assess AI implementation risks</li>
 <li>Develop AI governance frameworks</li>
@@ -109,7 +166,7 @@
 <li>Oversee AI transparency initiatives</li>
 <li>Guide responsible AI policies</li>
 </ul>
-<h3>Stakeholder Engagement</h3>
+<h3 id="stakeholder-engagement">Stakeholder Engagement</h3>
 <ul>
 <li>Direct ethics board communications</li>
 <li>Lead regulatory agency relationships</li>
@@ -117,7 +174,7 @@
 <li>Guide stakeholder education programs</li>
 <li>Manage ethics reporting processes</li>
 </ul>
-<h2>Required Qualifications</h2>
+<h2 id="required-qualifications">Required Qualifications</h2>
 <ul>
 <li>Advanced degree in Ethics, Law, AI, or related field</li>
 <li>10+ years experience in technology ethics or compliance</li>
@@ -125,7 +182,7 @@
 <li>Strong background in regulatory compliance</li>
 <li>Proven track record in ethical framework development</li>
 </ul>
-<h2>Preferred Qualifications</h2>
+<h2 id="preferred-qualifications">Preferred Qualifications</h2>
 <ul>
 <li>PhD in AI Ethics or related field</li>
 <li>Experience with international AI regulations</li>
@@ -133,7 +190,7 @@
 <li>Published work in AI ethics</li>
 <li>Industry certifications in compliance</li>
 </ul>
-<h2>Key Performance Indicators</h2>
+<h2 id="key-performance-indicators">Key Performance Indicators</h2>
 <ul>
 <li>AI ethics compliance rates</li>
 <li>Bias mitigation effectiveness</li>
@@ -142,14 +199,14 @@
 <li>Ethics program implementation</li>
 <li>Transparency initiative success</li>
 </ul>
-<h2>Impact &amp; Innovation</h2>
+<h2 id="impact-innovation">Impact &amp; Innovation</h2>
 <ul>
 <li>Pioneer AI ethics standards</li>
 <li>Drive industry leadership in responsible AI</li>
 <li>Establish governance frameworks</li>
 <li>Create ethical AI implementation models</li>
 </ul>
-<h2>Reporting Structure</h2>
+<h2 id="reporting-structure">Reporting Structure</h2>
 <ul>
 <li>Reports to: CEO</li>
 <li>Direct Reports:</li>
@@ -158,12 +215,12 @@
 <li>Governance Group</li>
 <li>Stakeholder Relations Team</li>
 </ul>
-<h2>Location</h2>
+<h2 id="location">Location</h2>
 <ul>
 <li>Primary: Tucson, AZ</li>
 <li>Travel: 30% for ethics conferences, regulatory meetings, and stakeholder engagement</li>
 </ul>
-<h2>Compensation</h2>
+<h2 id="compensation">Compensation</h2>
 <ul>
 <li>Executive-level compensation package</li>
 <li>Ethics achievement bonuses</li>
@@ -173,6 +230,7 @@
 </ul>
 <hr />
 <p><em>This position represents the commitment to responsible AI implementation, ensuring ethical practices and regulatory compliance in data center operations.</em> </p>
+        </div>
     </div>
 </body>
 </html>

@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,16 +137,17 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / 32 AD YOLO Schema Extension AuxLogin
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: 32 AD YOLO Schema Extension AuxLogin
 permalink: /docs/32_AD_YOLO_Schema_Extension_AuxLogin/</p>
 <hr />
-<h1>AD-YOLO Schema Extension (auxLogin)</h1>
-<h2>Overview</h2>
+<h1 id="ad-yolo-schema-extension-auxlogin">AD-YOLO Schema Extension (auxLogin)</h1>
+<h2 id="overview">Overview</h2>
 <p>AD-YOLO extends Active Directory schema with auxiliary attributes (<code>auxLogin</code>) to track modern enterprise assets and user properties. This extension enables granular tracking of devices, vehicles, security equipment, and employee-specific data while maintaining AD's core functionality.</p>
-<h2>Extended Attributes</h2>
-<h3>Core Attributes</h3>
+<h2 id="extended-attributes">Extended Attributes</h2>
+<h3 id="core-attributes">Core Attributes</h3>
 <pre><code class="language-powershell"># Base auxLogin attributes
 $attributes = @{
     'auxLoginInstalledApps' = 'List of installed applications'
@@ -99,7 +156,7 @@ $attributes = @{
     'auxLoginMetaGlasses' = 'AR/VR device assignments'
 }
 </code></pre>
-<h3>New Extended Attributes</h3>
+<h3 id="new-extended-attributes">New Extended Attributes</h3>
 <pre><code class="language-powershell"># Additional tracking attributes
 $newAttributes = @{
     'auxLoginIMEINumber' = 'Mobile device IMEI tracking'
@@ -112,8 +169,8 @@ $newAttributes = @{
     'auxLoginCertifications' = 'Professional certifications'
 }
 </code></pre>
-<h2>Schema Extension</h2>
-<h3>PowerShell Deployment</h3>
+<h2 id="schema-extension">Schema Extension</h2>
+<h3 id="powershell-deployment">PowerShell Deployment</h3>
 <pre><code class="language-powershell"># Import AD Schema module
 Import-Module ActiveDirectory
 
@@ -137,8 +194,8 @@ New-ADObject -Name &quot;auxLogin&quot; -Type &quot;classSchema&quot; -Path $sch
     )
 }
 </code></pre>
-<h2>Bulk Import Support</h2>
-<h3>LDIF Import Example</h3>
+<h2 id="bulk-import-support">Bulk Import Support</h2>
+<h3 id="ldif-import-example">LDIF Import Example</h3>
 <pre><code class="language-ldif">dn: CN=Schema,CN=Configuration,DC=login,DC=local
 changetype: modify
 add: attributeTypes
@@ -157,7 +214,7 @@ attributeTypes: (
     SINGLE-VALUE
 )
 </code></pre>
-<h3>CSV Bulk Import Tool</h3>
+<h3 id="csv-bulk-import-tool">CSV Bulk Import Tool</h3>
 <pre><code class="language-python">import csv
 import ldap3
 from typing import Dict, List
@@ -203,8 +260,8 @@ importer = AuxLoginBulkImporter(
 )
 importer.import_from_csv('aux_login_data.csv')
 </code></pre>
-<h2>Enhanced Audit Tracking</h2>
-<h3>Attribute Change Logging</h3>
+<h2 id="enhanced-audit-tracking">Enhanced Audit Tracking</h2>
+<h3 id="attribute-change-logging">Attribute Change Logging</h3>
 <pre><code class="language-python">from datetime import datetime
 import sqlite3
 from typing import Dict
@@ -259,8 +316,8 @@ class AuxLoginAuditor:
 
         return [dict(row) for row in cursor.fetchall()]
 </code></pre>
-<h2>Schema Validation</h2>
-<h3>Health Check Tool</h3>
+<h2 id="schema-validation">Schema Validation</h2>
+<h3 id="health-check-tool">Health Check Tool</h3>
 <pre><code class="language-python">from typing import List, Dict
 import ldap3
 
@@ -361,8 +418,8 @@ for category, issues in health_report.items():
     for issue in issues:
         print(f&quot;- {issue}&quot;)
 </code></pre>
-<h2>Deployment Validation</h2>
-<h3>Pre-deployment Checks</h3>
+<h2 id="deployment-validation">Deployment Validation</h2>
+<h3 id="pre-deployment-checks">Pre-deployment Checks</h3>
 <pre><code class="language-powershell"># Validate schema before deployment
 function Test-AuxLoginSchema {
     param(
@@ -417,13 +474,13 @@ if ($checkResults.Success) {
     $checkResults.Messages | ForEach-Object { Write-Host &quot;- $_&quot; }
 }
 </code></pre>
-<h2>Future Enhancements</h2>
+<h2 id="future-enhancements">Future Enhancements</h2>
 <p>✅ <strong>Additional tracking attributes</strong><br />
 ✅ <strong>Enhanced audit logging</strong><br />
 ✅ <strong>Bulk import tools</strong><br />
 ✅ <strong>Schema validation</strong><br />
 ✅ <strong>Health monitoring</strong>  </p>
-<h2>Next Steps</h2>
+<h2 id="next-steps">Next Steps</h2>
 <ol>
 <li>Deploy new attributes using LDIF or PowerShell</li>
 <li>Import existing data using CSV tool</li>
@@ -433,6 +490,7 @@ if ($checkResults.Success) {
 </ol>
 <hr />
 <p><em>AD-YOLO Schema Extension provides a robust framework for tracking modern enterprise assets while maintaining AD compatibility and security.</em> 🎯 </p>
+        </div>
     </div>
 </body>
 </html>

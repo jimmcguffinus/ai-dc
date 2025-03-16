@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,19 +137,20 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / Login Networking IT Discussions
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: Login Networking IT Discussions
 permalink: /docs/Login_Networking_IT_Discussions/</p>
 <hr />
-<h1>🎥 Login Networking &amp; IT Discussions</h1>
-<h2>📌 Overview</h2>
+<h1 id="login-networking-it-discussions">🎥 Login Networking &amp; IT Discussions</h1>
+<h2 id="overview">📌 Overview</h2>
 <p>A curated collection of professional discussions and interviews focusing on networking, IT, and business technology in Tucson. Our video series features industry leaders, experts, and innovators sharing insights and experiences.</p>
 <hr />
-<h2>🌟 Tucson's Stars of Networking Series</h2>
-<h3><strong>About the Series</strong></h3>
+<h2 id="tucsons-stars-of-networking-series">🌟 Tucson's Stars of Networking Series</h2>
+<h3 id="about-the-series"><strong>About the Series</strong></h3>
 <p>A premier video podcast series showcasing Tucson's business networking professionals, exploring strategies, trends, and success stories in the local business community.</p>
-<h3><strong>Latest Episodes</strong></h3>
+<h3 id="latest-episodes"><strong>Latest Episodes</strong></h3>
 <ol>
 <li><strong><a href="https://www.youtube.com/watch?v=XXXXX">Ep. 19 | With Ellison Turner</a></strong></li>
 <li>Topic: Tucson's Evolving Networking Landscape</li>
@@ -133,10 +190,10 @@ permalink: /docs/Login_Networking_IT_Discussions/</p>
 <li>Duration: 45 minutes</li>
 </ol>
 <hr />
-<h2>💻 Tucson I.T. Connections Series</h2>
-<h3><strong>About the Series</strong></h3>
+<h2 id="tucson-it-connections-series">💻 Tucson I.T. Connections Series</h2>
+<h3 id="about-the-series_1"><strong>About the Series</strong></h3>
 <p>In-depth discussions with IT and cybersecurity experts, exploring technological innovations, security trends, and digital transformation in Tucson's business landscape.</p>
-<h3><strong>Latest Episodes</strong></h3>
+<h3 id="latest-episodes_1"><strong>Latest Episodes</strong></h3>
 <ol>
 <li><strong><a href="https://www.youtube.com/watch?v=XXXXX">Ep. 4 | Special Guest: Adrian Leffler</a></strong></li>
 <li>Topic: IT Strategy for Modern Businesses</li>
@@ -168,7 +225,7 @@ permalink: /docs/Login_Networking_IT_Discussions/</p>
 <li>Duration: 42 minutes</li>
 </ol>
 <hr />
-<h2>🏷️ Categories &amp; Tags</h2>
+<h2 id="categories-tags">🏷️ Categories &amp; Tags</h2>
 <ul>
 <li><strong>Industry Focus:</strong> #Networking #IT #Cybersecurity #CloudComputing #AI</li>
 <li><strong>Location:</strong> #Tucson #Arizona #Southwest</li>
@@ -176,26 +233,27 @@ permalink: /docs/Login_Networking_IT_Discussions/</p>
 <li><strong>Format:</strong> #Podcast #Interview #ProfessionalDevelopment</li>
 </ul>
 <hr />
-<h2>📺 Channel Information</h2>
+<h2 id="channel-information">📺 Channel Information</h2>
 <ul>
 <li><strong>Subscribe:</strong> <a href="https://www.youtube.com/c/LoginBusiness">Login Business YouTube Channel</a></li>
 <li><strong>Playlist:</strong> <a href="https://www.youtube.com/playlist?list=XXXXX">Complete Networking Series</a></li>
 <li><strong>Contact:</strong> media@loginbusiness.com</li>
 </ul>
 <hr />
-<h2>🔄 Regular Schedule</h2>
+<h2 id="regular-schedule">🔄 Regular Schedule</h2>
 <ul>
 <li>New Networking Episodes: Every Tuesday at 2 PM MST</li>
 <li>IT Connections Series: Last Thursday of each month</li>
 </ul>
 <hr />
-<h2>📱 Social Media</h2>
+<h2 id="social-media">📱 Social Media</h2>
 <ul>
 <li>Twitter: <a href="https://twitter.com/LoginBusiness">@LoginBusiness</a></li>
 <li>LinkedIn: <a href="https://linkedin.com/company/login-business">Login Business</a></li>
 <li>Facebook: <a href="https://facebook.com/LoginBusiness">Login Business Solutions</a></li>
 </ul>
 <p>🎬 <strong>Subscribe to our channel for the latest episodes and updates in Tucson's business and technology landscape.</strong> </p>
+        </div>
     </div>
 </body>
 </html>

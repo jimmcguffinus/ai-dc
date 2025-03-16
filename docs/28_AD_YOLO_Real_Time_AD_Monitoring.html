@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,16 +137,17 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / 28 AD YOLO Real Time AD Monitoring
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: AD-YOLO Real-Time AD Monitoring
 permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/</p>
 <hr />
-<h1>AD-YOLO Real-Time AD Monitoring</h1>
-<h2>Overview</h2>
+<h1 id="ad-yolo-real-time-ad-monitoring">AD-YOLO Real-Time AD Monitoring</h1>
+<h2 id="overview">Overview</h2>
 <p>AD-YOLO's real-time Active Directory monitoring system provides continuous surveillance of AD changes, security events, and performance metrics. Using advanced event processing and AI-driven analysis, it enables immediate detection and response to critical AD events.</p>
-<h2>Architecture</h2>
-<h3>Core Components</h3>
+<h2 id="architecture">Architecture</h2>
+<h3 id="core-components">Core Components</h3>
 <ul>
 <li><strong>Event Collector</strong></li>
 <li>LDAP change notification listener</li>
@@ -107,7 +164,7 @@ permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/</p>
 <li>Anomaly detection</li>
 <li>Alert generation</li>
 </ul>
-<h3>Event Types</h3>
+<h3 id="event-types">Event Types</h3>
 <pre><code class="language-python">class ADEventType(Enum):
     OBJECT_CREATED = &quot;object_created&quot;
     OBJECT_MODIFIED = &quot;object_modified&quot;
@@ -118,8 +175,8 @@ permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/</p>
     LOGIN_ATTEMPT = &quot;login_attempt&quot;
     REPLICATION_STATUS = &quot;replication_status&quot;
 </code></pre>
-<h2>Event Collection</h2>
-<h3>LDAP Change Monitor</h3>
+<h2 id="event-collection">Event Collection</h2>
+<h3 id="ldap-change-monitor">LDAP Change Monitor</h3>
 <pre><code class="language-python">class LDAPChangeMonitor:
     def __init__(self, ldap_server, base_dn):
         self.server = ldap_server
@@ -150,7 +207,7 @@ permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/</p>
         }
         await self.changes_queue.put(change)
 </code></pre>
-<h3>Security Event Monitor</h3>
+<h3 id="security-event-monitor">Security Event Monitor</h3>
 <pre><code class="language-python">class SecurityEventMonitor:
     def __init__(self):
         self.event_queue = asyncio.Queue()
@@ -172,8 +229,8 @@ permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/</p>
 
             await asyncio.sleep(1)
 </code></pre>
-<h2>Event Processing</h2>
-<h3>Pattern Recognition</h3>
+<h2 id="event-processing">Event Processing</h2>
+<h3 id="pattern-recognition">Pattern Recognition</h3>
 <pre><code class="language-python">class PatternRecognizer:
     def __init__(self):
         self.patterns = self.load_patterns()
@@ -190,7 +247,7 @@ permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/</p>
                 })
         return matches
 </code></pre>
-<h3>Anomaly Detection</h3>
+<h3 id="anomaly-detection">Anomaly Detection</h3>
 <pre><code class="language-python">class AnomalyDetector:
     def __init__(self):
         self.model = self.load_model()
@@ -211,8 +268,8 @@ permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/</p>
 
         return anomalies
 </code></pre>
-<h2>Alert Generation</h2>
-<h3>Alert Rules</h3>
+<h2 id="alert-generation">Alert Generation</h2>
+<h3 id="alert-rules">Alert Rules</h3>
 <pre><code class="language-python">class AlertRule:
     def __init__(self, condition, severity, actions):
         self.condition = condition
@@ -229,7 +286,7 @@ permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/</p>
             )
         return None
 </code></pre>
-<h3>Alert Manager</h3>
+<h3 id="alert-manager">Alert Manager</h3>
 <pre><code class="language-python">class AlertManager:
     def __init__(self):
         self.rules = self.load_rules()
@@ -251,8 +308,8 @@ permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/</p>
         for notifier in self.notifiers:
             await notifier.send(alert)
 </code></pre>
-<h2>Performance Monitoring</h2>
-<h3>Metrics Collection</h3>
+<h2 id="performance-monitoring">Performance Monitoring</h2>
+<h3 id="metrics-collection">Metrics Collection</h3>
 <pre><code class="language-python">class ADMetricsCollector:
     def __init__(self):
         self.metrics = {
@@ -271,7 +328,7 @@ permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/</p>
             await self.store_metrics(metrics)
             await asyncio.sleep(60)
 </code></pre>
-<h3>Health Checks</h3>
+<h3 id="health-checks">Health Checks</h3>
 <pre><code class="language-python">class ADHealthChecker:
     def __init__(self):
         self.checks = [
@@ -289,8 +346,8 @@ permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/</p>
             results.append(result)
         return results
 </code></pre>
-<h2>Integration Examples</h2>
-<h3>PowerShell Integration</h3>
+<h2 id="integration-examples">Integration Examples</h2>
+<h3 id="powershell-integration">PowerShell Integration</h3>
 <pre><code class="language-powershell"># Monitor AD changes
 function Watch-ADChanges {
     param(
@@ -312,7 +369,7 @@ function Watch-ADChanges {
     }
 }
 </code></pre>
-<h3>Python Integration</h3>
+<h3 id="python-integration">Python Integration</h3>
 <pre><code class="language-python">from adyolo.monitor import ADMonitor
 
 # Initialize monitor
@@ -329,8 +386,8 @@ async def handle_event(event):
 # Start monitoring
 monitor.start()
 </code></pre>
-<h2>Configuration</h2>
-<h3>Monitor Settings</h3>
+<h2 id="configuration">Configuration</h2>
+<h3 id="monitor-settings">Monitor Settings</h3>
 <pre><code class="language-yaml"># monitor_config.yaml
 monitoring:
   ldap:
@@ -358,8 +415,8 @@ alerts:
       severity: critical
       actions: [email, sms, ticket]
 </code></pre>
-<h2>Deployment</h2>
-<h3>Environment Setup</h3>
+<h2 id="deployment">Deployment</h2>
+<h3 id="environment-setup">Environment Setup</h3>
 <pre><code class="language-bash"># Install dependencies
 pip install aioldap asyncio aiohttp pyyaml
 
@@ -369,8 +426,8 @@ export AD_USERNAME=&quot;monitor_user&quot;
 export AD_PASSWORD=&quot;secure_password&quot;
 export ALERT_EMAIL=&quot;admin@example.com&quot;
 </code></pre>
-<h2>Monitoring Dashboard</h2>
-<h3>Metrics Display</h3>
+<h2 id="monitoring-dashboard">Monitoring Dashboard</h2>
+<h3 id="metrics-display">Metrics Display</h3>
 <ul>
 <li>Real-time event feed</li>
 <li>Performance graphs</li>
@@ -378,7 +435,7 @@ export ALERT_EMAIL=&quot;admin@example.com&quot;
 <li>Health status</li>
 <li>Replication status</li>
 </ul>
-<h3>Interactive Features</h3>
+<h3 id="interactive-features">Interactive Features</h3>
 <ul>
 <li>Event filtering</li>
 <li>Alert acknowledgment</li>
@@ -386,13 +443,14 @@ export ALERT_EMAIL=&quot;admin@example.com&quot;
 <li>Report generation</li>
 <li>Trend analysis</li>
 </ul>
-<h2>Future Enhancements</h2>
+<h2 id="future-enhancements">Future Enhancements</h2>
 <p>✅ <strong>AI-powered event correlation</strong><br />
 ✅ <strong>Predictive anomaly detection</strong><br />
 ✅ <strong>Automated response actions</strong><br />
 ✅ <strong>Extended metrics collection</strong>  </p>
 <hr />
 <p><em>AD-YOLO's real-time monitoring provides comprehensive visibility into Active Directory changes, enabling proactive management and rapid response to critical events.</em> 🔍 </p>
+        </div>
     </div>
 </body>
 </html>

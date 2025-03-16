@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,44 +137,46 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / 14 Best Practices AI Datacenter
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: 14 Best Practices AI Datacenter
 permalink: /docs/14_Best_Practices_AI_Datacenter/</p>
 <hr />
-<h1>🏢 Best Practices for Transitioning Data Centers to Support AI Workloads</h1>
+<h1 id="best-practices-for-transitioning-data-centers-to-support-ai-workloads">🏢 Best Practices for Transitioning Data Centers to Support AI Workloads</h1>
 <p>To effectively transform your data center into an AI-ready infrastructure, follow these comprehensive best practices informed by current industry standards and insights:</p>
-<h2>🚀 AI Hardware and Infrastructure Upgrades</h2>
+<h2 id="ai-hardware-and-infrastructure-upgrades">🚀 AI Hardware and Infrastructure Upgrades</h2>
 <ul>
 <li><strong>GPU-Enabled Servers:</strong> Equip servers with GPUs or dedicated AI accelerators to efficiently handle AI training and inference workloads.</li>
 <li><strong>High-Capacity Memory &amp; Storage:</strong> Ensure ample RAM and high-speed storage solutions to support intensive computations and large AI datasets.</li>
 </ul>
-<h2>🌐 Networking &amp; Connectivity</h2>
+<h2 id="networking-connectivity">🌐 Networking &amp; Connectivity</h2>
 <ul>
 <li><strong>High-Speed Networking:</strong> Deploy InfiniBand or RoCE (RDMA over Converged Ethernet) to provide ultra-low latency and high bandwidth critical for AI workloads.</li>
 <li><strong>Redundant Geo-Diverse Fiber Routes:</strong> Maintain at least three geographically diverse fiber paths ensuring continuous, reliable connectivity, essential for AI applications.</li>
 </ul>
-<h2>❄️ Power &amp; Cooling Infrastructure</h2>
+<h2 id="power-cooling-infrastructure">❄️ Power &amp; Cooling Infrastructure</h2>
 <ul>
 <li><strong>Reliable Power Sources:</strong> Secure stable, high-capacity power supplies; evaluate sites with renewable or abundant power resources.</li>
 <li><strong>Advanced Cooling Solutions:</strong> Implement liquid cooling technologies (direct-to-chip, immersion cooling) to efficiently manage heat from AI computing workloads.</li>
 </ul>
-<h2>🔒 Security &amp; Data Protection</h2>
+<h2 id="security-data-protection">🔒 Security &amp; Data Protection</h2>
 <ul>
 <li><strong>Intelligent Video Surveillance:</strong> Deploy AI-driven video analytics for real-time threat detection, anomaly monitoring, and proactive response.</li>
 <li><strong>Robust Data Security:</strong> Employ AI-enhanced cybersecurity measures, including encryption and intelligent access controls, safeguarding sensitive AI data and models.</li>
 </ul>
-<h2>📈 Scalability &amp; Flexibility</h2>
+<h2 id="scalability-flexibility">📈 Scalability &amp; Flexibility</h2>
 <ul>
 <li><strong>Modular Design:</strong> Adopt flexible, modular architectures to rapidly scale infrastructure as AI workloads grow.</li>
 <li><strong>Benchmarking &amp; Metrics:</strong> Establish performance benchmarks to regularly evaluate and optimize the facility's capability to handle diverse AI applications.</li>
 </ul>
-<h2>🤝 Collaboration &amp; Innovation</h2>
+<h2 id="collaboration-innovation">🤝 Collaboration &amp; Innovation</h2>
 <ul>
 <li><strong>Interdisciplinary Collaboration:</strong> Encourage close collaboration between data scientists, engineers, and administrators for optimal use of resources.</li>
 <li><strong>Customer Training &amp; Education:</strong> Provide resources and training to clients to help them fully leverage AI capabilities, enhancing client satisfaction and facility usage.</li>
 </ul>
 <p>By incorporating these best practices, data center providers will position themselves to attract AI-focused clientele, drive operational excellence, and achieve sustained competitive advantage.</p>
+        </div>
     </div>
 </body>
 </html>

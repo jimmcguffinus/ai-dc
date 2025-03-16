@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,17 +137,18 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / Login Business Services Explainers
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: Login Business Services Explainers
 permalink: /docs/Login_Business_Services_Explainers/</p>
 <hr />
-<h1>💡 Login Business Services Explainers</h1>
-<h2>📌 Overview</h2>
+<h1 id="login-business-services-explainers">💡 Login Business Services Explainers</h1>
+<h2 id="overview">📌 Overview</h2>
 <p>Clear, concise video explanations of Login's comprehensive business services. These explainer videos help clients understand our solutions, technologies, and implementation processes.</p>
 <hr />
-<h2>🔧 Core Services</h2>
-<h3><strong>IT Infrastructure Solutions</strong></h3>
+<h2 id="core-services">🔧 Core Services</h2>
+<h3 id="it-infrastructure-solutions"><strong>IT Infrastructure Solutions</strong></h3>
 <ol>
 <li><strong><a href="https://www.youtube.com/watch?v=XXXXX">Managed IT Services Overview</a></strong></li>
 <li>Topic: Complete IT Management</li>
@@ -109,8 +166,8 @@ permalink: /docs/Login_Business_Services_Explainers/</p>
 <li>Duration: 4:20 minutes</li>
 </ol>
 <hr />
-<h2>🔒 Security Services</h2>
-<h3><strong>Cybersecurity Solutions</strong></h3>
+<h2 id="security-services">🔒 Security Services</h2>
+<h3 id="cybersecurity-solutions"><strong>Cybersecurity Solutions</strong></h3>
 <ol>
 <li><strong><a href="https://www.youtube.com/watch?v=XXXXX">Complete Security Protection</a></strong></li>
 <li>Topic: Enterprise Security</li>
@@ -128,8 +185,8 @@ permalink: /docs/Login_Business_Services_Explainers/</p>
 <li>Duration: 4:45 minutes</li>
 </ol>
 <hr />
-<h2>📱 Communication Solutions</h2>
-<h3><strong>Business Communications</strong></h3>
+<h2 id="communication-solutions">📱 Communication Solutions</h2>
+<h3 id="business-communications"><strong>Business Communications</strong></h3>
 <ol>
 <li><strong><a href="https://www.youtube.com/watch?v=XXXXX">VoIP Phone Systems</a></strong></li>
 <li>Topic: Modern Business Phone Solutions</li>
@@ -147,8 +204,8 @@ permalink: /docs/Login_Business_Services_Explainers/</p>
 <li>Duration: 4:15 minutes</li>
 </ol>
 <hr />
-<h2>🚀 Business Growth Solutions</h2>
-<h3><strong>Digital Transformation</strong></h3>
+<h2 id="business-growth-solutions">🚀 Business Growth Solutions</h2>
+<h3 id="digital-transformation"><strong>Digital Transformation</strong></h3>
 <ol>
 <li><strong><a href="https://www.youtube.com/watch?v=XXXXX">AI &amp; Automation Solutions</a></strong></li>
 <li>Topic: Business Process Automation</li>
@@ -166,8 +223,8 @@ permalink: /docs/Login_Business_Services_Explainers/</p>
 <li>Duration: 4:45 minutes</li>
 </ol>
 <hr />
-<h2>💻 Specialized Solutions</h2>
-<h3><strong>Industry-Specific Services</strong></h3>
+<h2 id="specialized-solutions">💻 Specialized Solutions</h2>
+<h3 id="industry-specific-services"><strong>Industry-Specific Services</strong></h3>
 <ol>
 <li><strong><a href="https://www.youtube.com/watch?v=XXXXX">Healthcare IT Solutions</a></strong></li>
 <li>Focus: Medical Technology</li>
@@ -185,7 +242,7 @@ permalink: /docs/Login_Business_Services_Explainers/</p>
 <li>Duration: 5:45 minutes</li>
 </ol>
 <hr />
-<h2>🏷️ Categories &amp; Tags</h2>
+<h2 id="categories-tags">🏷️ Categories &amp; Tags</h2>
 <ul>
 <li><strong>Services:</strong> #IT #Security #Cloud #Communications #AI</li>
 <li><strong>Solutions:</strong> #Business #Technology #Digital #Growth</li>
@@ -193,7 +250,7 @@ permalink: /docs/Login_Business_Services_Explainers/</p>
 <li><strong>Benefits:</strong> #Efficiency #Innovation #Reliability #ROI</li>
 </ul>
 <hr />
-<h2>📊 Service Highlights</h2>
+<h2 id="service-highlights">📊 Service Highlights</h2>
 <ul>
 <li><strong>Response Time:</strong> &lt; 15 minutes</li>
 <li><strong>Uptime Guarantee:</strong> 99.9%</li>
@@ -201,20 +258,21 @@ permalink: /docs/Login_Business_Services_Explainers/</p>
 <li><strong>Implementation:</strong> Customized approach</li>
 </ul>
 <hr />
-<h2>📱 Get Started</h2>
+<h2 id="get-started">📱 Get Started</h2>
 <ul>
 <li><strong>Service Consultation:</strong> services@loginbusiness.com</li>
 <li><strong>Custom Solutions:</strong> solutions@loginbusiness.com</li>
 <li><strong>Support:</strong> support@loginbusiness.com</li>
 </ul>
 <hr />
-<h2>🔗 Additional Resources</h2>
+<h2 id="additional-resources">🔗 Additional Resources</h2>
 <ul>
 <li><a href="https://loginbusiness.com/brochures">Service Brochures</a></li>
 <li><a href="https://loginbusiness.com/guides">Implementation Guides</a></li>
 <li><a href="https://loginbusiness.com/support">Support Documentation</a></li>
 </ul>
 <p>🎬 <strong>Understand our services better with these comprehensive explainer videos - where clarity meets capability.</strong> </p>
+        </div>
     </div>
 </body>
 </html>

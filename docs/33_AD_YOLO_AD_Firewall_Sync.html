@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,16 +137,17 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / 33 AD YOLO AD Firewall Sync
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: 33 AD YOLO AD Firewall Sync
 permalink: /docs/33_AD_YOLO_AD_Firewall_Sync/</p>
 <hr />
-<h1>AD-YOLO AD Firewall Synchronization</h1>
-<h2>Overview</h2>
+<h1 id="ad-yolo-ad-firewall-synchronization">AD-YOLO AD Firewall Synchronization</h1>
+<h2 id="overview">Overview</h2>
 <p>AD-YOLO's AD Firewall Sync module enables real-time synchronization between Active Directory security groups and network firewall rules. This integration ensures that network access controls automatically reflect AD group memberships and security policies.</p>
-<h2>Architecture</h2>
-<h3>Core Components</h3>
+<h2 id="architecture">Architecture</h2>
+<h3 id="core-components">Core Components</h3>
 <ul>
 <li><strong>AD Group Monitor</strong></li>
 <li>Real-time group membership tracking</li>
@@ -107,7 +164,7 @@ permalink: /docs/33_AD_YOLO_AD_Firewall_Sync/</p>
 <li>Policy enforcement</li>
 <li>Change verification</li>
 </ul>
-<h3>Supported Firewalls</h3>
+<h3 id="supported-firewalls">Supported Firewalls</h3>
 <ul>
 <li>Palo Alto Networks</li>
 <li>Cisco ASA</li>
@@ -116,8 +173,8 @@ permalink: /docs/33_AD_YOLO_AD_Firewall_Sync/</p>
 <li>pfSense</li>
 <li>OPNsense</li>
 </ul>
-<h2>Group Synchronization</h2>
-<h3>Group Monitor</h3>
+<h2 id="group-synchronization">Group Synchronization</h2>
+<h3 id="group-monitor">Group Monitor</h3>
 <pre><code class="language-python">class ADGroupMonitor:
     def __init__(self, ad_client):
         self.ad_client = ad_client
@@ -145,7 +202,7 @@ permalink: /docs/33_AD_YOLO_AD_Firewall_Sync/</p>
         }
         await self.change_queue.put(group_data)
 </code></pre>
-<h3>Firewall Rule Generation</h3>
+<h3 id="firewall-rule-generation">Firewall Rule Generation</h3>
 <pre><code class="language-python">class FirewallRuleGenerator:
     def __init__(self):
         self.templates = self.load_rule_templates()
@@ -174,8 +231,8 @@ permalink: /docs/33_AD_YOLO_AD_Firewall_Sync/</p>
                 ips.update(self.get_user_workstations(member))
         return list(ips)
 </code></pre>
-<h2>Firewall Integration</h2>
-<h3>Palo Alto Networks</h3>
+<h2 id="firewall-integration">Firewall Integration</h2>
+<h3 id="palo-alto-networks">Palo Alto Networks</h3>
 <pre><code class="language-python">class PaloAltoConnector:
     def __init__(self, config):
         self.api = PanApiClient(config)
@@ -201,7 +258,7 @@ permalink: /docs/33_AD_YOLO_AD_Firewall_Sync/</p>
                 action=rule.action
             )
 </code></pre>
-<h3>Cisco ASA</h3>
+<h3 id="cisco-asa">Cisco ASA</h3>
 <pre><code class="language-python">class CiscoASAConnector:
     def __init__(self, config):
         self.client = ASAClient(config)
@@ -226,8 +283,8 @@ permalink: /docs/33_AD_YOLO_AD_Firewall_Sync/</p>
                     action=rule.action
                 )
 </code></pre>
-<h2>Rule Management</h2>
-<h3>Rule Templates</h3>
+<h2 id="rule-management">Rule Management</h2>
+<h3 id="rule-templates">Rule Templates</h3>
 <pre><code class="language-yaml"># rule_templates.yaml
 templates:
   vpn_access:
@@ -246,7 +303,7 @@ templates:
     action: &quot;allow&quot;
     logging: true
 </code></pre>
-<h3>Rule Validator</h3>
+<h3 id="rule-validator">Rule Validator</h3>
 <pre><code class="language-python">class RuleValidator:
     def __init__(self):
         self.validators = [
@@ -272,8 +329,8 @@ templates:
             })
         return results
 </code></pre>
-<h2>Change Management</h2>
-<h3>Change Tracking</h3>
+<h2 id="change-management">Change Management</h2>
+<h3 id="change-tracking">Change Tracking</h3>
 <pre><code class="language-python">class ChangeTracker:
     def __init__(self):
         self.db = self.initialize_db()
@@ -289,7 +346,7 @@ templates:
             'status': 'pending'
         })
 </code></pre>
-<h3>Rollback Support</h3>
+<h3 id="rollback-support">Rollback Support</h3>
 <pre><code class="language-python">class RollbackManager:
     def __init__(self, firewall):
         self.firewall = firewall
@@ -313,8 +370,8 @@ templates:
             await self.firewall.restore_config(snapshot.config)
             await self.verify_rollback(snapshot)
 </code></pre>
-<h2>Performance Optimization</h2>
-<h3>Batch Processing</h3>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<h3 id="batch-processing">Batch Processing</h3>
 <pre><code class="language-python">class BatchProcessor:
     def __init__(self, batch_size=100):
         self.batch_size = batch_size
@@ -330,7 +387,7 @@ templates:
         if self.batch:
             await self.flush_batch()
 </code></pre>
-<h3>Caching Strategy</h3>
+<h3 id="caching-strategy">Caching Strategy</h3>
 <pre><code class="language-python">class RuleCache:
     def __init__(self):
         self.cache = LRUCache(maxsize=1000)
@@ -343,8 +400,8 @@ templates:
         &quot;&quot;&quot;Store rule in cache&quot;&quot;&quot;
         self.cache.set(group_dn, rule)
 </code></pre>
-<h2>Monitoring &amp; Metrics</h2>
-<h3>Performance Metrics</h3>
+<h2 id="monitoring-metrics">Monitoring &amp; Metrics</h2>
+<h3 id="performance-metrics">Performance Metrics</h3>
 <ul>
 <li>Rule update latency</li>
 <li>Synchronization accuracy</li>
@@ -352,7 +409,7 @@ templates:
 <li>API response time</li>
 <li>Error rates</li>
 </ul>
-<h3>Health Checks</h3>
+<h3 id="health-checks">Health Checks</h3>
 <pre><code class="language-python">class HealthMonitor:
     def __init__(self):
         self.checks = [
@@ -377,8 +434,8 @@ templates:
                 })
         return results
 </code></pre>
-<h2>Security &amp; Compliance</h2>
-<h3>Audit Logging</h3>
+<h2 id="security-compliance">Security &amp; Compliance</h2>
+<h3 id="audit-logging">Audit Logging</h3>
 <pre><code class="language-python">class FirewallAuditor:
     def __init__(self):
         self.logger = self.setup_logger()
@@ -393,7 +450,7 @@ templates:
             'source': 'AD-YOLO'
         })
 </code></pre>
-<h3>Compliance Checks</h3>
+<h3 id="compliance-checks">Compliance Checks</h3>
 <ul>
 <li>Rule consistency</li>
 <li>Policy compliance</li>
@@ -401,13 +458,14 @@ templates:
 <li>Access reviews</li>
 <li>Audit trails</li>
 </ul>
-<h2>Future Enhancements</h2>
+<h2 id="future-enhancements">Future Enhancements</h2>
 <p>✅ <strong>Zero-trust integration</strong><br />
 ✅ <strong>ML-based rule optimization</strong><br />
 ✅ <strong>Cloud firewall support</strong><br />
 ✅ <strong>Automated compliance reporting</strong>  </p>
 <hr />
 <p><em>AD-YOLO's AD Firewall Sync ensures network security policies stay synchronized with Active Directory group memberships, enabling automated and accurate access control.</em> 🛡️ </p>
+        </div>
     </div>
 </body>
 </html>

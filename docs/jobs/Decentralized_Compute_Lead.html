@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,11 +137,12 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> / jobs / Decentralized Compute Lead
         </div>
-        <h1>Decentralized Compute Lead</h1>
-<h2>Role Overview</h2>
+        <div class="main-content">
+            <h1 id="decentralized-compute-lead">Decentralized Compute Lead</h1>
+<h2 id="role-overview">Role Overview</h2>
 <p>The Decentralized Compute Lead develops and manages distributed AI computing fabric and federated learning models across the data center infrastructure. This position drives the implementation of decentralized computing solutions that enable efficient, scalable, and resilient AI operations.</p>
-<h2>Key Responsibilities</h2>
-<h3>Distributed Computing</h3>
+<h2 id="key-responsibilities">Key Responsibilities</h2>
+<h3 id="distributed-computing">Distributed Computing</h3>
 <ul>
 <li>Design distributed computing architectures</li>
 <li>Implement federated learning systems</li>
@@ -93,7 +150,7 @@
 <li>Create mesh computing networks</li>
 <li>Guide distributed resource management</li>
 </ul>
-<h3>AI/ML Implementation</h3>
+<h3 id="aiml-implementation">AI/ML Implementation</h3>
 <ul>
 <li>Lead federated learning initiatives</li>
 <li>Design distributed AI training systems</li>
@@ -101,7 +158,7 @@
 <li>Develop model distribution strategies</li>
 <li>Guide distributed model optimization</li>
 </ul>
-<h3>System Architecture</h3>
+<h3 id="system-architecture">System Architecture</h3>
 <ul>
 <li>Design scalable compute fabrics</li>
 <li>Implement distributed storage solutions</li>
@@ -109,7 +166,7 @@
 <li>Create fault-tolerant systems</li>
 <li>Guide performance optimization</li>
 </ul>
-<h3>Innovation Leadership</h3>
+<h3 id="innovation-leadership">Innovation Leadership</h3>
 <ul>
 <li>Research emerging distributed technologies</li>
 <li>Evaluate new computing paradigms</li>
@@ -117,7 +174,7 @@
 <li>Drive architectural innovation</li>
 <li>Guide technology adoption</li>
 </ul>
-<h2>Required Qualifications</h2>
+<h2 id="required-qualifications">Required Qualifications</h2>
 <ul>
 <li>Advanced degree in Computer Science, Distributed Systems, or related field</li>
 <li>7+ years experience in distributed computing</li>
@@ -125,7 +182,7 @@
 <li>Strong background in federated learning</li>
 <li>Proven track record in innovation</li>
 </ul>
-<h2>Preferred Qualifications</h2>
+<h2 id="preferred-qualifications">Preferred Qualifications</h2>
 <ul>
 <li>PhD in Distributed Computing or related field</li>
 <li>Experience with blockchain technologies</li>
@@ -133,7 +190,7 @@
 <li>Published research in distributed AI</li>
 <li>Industry certifications in cloud/distributed systems</li>
 </ul>
-<h2>Key Performance Indicators</h2>
+<h2 id="key-performance-indicators">Key Performance Indicators</h2>
 <ul>
 <li>Distributed system performance</li>
 <li>Federated learning efficiency</li>
@@ -142,14 +199,14 @@
 <li>System reliability</li>
 <li>Cost optimization</li>
 </ul>
-<h2>Impact &amp; Innovation</h2>
+<h2 id="impact-innovation">Impact &amp; Innovation</h2>
 <ul>
 <li>Transform compute infrastructure</li>
 <li>Implement federated learning</li>
 <li>Drive distributed AI adoption</li>
 <li>Create resilient systems</li>
 </ul>
-<h2>Reporting Structure</h2>
+<h2 id="reporting-structure">Reporting Structure</h2>
 <ul>
 <li>Reports to: VP of AI-Optimized Infrastructure</li>
 <li>Leads:</li>
@@ -158,12 +215,12 @@
 <li>Edge Computing Division</li>
 <li>Resource Orchestration Team</li>
 </ul>
-<h2>Location</h2>
+<h2 id="location">Location</h2>
 <ul>
 <li>Primary: Tucson, AZ</li>
 <li>Travel: 20% for technology evaluation and implementation</li>
 </ul>
-<h2>Compensation</h2>
+<h2 id="compensation">Compensation</h2>
 <ul>
 <li>Competitive lead engineer package</li>
 <li>Performance bonuses</li>
@@ -173,6 +230,7 @@
 </ul>
 <hr />
 <p><em>This position drives the future of distributed computing, creating scalable and efficient AI infrastructure through decentralized architectures.</em> </p>
+        </div>
     </div>
 </body>
 </html>

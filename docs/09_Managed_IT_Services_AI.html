@@ -11,17 +11,23 @@
             margin: 0;
             padding: 0;
             color: #333;
+            background: #f5f6fa;
         }
         .header {
             background: #2c3e50;
             color: white;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav {
             background: #34495e;
             padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .nav a {
             color: white;
@@ -39,6 +45,12 @@
             margin: 2rem auto;
             padding: 0 1rem;
         }
+        .main-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
         a {
             color: #3498db;
             text-decoration: none;
@@ -52,17 +64,61 @@
             padding: 1rem;
             border-radius: 4px;
             overflow-x: auto;
+            border: 1px solid #e9ecef;
         }
         code {
             background: #f8f9fa;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
         }
         .breadcrumbs {
             padding: 1rem;
-            background: #f8f9fa;
+            background: white;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #2c3e50;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
         }
     </style>
 </head>
@@ -81,23 +137,24 @@
         <div class="breadcrumbs">
             <a href="/ai-dc/index.html">Home</a> /  / 09 Managed IT Services AI
         </div>
-        <hr />
+        <div class="main-content">
+            <hr />
 <p>layout: page
 title: 09 Managed IT Services AI
 permalink: /docs/09_Managed_IT_Services_AI/</p>
 <hr />
-<h1>🔧 AI-Powered Managed IT Services</h1>
-<h2>📌 Overview</h2>
+<h1 id="ai-powered-managed-it-services">🔧 AI-Powered Managed IT Services</h1>
+<h2 id="overview">📌 Overview</h2>
 <p>Login's Managed IT Services leverage <strong>AI and automation</strong> to provide <strong>proactive, intelligent, and comprehensive IT management</strong>. Our AI systems work <strong>24/7 to monitor, optimize, and protect</strong> your IT infrastructure.</p>
 <hr />
-<h2>🤖 1️⃣ AI-Driven IT Automation</h2>
-<h3><strong>🎯 Intelligent System Management</strong></h3>
+<h2 id="1-ai-driven-it-automation">🤖 1️⃣ AI-Driven IT Automation</h2>
+<h3 id="intelligent-system-management"><strong>🎯 Intelligent System Management</strong></h3>
 <p>✅ AI provides <strong>automated IT operations</strong>:
 - <strong>Smart patch management</strong> with zero-downtime updates
 - <strong>Automated system provisioning</strong> and configuration
 - <strong>Self-healing systems</strong> that auto-resolve common issues
 - <strong>Predictive maintenance</strong> to prevent failures</p>
-<h3><strong>📊 Performance Optimization</strong></h3>
+<h3 id="performance-optimization"><strong>📊 Performance Optimization</strong></h3>
 <p>✅ AI ensures <strong>peak system performance</strong>:
 - <strong>Resource utilization monitoring</strong>
 - <strong>Automated load balancing</strong>
@@ -106,14 +163,14 @@ permalink: /docs/09_Managed_IT_Services_AI/</p>
 <p><strong>💡 Example:</strong><br />
 AI detects <strong>memory leak in application</strong> → <strong>automatically restarts service</strong> and alerts IT team.</p>
 <hr />
-<h2>🛡️ 2️⃣ AI Security Management</h2>
-<h3><strong>🔒 Advanced Threat Protection</strong></h3>
+<h2 id="2-ai-security-management">🛡️ 2️⃣ AI Security Management</h2>
+<h3 id="advanced-threat-protection"><strong>🔒 Advanced Threat Protection</strong></h3>
 <p>✅ AI provides <strong>comprehensive security</strong>:
 - <strong>Zero-trust security implementation</strong>
 - <strong>Endpoint protection &amp; response</strong>
 - <strong>AI-powered antivirus &amp; malware detection</strong>
 - <strong>Automated security patching</strong></p>
-<h3><strong>🎯 Security Automation</strong></h3>
+<h3 id="security-automation"><strong>🎯 Security Automation</strong></h3>
 <p>✅ AI enables <strong>proactive defense</strong>:
 - <strong>Real-time threat monitoring</strong>
 - <strong>Automated incident response</strong>
@@ -122,14 +179,14 @@ AI detects <strong>memory leak in application</strong> → <strong>automatically
 <p><strong>💡 Example:</strong><br />
 AI identifies <strong>suspicious file activity</strong> → <strong>automatically quarantines threat</strong> and updates security policies.</p>
 <hr />
-<h2>☁️ 3️⃣ AI-Enhanced Cloud Management</h2>
-<h3><strong>🌐 Multi-Cloud Optimization</strong></h3>
+<h2 id="3-ai-enhanced-cloud-management">☁️ 3️⃣ AI-Enhanced Cloud Management</h2>
+<h3 id="multi-cloud-optimization"><strong>🌐 Multi-Cloud Optimization</strong></h3>
 <p>✅ AI manages <strong>cloud environments</strong>:
 - <strong>Cost optimization across clouds</strong>
 - <strong>Resource allocation automation</strong>
 - <strong>Performance monitoring &amp; tuning</strong>
 - <strong>Cloud security enforcement</strong></p>
-<h3><strong>🔄 Hybrid Cloud Integration</strong></h3>
+<h3 id="hybrid-cloud-integration"><strong>🔄 Hybrid Cloud Integration</strong></h3>
 <p>✅ AI ensures <strong>seamless operations</strong>:
 - <strong>Automated workload balancing</strong>
 - <strong>Cross-cloud data synchronization</strong>
@@ -138,14 +195,14 @@ AI identifies <strong>suspicious file activity</strong> → <strong>automaticall
 <p><strong>💡 Example:</strong><br />
 AI detects <strong>underutilized cloud resources</strong> → <strong>automatically scales down</strong> to optimize costs.</p>
 <hr />
-<h2>🎯 4️⃣ AI Service Desk &amp; Support</h2>
-<h3><strong>🤝 Intelligent Help Desk</strong></h3>
+<h2 id="4-ai-service-desk-support">🎯 4️⃣ AI Service Desk &amp; Support</h2>
+<h3 id="intelligent-help-desk"><strong>🤝 Intelligent Help Desk</strong></h3>
 <p>✅ AI powers <strong>customer support</strong>:
 - <strong>24/7 AI chatbot support</strong>
 - <strong>Automated ticket routing</strong>
 - <strong>Predictive issue resolution</strong>
 - <strong>Knowledge base automation</strong></p>
-<h3><strong>📊 Support Analytics</strong></h3>
+<h3 id="support-analytics"><strong>📊 Support Analytics</strong></h3>
 <p>✅ AI improves <strong>service quality</strong>:
 - <strong>Ticket pattern analysis</strong>
 - <strong>Resolution time optimization</strong>
@@ -154,14 +211,14 @@ AI detects <strong>underutilized cloud resources</strong> → <strong>automatica
 <p><strong>💡 Example:</strong><br />
 AI analyzes <strong>common support patterns</strong> → <strong>creates automated solutions</strong> for frequent issues.</p>
 <hr />
-<h2>🔍 5️⃣ AI Infrastructure Monitoring</h2>
-<h3><strong>📡 Proactive Monitoring</strong></h3>
+<h2 id="5-ai-infrastructure-monitoring">🔍 5️⃣ AI Infrastructure Monitoring</h2>
+<h3 id="proactive-monitoring"><strong>📡 Proactive Monitoring</strong></h3>
 <p>✅ AI ensures <strong>system reliability</strong>:
 - <strong>Real-time performance monitoring</strong>
 - <strong>Predictive failure detection</strong>
 - <strong>Automated diagnostics</strong>
 - <strong>System health scoring</strong></p>
-<h3><strong>📈 Analytics &amp; Reporting</strong></h3>
+<h3 id="analytics-reporting"><strong>📈 Analytics &amp; Reporting</strong></h3>
 <p>✅ AI provides <strong>actionable insights</strong>:
 - <strong>Performance trend analysis</strong>
 - <strong>Resource utilization reports</strong>
@@ -170,13 +227,14 @@ AI analyzes <strong>common support patterns</strong> → <strong>creates automat
 <p><strong>💡 Example:</strong><br />
 AI predicts <strong>disk failure likelihood</strong> → <strong>initiates backup</strong> and orders replacement automatically.</p>
 <hr />
-<h2>⚡ Next Steps</h2>
+<h2 id="next-steps">⚡ Next Steps</h2>
 <p>1️⃣ <strong>Deploy AI monitoring systems</strong>
 2️⃣ <strong>Implement automated IT management</strong>
 3️⃣ <strong>Enhance security automation</strong>
 4️⃣ <strong>Roll out AI service desk</strong>
 5️⃣ <strong>Launch predictive maintenance</strong></p>
 <p>🚀 <strong>Through AI-powered IT management, Login delivers reliable, secure, and efficient IT operations while reducing costs and improving service quality.</strong> </p>
+        </div>
     </div>
 </body>
 </html>
