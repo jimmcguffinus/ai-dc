@@ -1,10 +1,3 @@
-title: AI-DC
-description: AI-powered data center transformation
-theme: minima
-author: Jim McGuffin
-baseurl: ""
-url: "https://jimmcguffinus.github.io"
-
 # Build settings
 markdown: kramdown
 kramdown:
@@ -12,7 +5,34 @@ kramdown:
   hard_wrap: false
   syntax_highlighter: rouge
 
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /docs/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "*.md"
+      type: "docs"
+    values:
+      layout: "page"
+
+# Site settings
+title: AI-DC
+description: AI-powered data center transformation
+baseurl: ""
+url: "https://jimmcguffinus.github.io"
+permalink: pretty
+
 # Theme settings
+theme: minima
 minima:
   date_format: "%b %-d, %Y"
   social_links:
@@ -24,7 +44,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-relative-links
 
-# Site settings
 show_excerpts: true
 relative_links:
   enabled: true
@@ -35,25 +54,6 @@ header_pages:
   - about.md
   - documentation.md
   - components.md
-
-# Collections
-collections:
-  docs:
-    output: true
-    permalink: /:collection/:path/
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-  - scope:
-      path: ""
-      type: "docs"
-    values:
-      layout: "page"
 
 # Exclude files from processing
 exclude:
@@ -66,7 +66,6 @@ exclude:
   - .gitignore
 
 # Additional settings
-permalink: pretty
 future: true
 encoding: UTF-8
 sass:

@@ -1,3 +1,8 @@
+---
+layout: page
+title: Login Client Testimonials
+permalink: /docs/Login_Client_Testimonials/
+---
 # 🌟 Login Client Testimonials & Success Stories
 
 ## 📌 Overview

@@ -1,3 +1,8 @@
+---
+layout: page
+title: 06 Phase3 Cloud AI
+permalink: /docs/06_Phase3_Cloud_AI/
+---
 # Phase 3: Cloud AI Implementation
 
 ## Overview

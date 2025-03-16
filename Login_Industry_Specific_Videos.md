@@ -1,3 +1,8 @@
+---
+layout: page
+title: Login Industry Specific Videos
+permalink: /docs/Login_Industry_Specific_Videos/
+---
 # 🎥 Login Industry-Specific Videos
 
 ## 📌 Overview

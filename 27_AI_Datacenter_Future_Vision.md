@@ -1,3 +1,8 @@
+---
+layout: page
+title: 27 AI Datacenter Future Vision
+permalink: /docs/27_AI_Datacenter_Future_Vision/
+---
 # 🚀 Login's AI-Powered Data Center Future Vision
 
 ## 📌 Overview

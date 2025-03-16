@@ -1,3 +1,8 @@
+---
+layout: page
+title: Readme AD-YOLO
+permalink: /docs/Readme_AD-YOLO/
+---
 # AD-YOLO: AI-Powered Active Directory Management & Automation
 
 ## Overview

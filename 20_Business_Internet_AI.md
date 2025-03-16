@@ -1,3 +1,8 @@
+---
+layout: page
+title: 20 Business Internet AI
+permalink: /docs/20_Business_Internet_AI/
+---
 # 🌐 AI-Powered Business Internet Services
 
 ## 📌 Overview

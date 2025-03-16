@@ -1,3 +1,8 @@
+---
+layout: page
+title: 23 Autonomous Smart Tech AI Markets Growth
+permalink: /docs/23_Autonomous_Smart_Tech_AI_Markets_Growth/
+---
 # 🤖 Autonomous & Smart Technology Market Growth
 
 ## 📌 Overview

@@ -1,3 +1,8 @@
+---
+layout: page
+title: 19 Colocation Hosting AI
+permalink: /docs/19_Colocation_Hosting_AI/
+---
 # 🏢 AI-Powered Colocation Hosting Services
 
 ## 📌 Overview

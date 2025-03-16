@@ -1,3 +1,8 @@
+---
+layout: page
+title: 11 Network Cabling Company AI
+permalink: /docs/11_Network_Cabling_Company_AI/
+---
 # 🔌 AI-Enhanced Network Cabling & Infrastructure
 
 ## 📌 Overview

@@ -1,3 +1,8 @@
+---
+layout: page
+title: 33 AD YOLO AD Firewall Sync
+permalink: /docs/33_AD_YOLO_AD_Firewall_Sync/
+---
 # AD-YOLO AD Firewall Synchronization
 
 ## Overview

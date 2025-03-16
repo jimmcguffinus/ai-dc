@@ -1,3 +1,8 @@
+---
+layout: page
+title: 22 AI Research Development AI Markets Growth
+permalink: /docs/22_AI_Research_Development_AI_Markets_Growth/
+---
 # 🔬 AI Research & Development Market Growth
 
 ## 📌 Overview

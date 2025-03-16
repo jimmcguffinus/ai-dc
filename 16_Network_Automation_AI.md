@@ -1,3 +1,8 @@
+---
+layout: page
+title: 16 Network Automation AI
+permalink: /docs/16_Network_Automation_AI/
+---
 # 🚀 AI-Powered Network Automation
 
 ## 📌 Overview

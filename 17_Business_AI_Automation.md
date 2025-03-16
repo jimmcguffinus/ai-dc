@@ -1,3 +1,8 @@
+---
+layout: page
+title: 17 Business AI Automation
+permalink: /docs/17_Business_AI_Automation/
+---
 # 🚀 AI-Powered Business Development & Sales Automation
 
 ## 📌 Overview

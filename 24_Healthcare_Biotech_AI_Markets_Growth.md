@@ -1,3 +1,8 @@
+---
+layout: page
+title: 24 Healthcare Biotech AI Markets Growth
+permalink: /docs/24_Healthcare_Biotech_AI_Markets_Growth/
+---
 # 🏥 Healthcare & Biotech AI Market Growth
 
 ## 📌 Overview

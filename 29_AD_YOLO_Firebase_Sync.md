@@ -1,3 +1,8 @@
+---
+layout: page
+title: 29 AD YOLO Firebase Sync
+permalink: /docs/29_AD_YOLO_Firebase_Sync/
+---
 # AD-YOLO Firebase Sync
 
 ## Overview

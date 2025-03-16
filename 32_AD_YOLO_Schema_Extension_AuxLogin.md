@@ -1,3 +1,8 @@
+---
+layout: page
+title: 32 AD YOLO Schema Extension AuxLogin
+permalink: /docs/32_AD_YOLO_Schema_Extension_AuxLogin/
+---
 # AD-YOLO Schema Extension (auxLogin)
 
 ## Overview

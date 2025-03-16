@@ -1,3 +1,8 @@
+---
+layout: page
+title: 02 AI Strategy
+permalink: /docs/02_AI_Strategy/
+---
 # AI Strategy: Solutions for Each Service Tier
 
 ## Executive Summary

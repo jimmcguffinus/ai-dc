@@ -1,3 +1,8 @@
+---
+layout: page
+title: 10 Login Connection Hub AI
+permalink: /docs/10_Login_Connection_Hub_AI/
+---
 # 🌐 AI-Powered Login Connection Hub
 
 ## 📌 Overview

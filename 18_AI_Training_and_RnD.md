@@ -1,3 +1,8 @@
+---
+layout: page
+title: 18 AI Training and RnD
+permalink: /docs/18_AI_Training_and_RnD/
+---
 # 🧠 AI-Driven Training & Research Development (R&D)
 
 ## **📌 Overview**

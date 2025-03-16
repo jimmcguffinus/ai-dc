@@ -1,3 +1,8 @@
+---
+layout: page
+title: 09 Managed IT Services AI
+permalink: /docs/09_Managed_IT_Services_AI/
+---
 # 🔧 AI-Powered Managed IT Services
 
 ## 📌 Overview

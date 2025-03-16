@@ -1,3 +1,8 @@
+---
+layout: page
+title: 15 Business Development AI
+permalink: /docs/15_Business_Development_AI/
+---
 # 💼 AI-Driven Business Development & Revenue Optimization
 
 ## AI-Enhanced Lead Management

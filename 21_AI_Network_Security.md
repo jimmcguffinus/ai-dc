@@ -1,3 +1,8 @@
+---
+layout: page
+title: 21 AI Network Security
+permalink: /docs/21_AI_Network_Security/
+---
 # 🛡️ AI-Powered Network Security
 
 ## 📌 Overview

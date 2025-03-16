@@ -1,3 +1,8 @@
+---
+layout: page
+title: Login Community Events
+permalink: /docs/Login_Community_Events/
+---
 # 🎉 Login Community Events & Engagement
 
 ## 📌 Overview

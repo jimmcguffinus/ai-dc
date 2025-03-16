@@ -1,3 +1,8 @@
+---
+layout: page
+title: 25 Enterprise Business Automation AI Markets Growth
+permalink: /docs/25_Enterprise_Business_Automation_AI_Markets_Growth/
+---
 # 🏢 Enterprise Business Automation AI Market Growth
 
 ## 📌 Overview

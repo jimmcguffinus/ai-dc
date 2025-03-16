@@ -1,3 +1,8 @@
+---
+layout: page
+title: 08 VectorDB Setup
+permalink: /docs/08_VectorDB_Setup/
+---
 # Vector Database Setup: Milvus Integration
 
 ## Overview

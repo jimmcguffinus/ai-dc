@@ -1,3 +1,8 @@
+---
+layout: page
+title: Future DataCenter OrgChart AI
+permalink: /docs/Future_DataCenter_OrgChart_AI/
+---
 # Future Titles of a Data Center Organizational Chart
 
 ## **Executive Leadership**

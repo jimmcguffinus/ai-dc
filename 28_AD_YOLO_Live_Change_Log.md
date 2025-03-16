@@ -1,3 +1,8 @@
+---
+layout: page
+title: 28 AD YOLO Live Change Log
+permalink: /docs/28_AD_YOLO_Live_Change_Log/
+---
 # AD-YOLO Live Change Log Integration
 
 ## **🔍 Overview**

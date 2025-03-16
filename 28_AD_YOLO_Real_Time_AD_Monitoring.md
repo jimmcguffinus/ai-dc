@@ -1,3 +1,9 @@
+---
+layout: page
+title: AD-YOLO Real-Time AD Monitoring
+permalink: /docs/28_AD_YOLO_Real_Time_AD_Monitoring/
+---
+
 # AD-YOLO Real-Time AD Monitoring
 
 ## Overview

@@ -1,3 +1,8 @@
+---
+layout: page
+title: 30 AD YOLO Ticketing Helpdesk Integration
+permalink: /docs/30_AD_YOLO_Ticketing_Helpdesk_Integration/
+---
 # AD-YOLO Ticketing & Helpdesk Integration
 
 ## Overview

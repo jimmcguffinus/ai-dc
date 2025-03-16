@@ -1,3 +1,8 @@
+---
+layout: page
+title: 07 Phase4 Security AI
+permalink: /docs/07_Phase4_Security_AI/
+---
 # 🔒 Phase 4: Security AI Implementation
 
 ## Overview

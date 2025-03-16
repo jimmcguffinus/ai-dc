@@ -1,3 +1,8 @@
+---
+layout: page
+title: README
+permalink: /docs/README/
+---
 # 🚀 AI-DC: Artificial Intelligence for Data Centers
 
 ## 🔹 Overview
@@ -56,3 +61,4 @@ Please **review our documentation** before submitting changes or new ideas.
 
 ## 📜 License
 This project is licensed under the terms specified in the **LICENSE** file.
+

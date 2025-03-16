@@ -1,3 +1,8 @@
+---
+layout: page
+title: 05 Phase2 Colo AI
+permalink: /docs/05_Phase2_Colo_AI/
+---
 # 🏢 Phase 2: AI-Powered Colocation Services
 
 ## 📌 Overview

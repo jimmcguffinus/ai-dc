@@ -1,3 +1,8 @@
+---
+layout: page
+title: 01 Company Breakdown
+permalink: /docs/01_Company_Breakdown/
+---
 # Company Breakdown: Services, Organization, and Business Model
 
 ## Company Overview

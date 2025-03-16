@@ -1,3 +1,8 @@
+---
+layout: page
+title: 14 Best Practices AI Datacenter
+permalink: /docs/14_Best_Practices_AI_Datacenter/
+---
 # 🏢 Best Practices for Transitioning Data Centers to Support AI Workloads
 
 To effectively transform your data center into an AI-ready infrastructure, follow these comprehensive best practices informed by current industry standards and insights:

@@ -1,3 +1,8 @@
+---
+layout: page
+title: 04 Phase1 Network AI
+permalink: /docs/04_Phase1_Network_AI/
+---
 # 🌐 Phase 1: Network AI Implementation
 
 ## Overview

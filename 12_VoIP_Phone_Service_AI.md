@@ -1,3 +1,8 @@
+---
+layout: page
+title: 12 VoIP Phone Service AI
+permalink: /docs/12_VoIP_Phone_Service_AI/
+---
 # 📞 AI-Enhanced VoIP Phone Service
 
 ## 📌 Overview

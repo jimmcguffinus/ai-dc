@@ -1,3 +1,8 @@
+---
+layout: page
+title: Login Networking IT Discussions
+permalink: /docs/Login_Networking_IT_Discussions/
+---
 # 🎥 Login Networking & IT Discussions
 
 ## 📌 Overview

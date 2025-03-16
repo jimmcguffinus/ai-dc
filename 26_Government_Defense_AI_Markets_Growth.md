@@ -1,3 +1,8 @@
+---
+layout: page
+title: 26 Government Defense AI Markets Growth
+permalink: /docs/26_Government_Defense_AI_Markets_Growth/
+---
 # 🏛️ Government & Defense AI Market Growth
 
 ## 📌 Overview

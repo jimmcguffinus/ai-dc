@@ -1,3 +1,8 @@
+---
+layout: page
+title: about
+permalink: /docs/about/
+---
 # 🚀 About Login, Inc. – Empowered by AI
 
 ## 🌟 Our Story

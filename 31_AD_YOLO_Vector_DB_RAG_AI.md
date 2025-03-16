@@ -1,3 +1,8 @@
+---
+layout: page
+title: 31 AD YOLO Vector DB RAG AI
+permalink: /docs/31_AD_YOLO_Vector_DB_RAG_AI/
+---
 # AD-YOLO Vector DB & RAG AI Integration
 
 ## Overview

@@ -1,3 +1,8 @@
+---
+layout: page
+title: 03 Implementation Plan
+permalink: /docs/03_Implementation_Plan/
+---
 # Implementation Plan: AI Roadmap and Technical Execution
 
 ## Project Timeline

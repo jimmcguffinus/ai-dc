@@ -1,3 +1,8 @@
+---
+layout: page
+title: 13 Video Surveillance AI
+permalink: /docs/13_Video_Surveillance_AI/
+---
 # 📹 AI-Enhanced Video Surveillance
 
 ## 📌 Overview
