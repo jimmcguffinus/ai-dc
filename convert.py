@@ -24,6 +24,10 @@ def copy_markdown_files(source_dir, target_dir):
         for file in files:
             if file.endswith('.md'):
                 source_path = os.path.join(root, file)
+                # Skip if file is in docs/docs or deeper
+                if 'docs/docs' in source_path or 'docs\\docs' in source_path:
+                    continue
+                    
                 # Create relative path structure in target
                 rel_path = os.path.relpath(root, source_dir)
                 target_path = os.path.join(target_dir, rel_path)
@@ -200,6 +204,10 @@ def convert_md_to_html():
                 try:
                     full_path = os.path.join(root, md_file)
                     
+                    # Skip if file is in docs/docs or deeper
+                    if 'docs/docs' in full_path or 'docs\\docs' in full_path:
+                        continue
+                    
                     # Read markdown content
                     with open(full_path, 'r', encoding='utf-8') as f:
                         md_content = f.read()
@@ -260,6 +268,11 @@ def convert_md_to_html():
 
 if __name__ == '__main__':
     try:
+        # Clean up any existing docs/docs directory
+        if os.path.exists('docs/docs'):
+            shutil.rmtree('docs/docs')
+            logging.info('Cleaned up docs/docs directory')
+            
         convert_md_to_html()
         logging.info('Conversion completed successfully')
     except Exception as e:
