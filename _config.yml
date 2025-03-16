@@ -10,6 +10,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
+  syntax_highlighter: rouge
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -33,4 +34,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor 
+  - vendor
+  - .git/
+  - .gitignore
+
+# Additional settings
+permalink: pretty
+future: true
+encoding: UTF-8 
