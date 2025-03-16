@@ -1,0 +1,58 @@
+.home-content, .page-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff !important;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+    text-decoration: none !important;
+}
+
+.component-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.component-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+    .component-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .site-header {
+        padding: 0.5rem;
+    }
+    
+    .site-nav {
+        gap: 10px;
+    }
+} 
